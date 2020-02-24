@@ -6,8 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-<<<<<<< HEAD
-=======
+
 sexual_orientation =["hetero", "homo", "bi"]
 
 User.create(
@@ -21,7 +20,7 @@ User.create(
   drinker: true,
   sex: "Homme",
   sexual_orientation: "hetero",
-  photo: "https://fr.123rf.com/photo_37009483_selfie-portrait-de-jeune-homme-extérieur.html")
+  photo: "https://previews.123rf.com/images/dubova/dubova1502/dubova150200154/37009483-selfie-portrait-de-jeune-homme-ext%C3%A9rieur.jpg")
 
 User.create(
   email: "j@nomail.com",
@@ -88,4 +87,4 @@ User.create(
   sex: "Femme",
   sexual_orientation: "hetero",
   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYkvfUEB3IuFxALVATBwoVvwQfSs_dCoslEPF0mzMXXg0N1gSi")
->>>>>>> master
+
