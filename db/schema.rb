@@ -74,4 +74,6 @@ ActiveRecord::Schema.define(version: 2020_02_24_131539) do
 
   add_foreign_key "availabilities", "users"
   add_foreign_key "meetings", "places"
+  add_foreign_key "meetings", "users", column: "user1_id"
+  add_foreign_key "meetings", "users", column: "user2_id"
 end
