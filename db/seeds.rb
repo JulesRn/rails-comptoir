@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 sexual_orientation =["hetero", "homo", "bi"]
+days =["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
 
 User.create(
   email: "jf@nomail.com",
@@ -86,3 +87,41 @@ User.create(
   sex: "Femme",
   sexual_orientation: "hetero",
   photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYkvfUEB3IuFxALVATBwoVvwQfSs_dCoslEPF0mzMXXg0N1gSi")
+
+
+Availability.create(
+  user_id: 1,
+  afterwork: false,
+  diner_time: true,
+  days: "lundi, mercredi, vendredi"
+  )
+Availability.create(
+  user_id: 2,
+  afterwork: true,
+  diner_time: true,
+  days: "lundi, dimanche"
+  )
+Availability.create(
+  user_id: 3,
+  afterwork: true,
+  diner_time: false,
+  days: "samedi"
+  )
+Availability.create(
+  user_id: 4,
+  afterwork: false,
+  diner_time: true,
+  days: "lundi, mardi, mercredi, jeudi, vendredi"
+  )
+Availability.create(
+  user_id: 5,
+  afterwork: true,
+  diner_time: true,
+  days: "lundi"
+  )
+Availability.create(
+  user_id: 6,
+  afterwork: true,
+  diner_time: true,
+  days: "lundi, mercredi, vendredi"
+  )
