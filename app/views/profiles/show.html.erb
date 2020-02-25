@@ -18,24 +18,33 @@
 
   <button id="user-settings">Mes info</button>
   <div class="dashboard-settings" id="myDIV">
-    <p> <%= current_user.sex %> </p>
-    <p> <%= current_user.sexual_orientation %></p>
-    <p> Looking for : <%= current_user.intention %> </p>
-    <p> Height : <%= current_user.height %></p>
-    <p> Do you smoke ? <%= current_user.smoker %></p>
-    <p> Do you drink ? <%= current_user.drinker %></p>
-    <p> <%= link_to 'Edit', dashboard_edit_path(current_user) %> </p>
+    <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
+      <%= f.input :sex, label: "Sexe" %>
+      <%= f.input :sexual_orientation, label: "Orientation sexuelle" %>
+      <%= f.input :name, label: "Nom" %>
+      <%= f.input :intention, label: "Je suis là pour :" %>
+      <%= f.input :height, label: "Taille" %>
+      <%= f.input :smoker, label: "Je fume"%>
+      <%= f.input :drinker, label: "Je bois" %>
+      <%= f.input :description, label: "Description" %>
+      <%= f.input :photo, as: :file %>
+
+      <%= f.submit "Submit", class: "btn btn-primary", id: "update-profile" %>
+    <% end %>
   </div>
 </div>
 
 
-<h1>Edit cocktail</h1>
-
-<%= simple_form_for @user do |f| %>
-  <%= f.input :name %>
-
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
+<h1>Editer</h1>
 
 
 
+
+
+
+    <!-- <p> <%= current_user.sex %> </p>
+    <p> <%= current_user.sexual_orientation %></p>
+    <p> Looking for : <%= current_user.intention %> </p>
+    <p> Height : <%= current_user.height %></p>
+    <p> Do you smoke ? <%= current_user.smoker %></p>
+    <p> Do you drink ? <%= current_user.drinker %></p> -->

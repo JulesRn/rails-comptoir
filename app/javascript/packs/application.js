@@ -33,9 +33,16 @@ const hideOrDisplayMenu = () => {
   }
 }
 
-const button = document.getElementById('user-settings');
-button.addEventListener('click', (event) => {
+
+const buttonSettings = document.getElementById('user-settings');
+buttonSettings.addEventListener('click', (event) => {
 event.preventDefault();
 hideOrDisplayMenu();
 })
 
+// const buttonUpdateProfile = document.getElementById('update-profile');
+// buttonUpdateProfile.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   hideMenu();
+//   displayMenu();
+// })
