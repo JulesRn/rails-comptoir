@@ -200,9 +200,9 @@ Like.create(user: User.second, liked_user: User.last)
 
 
 
- Meeting.create(user: User.first, liked_user: User.last)
+ Meeting.create(user1: User.first, user2: User.last)
 
-Meeting.create(user: User.second, liked_user: User.last)
+Meeting.create(user1: User.second, user2: User.last)
 
 
-   Meeting.create(user: User.third, liked_user: User.fourth)
+   Meeting.create(user1: User.third, user2: User.fourth)
