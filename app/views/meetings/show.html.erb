@@ -1,13 +1,32 @@
 
-<h1>Tu as un date</h1>
+  <div class="container-fluid">
+    <div class= "background-img">
+    <%#= image_tag "#{@place.photo}", alt: "best place ever" , class: "background-img" %>
+      <h1 class= "center-text">Tu as un date</h1>
+        <div>
+        <%= @liked_user.name %>
+        <img src="https://www.monpetitplus.com/21774-large_default/t-shirt-dangereux-selfie-homme-femme.jpg" alt="" class = "avatar-date">
+        <%#= image_tag "#{@liked_user.photo}", alt: "best place ever", class: "avatar-date" %>
+    </div>
 
-<%= @place.photo %>
-<%= @place.name %>
-<%= @place.address %>
-<%= @place.category %>
+    </div>
+    <div class="bottom-left">
+      <%= @place.name %>
+      <%= @place.category %>
+      <%= @place.address %>
+    </div>
 
-<%= @liked_user.name %>
-<%= @liked_user.photo %>
-<%#= link_to , user_show_path(@liked_user) %>
+    <div class = "rdv">
+      <h1>Ton date est le :</h1>
+      <h2> le 13 novembre</h2>
+
+      <div class="annulation">
+         <%= link_to "Annuler le date", meeting_path(@meeting), method: :delete, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+
+
+
 
 
