@@ -8,7 +8,20 @@
     </div>
   <% end %>
 
-<%= link_to likes_path  %>
-<%= link_to likes_path  %>
+</div>
 
+<div class="row mt-5 buttons">
+  <div class="col-2">
+    <%= link_to likes_path, class: "btn btn-next"  do  %>
+    <p><i class="fas fa-times"></i></p>
+    <% end %>
+  </div>
+  <div class="col">
+    <%= link_to likes_path, class: "btn btn-like d-flex justify-content-center" do  %>
+    <p>
+      <%= image_tag "LogoComptoir.png", style: "height: 100px;" %>
+      Rencontrer
+    </p>
+    <% end %>
+  </div>
 </div>
