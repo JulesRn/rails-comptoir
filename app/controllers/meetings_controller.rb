@@ -9,8 +9,5 @@ class MeetingsController < ApplicationController
 
   end
 
-  def update
-  end
-
 end
 
