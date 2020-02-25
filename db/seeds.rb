@@ -26,7 +26,7 @@ User.create(
   drinker: true,
   sex: "Homme",
   sexual_orientation: "hetero",
-  photo: "https://fr.123rf.com/photo_37009483_selfie-portrait-de-jeune-homme-extérieur.html")
+  photo: "https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639348/nqnbgq5h68wlhql62fkf.jpg")
 
 User.create(
   email: "j@nomail.com",
@@ -39,7 +39,7 @@ User.create(
   drinker: true,
   sex: "Femme",
   sexual_orientation: "hetero",
-  photo: "https://fotomelia.com/wp-content/uploads/edd/2015/12/banque-d-images-gratuites-libres-de-droits425.jpg")
+  photo: "https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638274/m6bh8rcgx9nus7kcujs7.jpg")
 
 User.create(
   email: "fifi@nomail.com",
@@ -52,7 +52,7 @@ User.create(
   drinker: false,
   sex: "Homme",
   sexual_orientation: "bi",
-  photo: "https://image.freepik.com/photos-gratuite/drole-jeune-homme-prenant-selfie-studio_23-2148165077.jpg")
+  photo: "https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638612/pqqxbthn0bzqtilzsogq.jpg")
 
 
 User.create(
@@ -66,7 +66,7 @@ User.create(
   drinker: true,
   sex: "Femme",
   sexual_orientation: "homo",
-  photo: "https://image.freepik.com/photos-gratuite/souriant-belle-femme-prenant-selfie-photo-montrant-signe-victoire-regardant-camera_1262-14385.jpg")
+  photo: "https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638775/rbzkt3r5tpvupgxqbbhe.jpg")
 
 User.create(
   email: "kikou@nomail.com",
@@ -79,7 +79,7 @@ User.create(
   drinker: true,
   sex: "Homme",
   sexual_orientation: "homo",
-  photo: "https://pbs.twimg.com/media/CVJftYhWwAA7YO7.jpg")
+  photo: "https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638787/u9fhhkoycfvci90usute.jpg")
 
 User.create(
   email: "marie@nomail.com",
@@ -92,7 +92,7 @@ User.create(
   drinker: true,
   sex: "Femme",
   sexual_orientation: "hetero",
-  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYkvfUEB3IuFxALVATBwoVvwQfSs_dCoslEPF0mzMXXg0N1gSi")
+  photo: "https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639195/mqra2ye6msbzskc66swm.jpg")
 
 
 Availability.create(
