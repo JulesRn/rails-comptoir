@@ -22,3 +22,20 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 import "bootstrap";
+
+
+const hideOrDisplayMenu = () => {
+  const x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+const button = document.getElementById('user-settings');
+button.addEventListener('click', (event) => {
+event.preventDefault();
+hideOrDisplayMenu();
+})
+

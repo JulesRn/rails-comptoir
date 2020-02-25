@@ -1,0 +1,41 @@
+
+<div class="container justify-content-center text-center">
+  <h1>Dashboard</h1>
+
+  <div class="dashboard">
+    <h2> <%= current_user.name %> </h2>
+    <%= image_tag "#{current_user.photo}", alt: "user_photo", :class => "avatar-dashboard" %>
+
+    <p> <%= current_user.description %> </p>
+  </div>
+
+
+
+  <div class="dashboard-availabilities">
+    <% current_user.availabilities %>
+
+  </div>
+
+  <button id="user-settings">Mes info</button>
+  <div class="dashboard-settings" id="myDIV">
+    <p> <%= current_user.sex %> </p>
+    <p> <%= current_user.sexual_orientation %></p>
+    <p> Looking for : <%= current_user.intention %> </p>
+    <p> Height : <%= current_user.height %></p>
+    <p> Do you smoke ? <%= current_user.smoker %></p>
+    <p> Do you drink ? <%= current_user.drinker %></p>
+    <p> <%= link_to 'Edit', dashboard_edit_path(current_user) %> </p>
+  </div>
+</div>
+
+
+<h1>Edit cocktail</h1>
+
+<%= simple_form_for @user do |f| %>
+  <%= f.input :name %>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
+
+
+
