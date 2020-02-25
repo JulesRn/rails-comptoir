@@ -33,4 +33,10 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :age, :description, :photo, :job, :intention, :sex, :sexual_orientation, :height, :sport, :smorker?, :drinker?)
   end
 
+  private
+
+  def restaurant_params
+    params.require(:user).permit(:email, :password)
+  end
+
 end
