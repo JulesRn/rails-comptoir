@@ -1,6 +1,5 @@
 
 
-
 .avatar-date {
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
@@ -19,8 +18,7 @@
   right: -50px;
 }
 
-.background-img {
-   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 66, 88, 0) 42.71%, #FAA916 100%), url(https://ik.imagekit.io/youshould/default_7_SkbNi54z4.jpg);
+.banner {
    height: 900px;
    position:relative;
 }
@@ -40,4 +38,17 @@
   text-align: center;
   height:700px;
   padding-bottom: 150px;
+}
+
+
+.bottom-left {
+  position: absolute;
+  color: white;
+  bottom: 100px;
+  left: 30px;
+}
+
+.pic  {
+  width: 100px;
+  height: 100px;
 }
