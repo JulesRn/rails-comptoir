@@ -8,6 +8,9 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
+    <%= f.input :name,
+                required: true,
+                input_html: { autocomplete: "Nom" }%>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -15,6 +18,27 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :sex,
+                required: true,
+                input_html: { autocomplete: "Sexe" }%>
+    <%= f.input :sexual_orientation,
+                required: true,
+                input_html: { autocomplete: "Orientation sexuelle" }%>
+    <%= f.input :intention,
+                required: true,
+                input_html: { autocomplete: "Quel type de rencontre cherchez-vous ?" }%>
+    <%= f.input :height,
+                required: true,
+                input_html: { autocomplete: "Taille" }%>
+    <%= f.input :smoker,
+                input_html: { autocomplete: "Je fume" }%>
+    <%= f.input :drinker,
+                input_html: { autocomplete: "Je bois" }%>
+    <%= f.input :description,
+                required: true,
+                input_html: { autocomplete: "Description" }%>
+    <%= f.input :photo, as: :file %>
+
   </div>
 
   <div class="form-actions">

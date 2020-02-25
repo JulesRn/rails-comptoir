@@ -14,6 +14,7 @@ Meeting.destroy_all
 User.destroy_all
 Place.destroy_all
 
+
 sexual_orientation =["hetero", "homo", "bi"]
 days =["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
 

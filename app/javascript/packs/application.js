@@ -22,3 +22,27 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 import "bootstrap";
+
+
+const hideOrDisplayMenu = () => {
+  const x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+const buttonSettings = document.getElementById('user-settings');
+buttonSettings.addEventListener('click', (event) => {
+event.preventDefault();
+hideOrDisplayMenu();
+})
+
+// const buttonUpdateProfile = document.getElementById('update-profile');
+// buttonUpdateProfile.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   hideMenu();
+//   displayMenu();
+// })
