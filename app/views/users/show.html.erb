@@ -1,0 +1,42 @@
+
+<h2><%= @user.name %></h2>
+<p><%#= @user.address %></p>
+<p><%#= @user.rating %></p>
+<p><%= @user.description %></p>
+<p><%= @user.drinker? %></p>
+<p><%= @user.job %></p>
+<p><%= @user.sex %></p>
+<p><%= @user.photo %></p>
+<p><%= @user.sexual_orientation %></p>
+<p><%= @user.sport %></p>
+<p><%= @user.intention %></p>
+<p><%= @user.age %></p>
+<p><%= @user.height %></p>
+<p><%= @user.smoker? %></p>
+<p><%= @user.drinker? %></p>
+<p><%= @user.job %></p>
+<p><%= @user.sex %></p>
+<p><%= @user.sexual_orientation %></p>
+<p><%= @user.sport %></p>
+<p><%= @user.intention %></p>
+<p><%= @user.height %></p>
+<p><%= @user.smoker? %></p>
+<p><%= @user.drinker? %></p>
+
+
+<div class="container">
+  <div class="row justify-content-center"></div>
+    <div class="col-12" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @user.photo%>)">
+      <h2><%= @user.name %></h2>
+      <p><%= @user.age %></p>
+      <p><%= @user.description %></p>
+    </div>
+    <div class="row justify-content-center">
+
+    </div>
+  <%= link_to "Signaler #{@user.name}", "#", class: "btn btn-ghost" %>
+</div>
+
+
+
+
