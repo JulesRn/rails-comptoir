@@ -1,12 +1,9 @@
 class MeetingsController < ApplicationController
 
   def show
-    @user1 = current_user
-    @user2 = User.new
-    @place = Place.new
-
-
-
+    @place = Place.last
+    @liked_user = User.find(params[:id])
+    @like = Like.find_by(user: current_user, liked_user: @liked_user)
   end
 
 end
