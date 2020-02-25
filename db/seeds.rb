@@ -9,6 +9,8 @@ require "nokogiri"
 require "open-uri"
 
 Availability.destroy_all
+Like.destroy_all
+Meeting.destroy_all
 User.destroy_all
 Place.destroy_all
 
@@ -184,3 +186,22 @@ html_doc.search('.card-content').each do |card|
 
   puts "#{bar_name} created!"
 end
+
+
+
+
+ Like.create(user: User.first, liked_user: User.last)
+
+Like.create(user: User.second, liked_user: User.last)
+
+
+   Like.create(user: User.third, liked_user: User.fourth)
+
+
+
+ Meeting.create(user: User.first, liked_user: User.last)
+
+Meeting.create(user: User.second, liked_user: User.last)
+
+
+   Meeting.create(user: User.third, liked_user: User.fourth)

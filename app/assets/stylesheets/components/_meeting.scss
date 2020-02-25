@@ -1,0 +1,43 @@
+
+
+
+.avatar-date {
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  background-position:bottom left;
+  position:absolute;
+  border-radius: 200px;
+  width: 400px;
+  height: 400px;
+  background-position: bottom left;
+  position: absolute;
+  bottom: 50px;
+  right: -50px;
+}
+
+.background-img {
+   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 66, 88, 0) 42.71%, #FAA916 100%), url(https://ik.imagekit.io/youshould/default_7_SkbNi54z4.jpg);
+   height: 900px;
+   position:relative;
+}
+
+.center-text {
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  position:absolute;
+  top: 300px;
+  right: 350px;
+}
+
+.rdv {
+  background: #FAA916;
+  color: white;
+  text-align: center;
+  height:700px;
+  padding-bottom: 150px;
+}
