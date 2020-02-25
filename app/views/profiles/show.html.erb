@@ -4,9 +4,8 @@
 
   <div class="dashboard">
     <h2> <%= current_user.name %> </h2>
-    <%= image_tag "#{current_user.photo}", alt: "user_photo", :class => "avatar-dashboard" %>
-
     <p> <%= current_user.description %> </p>
+    <p> <%= current_user.photo %> </p>
   </div>
 
 
@@ -33,9 +32,6 @@
     <% end %>
   </div>
 </div>
-
-
-<h1>Editer</h1>
 
 
 

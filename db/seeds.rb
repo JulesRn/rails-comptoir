@@ -29,11 +29,7 @@ User.create(
   drinker: true,
   sex: "Homme",
   sexual_orientation: "hetero",
-<<<<<<< HEAD
-  photo: "https://previews.123rf.com/images/dubova/dubova1502/dubova150200154/37009483-selfie-portrait-de-jeune-homme-ext%C3%A9rieur.jpg")
-=======
   photo: "https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639348/nqnbgq5h68wlhql62fkf.jpg")
->>>>>>> master
 
 User.create(
   email: "j@nomail.com",
@@ -99,10 +95,6 @@ User.create(
   drinker: true,
   sex: "Femme",
   sexual_orientation: "hetero",
-<<<<<<< HEAD
-  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYkvfUEB3IuFxALVATBwoVvwQfSs_dCoslEPF0mzMXXg0N1gSi")
-
-=======
   photo: "https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639195/mqra2ye6msbzskc66swm.jpg")
 
 
@@ -214,4 +206,3 @@ Meeting.create(user: User.second, liked_user: User.last)
 
 
    Meeting.create(user: User.third, liked_user: User.fourth)
->>>>>>> master
