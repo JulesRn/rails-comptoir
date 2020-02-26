@@ -35,10 +35,12 @@ const hideOrDisplayMenu = () => {
 
 
 const buttonSettings = document.getElementById('user-settings');
-buttonSettings.addEventListener('click', (event) => {
-event.preventDefault();
-hideOrDisplayMenu();
-})
+if (buttonSettings) {
+  buttonSettings.addEventListener('click', (event) => {
+    event.preventDefault();
+    hideOrDisplayMenu();
+  })
+}
 
 // const buttonUpdateProfile = document.getElementById('update-profile');
 // buttonUpdateProfile.addEventListener('click', (event) => {
@@ -46,4 +48,25 @@ hideOrDisplayMenu();
 //   hideMenu();
 //   displayMenu();
 // })
+
+
+const countdown = document.getElementById('countdown');
+if (countdown) {
+  let initTime = parseInt(countdown.innerText, 10);
+
+  setInterval(() => {
+    initTime = initTime - 1;
+    countdown.innerText = initTime;
+    console.log(initTime);
+  }, 1000);
+
+  // convertir initime en heures minutes secondes
+}
+
+
+
+
+
+
+
 
