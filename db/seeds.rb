@@ -9,8 +9,11 @@ require "nokogiri"
 require "open-uri"
 
 Availability.destroy_all
+Like.destroy_all
+Meeting.destroy_all
 User.destroy_all
 Place.destroy_all
+
 
 sexual_orientation =["hetero", "homo", "bi"]
 days =["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
@@ -184,3 +187,22 @@ html_doc.search('.card-content').each do |card|
 
   puts "#{bar_name} created!"
 end
+
+
+
+
+ Like.create(user: User.first, liked_user: User.last)
+
+Like.create(user: User.second, liked_user: User.last)
+
+
+   Like.create(user: User.third, liked_user: User.fourth)
+
+
+
+ Meeting.create(user1: User.first, user2: User.last)
+
+Meeting.create(user1: User.second, user2: User.last)
+
+
+   Meeting.create(user1: User.third, user2: User.fourth)

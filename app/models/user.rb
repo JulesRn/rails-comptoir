@@ -31,12 +31,13 @@ class User < ApplicationRecord
   end
 
   def first_matching_dispo_with(other_user)
-    my_dispos.each do |dispo|
-      if other_user.my_dispos.include?(dispo)
-        return dispo
-      end
-    end
+    matching_dispos_with(other_user).compact.first
   end
 
+  def matching_dispos_with(other_user)
+    my_dispos.map do |dispo|
+      dispo if other_user.my_dispos.include?(dispo)
+    end
+  end
 
 end
