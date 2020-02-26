@@ -2,10 +2,14 @@
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: 150px;
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid;
 }
 
 .buttons {
@@ -13,7 +17,8 @@
   justify-content: between;
   padding: 50px;
   height: 220px;
-  margin-bottom: 50px;
+  width: 100%;
+  margin: 50px 0px;
 
 }
 
@@ -45,4 +50,16 @@
   color:navy;
   font-size: 60px;
   margin: 0;
+}
+
+.btn-signal {
+  color: white;
+  font-weight: bold;
+  font-size: 55px;
+  justify-content: center;
+  text-decoration: underline white;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  padding-left: 230px;
+  margin-bottom: 20px;
 }

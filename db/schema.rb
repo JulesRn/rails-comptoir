@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_25_132321) do
+ActiveRecord::Schema.define(version: 2020_02_26_120237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(version: 2020_02_25_132321) do
     t.index ["user_id"], name: "index_availabilities_on_user_id"
   end
 
+  create_table "lapins", force: :cascade do |t|
+    t.bigint "meeting_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "lapin_time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["meeting_id"], name: "index_lapins_on_meeting_id"
+    t.index ["user_id"], name: "index_lapins_on_user_id"
+  end
+
   create_table "likes", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "liked_user_id", null: false
@@ -64,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_02_25_132321) do
     t.integer "was_here"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status", default: "occured"
     t.index ["place_id"], name: "index_meetings_on_place_id"
     t.index ["user1_id"], name: "index_meetings_on_user1_id"
     t.index ["user2_id"], name: "index_meetings_on_user2_id"
@@ -78,6 +89,15 @@ ActiveRecord::Schema.define(version: 2020_02_25_132321) do
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "unlikes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "unliked_user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["unliked_user_id"], name: "index_unlikes_on_unliked_user_id"
+    t.index ["user_id"], name: "index_unlikes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -106,9 +126,13 @@ ActiveRecord::Schema.define(version: 2020_02_25_132321) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "availabilities", "users"
+  add_foreign_key "lapins", "meetings"
+  add_foreign_key "lapins", "users"
   add_foreign_key "likes", "users"
   add_foreign_key "likes", "users", column: "liked_user_id"
   add_foreign_key "meetings", "places"
   add_foreign_key "meetings", "users", column: "user1_id"
   add_foreign_key "meetings", "users", column: "user2_id"
+  add_foreign_key "unlikes", "users"
+  add_foreign_key "unlikes", "users", column: "unliked_user_id"
 end

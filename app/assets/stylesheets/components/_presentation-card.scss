@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: center;
   height: 1500px;
-  width: 90%;
+  width: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,10 +24,28 @@
 
 .card-description {
   position: absolute;
+  font-size: 40px;
+  left: 75px;
+  top: 1320px;
+  max-width: 85%;
+  font-weight: normal;
+}
+
+.card-nickname {
+  font-size: 120px;
+  bottom: 180px;
+  left: 70px;
+  color:white;
+  margin-bottom: 40px;
+}
+
+.card-desc {
   font-size: 55px;
   bottom: 110px;
   left: 70px;
   font-weight: normal;
+  color:white;
+  margin-bottom: 40px;
 }
 
 .card-description p {
@@ -37,6 +55,12 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 200px;
+  grid-gap: 0px;
 }
 
+.card-infos {
+  background-color: #FAA916;
+  font-size: 50px;
+  color:white;
+  padding-left: 70px;
+}

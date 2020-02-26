@@ -35,9 +35,14 @@ const hideOrDisplayMenu = () => {
 
 
 const buttonSettings = document.getElementById('user-settings');
-buttonSettings.addEventListener('click', (event) => {
-  hideOrDisplayMenu();
-})
+
+if (buttonSettings) {
+  buttonSettings.addEventListener('click', (event) => {
+    event.preventDefault();
+    hideOrDisplayMenu();
+  })
+}
+
 
 // const buttonUpdateProfile = document.getElementById('update-profile');
 // buttonUpdateProfile.addEventListener('click', (event) => {
@@ -45,3 +50,28 @@ buttonSettings.addEventListener('click', (event) => {
 //   hideMenu();
 //   displayMenu();
 // })
+
+
+const countdown = document.getElementById('countdown');
+if (countdown) {
+  let initTime = parseInt(countdown.innerText, 10);
+
+  setInterval(() => {
+    initTime = initTime - 1;
+    var heure = parseInt((initTime / 3600), 10);
+    var reste = (initTime % 3600);
+    var minutes = parseInt((reste / 60),10);
+    var seconde = reste % 60;
+    countdown.innerText = heure + ":"
+  + minutes + ":" + seconde
+    console.log(initTime);
+  }, 1000);
+};
+
+
+
+
+
+
+
+
