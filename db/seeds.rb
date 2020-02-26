@@ -14,9 +14,45 @@ Meeting.destroy_all
 User.destroy_all
 Place.destroy_all
 
-
-sexual_orientation =["hetero", "homo", "bi"]
+PROFILE_PICS = [
+"https://geeko.lesoir.be/wp-content/uploads/sites/58/2017/11/Toni-Kelly.jpg",
+"https://cdn.pixabay.com/photo/2014/08/27/19/28/selfie-429448_960_720.jpg",
+"https://cdn-media.rtl.fr/online/image/2016/0802/7784308277_kristen-hancher-mannequin-canadien-qui-a-ete-l-un-des-premiers-a-populariser-le-fingermouthing.JPG",
+"https://static1.purepeople.com/articles/9/34/20/89/@/4885736-sahra-la-femme-de-jordan-des-ch-tis-950x0-1.jpg",
+"https://previews.123rf.com/images/lipik/lipik1606/lipik160600558/58759223-belle-femme-faisant-des-selfies-en-position-couchée-sur-le-canapé-ou-un-canapé-à-la-maison-dame-aux-cheveu.jpg",
+"https://c8.alamy.com/compfr/tt87me/femme-d-affaires-a-smartphone-faire-sourire-et-selfies-femme-heureuse-plan-moyen-tt87me.jpg",
+"https://image.freepik.com/photos-gratuite/selfie-femme-dans-nature_23-2147828069.jpg",
+"https://thumbs.dreamstime.com/z/autoportrait-de-femme-de-selfie-de-forme-physique-après-séance-d-entraînement-50655908.jpg",
+"https://i1.wp.com/barnab-paris.com/blog/wp-content/uploads/2017/05/selfie-homme-grande-taille-6.png",
+"https://www.gossip.fr/wp-content/uploads/news/2014-08/photos-baptiste-giabiconi-nouvelle-couleur-de-cheveux-et-rafale-de-selfies-sexy-sur-instagram_53f3632e0e60c.JPG",
+"https://assets.afcdn.com/story/20140502/223265_w980h638c1cx273cy150.jpg",
+"https://media.gqmagazine.fr/photos/5bb32ce272530800113bf69c/master/w_1254,c_limit/selfie_5080.jpeg",
+"https://image.freepik.com/photos-gratuite/souriant-jeune-homme-kayakiste-prenant-selfie_23-2147870361.jpg",
+"https://i.pinimg.com/originals/00/18/e6/0018e6211b1f30c0439b5ffc314fa0aa.jpg",
+"https://www.ztele.com/polopoly_fs/1.1401368!/image/selfie-douche.jpg_gen/derivatives/landscape_490/selfie-douche.jpg",
+"https://c8.alamy.com/compfr/xc9xwb/jeune-homme-chantant-sous-la-douche-xc9xwb.jpg",
+"https://c8.alamy.com/compfr/r57k6f/jeune-homme-couche-sur-une-feuille-dans-le-parc-et-prendre-photo-avec-sourire-niais-selfies-r57k6f.jpg",
+"https://bridoz.com/wp-content/uploads/2015/12/122415-mastering-the-art-of-animal-selfie-2.jpg",
+"https://www.glamourparis.com/uploads/images/thumbs/201603/19/jakohara_476006629_north_400x501_transparent.jpg"]
+SEX = ["Homme", "Femme"]
+SEXUAL_ORIENTATION =["hetero", "homo", "bi"]
 days =["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
+
+100.times do
+  User.create(
+    password: "123456",
+    name: Faker::Name.first_name ,
+    email: Faker::Internet.email(domain: 'nomail'),
+    description: Faker::Quotes::Shakespeare.hamlet_quote,
+    age: rand(18..100).round,
+    height: rand(140..210).round,
+    smoker: true,
+    drinker: true,
+    sex: SEX.sample,
+    sexual_orientation: SEXUAL_ORIENTATION.sample,
+    photo: PROFILE_PICS.sample)
+  puts "user created!"
+end
 
 User.create(
   email: "jf@nomail.com",
