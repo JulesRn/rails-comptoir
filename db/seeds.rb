@@ -10,6 +10,7 @@ require "open-uri"
 
 Availability.destroy_all
 Like.destroy_all
+Lapin.destroy_all
 Meeting.destroy_all
 User.destroy_all
 Place.destroy_all
