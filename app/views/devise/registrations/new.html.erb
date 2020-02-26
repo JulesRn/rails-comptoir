@@ -30,14 +30,16 @@
     <%= f.input :height,
                 required: true,
                 input_html: { autocomplete: "Taille" }%>
-    <%= f.input :smoker,
-                input_html: { autocomplete: "Je fume" }%>
-    <%= f.input :drinker,
-                input_html: { autocomplete: "Je bois" }%>
+    <div class="s-d-check d-flex justify-content-center">
+      <%= f.input :smoker,
+                  input_html: { autocomplete: "Je fume" }%>
+      <%= f.input :drinker,
+                  input_html: { autocomplete: "Je bois" }%>
+    </div>
     <%= f.input :description,
                 required: true,
                 input_html: { autocomplete: "Description" }%>
-    <%= f.input :photo, as: :file %>
+   <div class="photo-button"> <%= f.input :photo, as: :file %> </div>
 
   </div>
 

@@ -26,18 +26,17 @@ import "bootstrap";
 
 const hideOrDisplayMenu = () => {
   const x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
+  if (x.style.display === "block") {
     x.style.display = "none";
+  } else {
+    x.style.display = "block";
   }
 }
 
 
 const buttonSettings = document.getElementById('user-settings');
 buttonSettings.addEventListener('click', (event) => {
-event.preventDefault();
-hideOrDisplayMenu();
+  hideOrDisplayMenu();
 })
 
 // const buttonUpdateProfile = document.getElementById('update-profile');

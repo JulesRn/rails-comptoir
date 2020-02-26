@@ -1,11 +1,10 @@
 
-<div class="container justify-content-center text-center">
-  <h1>Profile</h1>
+<div class="justify-content-center text-center">
 
-  <div class="profile">
-    <h2> <%= current_user.name %> </h2>
-    <p> <%= current_user.description %> </p>
-    <img src="<%= current_user.photo %>" alt="">
+  <% @user = current_user %>
+  <div class="profile" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 40%), url('<%= @user.photo %>');">
+    <h2 id="profile-name"> <%= current_user.name %>, <%= @user.age %> </h2>
+    <p id="profile-description"> <%= current_user.description %> </p>
   </div>
 
 
@@ -18,15 +17,17 @@
   <button id="user-settings">Mes info</button>
   <div class="profile-settings" id="myDIV">
     <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
-      <%= f.input :sex, label: "Sexe" %>
+      <%= f.input :sex, label: "Sexe", html: { autocomplete: false } %>
       <%= f.input :sexual_orientation, label: "Orientation sexuelle" %>
       <%= f.input :name, label: "Nom" %>
       <%= f.input :intention, label: "Je suis là pour :" %>
       <%= f.input :height, label: "Taille" %>
-      <%= f.input :smoker, label: "Je fume"%>
-      <%= f.input :drinker, label: "Je bois" %>
+      <div class="s-d-check d-flex justify-content-center">
+        <%= f.input :smoker, label: "Je fume"%>
+        <%= f.input :drinker, label: "Je bois" %>
+      </div>
       <%= f.input :description, label: "Description" %>
-      <%= f.input :photo, as: :file %>
+      <div class="photo-button"> <%= f.input :photo, as: :file %> </div>
 
       <%= f.submit "Submit", class: "btn btn-primary", id: "update-profile" %>
     <% end %>
