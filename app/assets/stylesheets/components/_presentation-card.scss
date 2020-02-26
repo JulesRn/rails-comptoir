@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: center;
   height: 1500px;
-  width: 90%;
+  width: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +54,7 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 200px;
+  grid-gap: 0px;
 }
 
 .card-infos {

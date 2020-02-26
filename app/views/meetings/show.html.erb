@@ -1,16 +1,16 @@
 
-  <div class="container-fluid">
+
     <div class= "banner" style = 'background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 66, 88, 0) 42.71%, #FAA916 100%), url(<%= "#{@place.photo}" %>); background-size: cover;'>
-      <div class="center-text">
-          <h1>Tu as un date avec </h1>
-          <h1><%=@liked_user.name %></h1>
-        </div>
+          <div class="center-text">
+              <h1>Tu as un date avec </h1>
+              <h1><%=@liked_user.name %></h1>
+          </div>
         <%= link_to user_path(@liked_user) do  %>
         <%= image_tag "#{@liked_user.photo}", alt: "best place ever", class: "avatar-date" %>
         <% end %>
 
         <div class="bottom-left">
-          <a href= <%= "#{@place.url}"%> target ="_blank" >
+          <a href= <%= "#{@place.url}"%> target ="_blank" style="text-decoration: none;">
           <h2><%= @place.name %></h2>
           </a>
           <h3><%= @place.category %></h3>
@@ -23,11 +23,10 @@
       <h2> <%= @dispo%> </h2>
 
       <div class="annulation m-t:4">
-         <%= link_to "Annuler le date", meeting_path(@meeting), method: :delete, class: "btn btn-ghost" %>
+         <%= link_to "Annuler le date",  new_meeting_lapin_path(@meeting), class: "btn btn-ghost" %>
       </div>
     </div>
   </div>
-
 
 
 

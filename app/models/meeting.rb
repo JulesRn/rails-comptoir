@@ -4,4 +4,5 @@ class Meeting < ApplicationRecord
   belongs_to :place
 
   validates :user1_id, :user2_id, :place_id, :date_time, presence: true
+  STATUS = ["cancelled", "occured"]
 end
