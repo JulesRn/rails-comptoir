@@ -22,6 +22,9 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 import "bootstrap";
+import 'jquery-touchswipe/jquery.touchSwipe';
+import { swipeProfile } from "../components/profileswipe";
+swipeProfile();
 
 
 const hideOrDisplayMenu = () => {
