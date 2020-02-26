@@ -38,6 +38,17 @@ SEX = ["Homme", "Femme"]
 SEXUAL_ORIENTATION =["hetero", "homo", "bi"]
 days =["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
 
+
+file = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639348/nqnbgq5h68wlhql62fkf.jpg")
+file2 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638612/pqqxbthn0bzqtilzsogq.jpg")
+file3 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638775/rbzkt3r5tpvupgxqbbhe.jpg")
+file4 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639195/mqra2ye6msbzskc66swm.jpg")
+
+user1 = User.new(email:"jf@nomail.com", name: "jf", password: "coucou", description: "je suis BG", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "hetero")
+user1.photos.attach([{io: file, filename: " ", content_type: 'image/jpg'}, {io: file2, filename: " ", content_type: 'image/jpg'}, {io: file3, filename: " ", content_type: 'image/jpg'}, {io: file4, filename: " ", content_type: 'imagejpg'} ])
+
+user1.save!
+
 100.times do
   User.create(
     password: "123456",
@@ -66,7 +77,6 @@ User.create(
   sex: "Homme",
   sexual_orientation: "hetero",
   photo: "https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639348/nqnbgq5h68wlhql62fkf.jpg")
-
 User.create(
   email: "j@nomail.com",
   password: "coucou les copaings",
