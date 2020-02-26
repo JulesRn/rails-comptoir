@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: center;
   height: 1500px;
-  width: 90%;
+  width: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +37,46 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 200px;
+  grid-gap: 0px;
 }
 
+
+.card-photo {
+  background-size: cover;
+  background-position: center;
+  height: 2000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 50px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+
+.card-infos {
+  background-color: #FAA916;
+  font-size: 50px;
+  color: white;
+}
+
+.card-details {
+  padding-left: 70px;
+}
+
+.card-photo-icone {
+  position: absolute;
+  top: 20px;
+}
+
+.card-photo-active {
+
+}
+
+.card-photo-non-active {
+  opacity: 0.5;
+}

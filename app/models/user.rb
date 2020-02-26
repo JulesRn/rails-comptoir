@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :availabilities
   has_many :lapins
   has_many :liked_users, :class_name => 'Like', :foreign_key => 'liked_user_id'
+  has_many :unliked_users, :class_name => 'Unlike', :foreign_key => 'unliked_user_id'
   validates :email, :name, :description, :age, :height, :sex, :sexual_orientation, :photo, presence: true
 
   def afterworks_dispos

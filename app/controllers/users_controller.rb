@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
+    @like = Like.new
+    @unlike = Unlike.new
   end
 
   def show

@@ -1,22 +1,22 @@
 
 <div class="container justify-content-center text-center">
-  <h1>Dashboard</h1>
+  <h1>Profile</h1>
 
-  <div class="dashboard">
+  <div class="profile">
     <h2> <%= current_user.name %> </h2>
     <p> <%= current_user.description %> </p>
-    <p> <%= current_user.photo %> </p>
+    <img src="<%= current_user.photo %>" alt="">
   </div>
 
 
 
-  <div class="dashboard-availabilities">
+  <div class="profile-availabilities">
     <% current_user.availabilities %>
 
   </div>
 
   <button id="user-settings">Mes info</button>
-  <div class="dashboard-settings" id="myDIV">
+  <div class="profile-settings" id="myDIV">
     <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
       <%= f.input :sex, label: "Sexe" %>
       <%= f.input :sexual_orientation, label: "Orientation sexuelle" %>

@@ -49,6 +49,7 @@ if (buttonSettings) {
 //   displayMenu();
 // })
 
+
 const countdown = document.getElementById('countdown');
 if (countdown) {
   let initTime = parseInt(countdown.innerText, 10);
@@ -61,6 +62,7 @@ if (countdown) {
 
   // convertir initime en heures minutes secondes
 }
+
 
 
 
