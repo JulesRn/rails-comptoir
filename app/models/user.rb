@@ -41,4 +41,53 @@ class User < ApplicationRecord
     end
   end
 
+  def interesting_users
+    cu_id = self.id
+    user = User.find(cu_id)
+    list_users = User.all
+    wanted_users =[]
+    case user.sex
+    when "Homme"
+      if user.sexual_orientation == "hetero"
+        list_users.each do |user|
+          if user.sex == "Femme" && user.sexual_orientation == ("hetero"||"bi")
+            wanted_users << user
+          end
+        end
+      elsif user.sexual_orientation == "homo"
+        list_users.each do |user|
+          if user.sex == "Homme" && user.sexual_orientation == ("homo"||"bi")
+            wanted_users << user
+          end
+        end
+      else
+        list_users.each do |user|
+          if (user.sex == "Femme" && user.sexual_orientation == ("hetero"||"bi")) || (user.sex =="Homme" && user.sexual_orientation == ("homo"||"bi"))
+            wanted_users << user
+          end
+        end
+      end
+    when "Femme"
+      if user.sexual_orientation == "hetero"
+        list_users.each do |user|
+          if user.sex == "Homme" && user.sexual_orientation == ("hetero"||"bi")
+            wanted_users << user
+          end
+        end
+      elsif user.sexual_orientation == "homo"
+        list_users.each do |user|
+          if user.sex == "Femme" && user.sexual_orientation == ("homo"||"bi")
+            wanted_users << user
+          end
+        end
+      else
+        list_users.each do |user|
+          if (user.sex == "Femme" && user.sexual_orientation == ("homo"||"bi")) || (user.sex =="Homme" && user.sexual_orientation == ("hetero"||"bi"))
+            wanted_users << user
+          end
+        end
+      end
+    end
+    wanted_users
+  end
 end
