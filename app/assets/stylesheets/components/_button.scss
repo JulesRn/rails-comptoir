@@ -10,7 +10,6 @@
   font-weight: bold;
   color: white;
   border: 2px solid;
-  justify-content: between;
 }
 
 .buttons {
@@ -57,5 +56,9 @@
   font-weight: bold;
   font-size: 55px;
   justify-content: center;
-  text-decoration: none;
+  text-decoration: underline white;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  padding-left: 230px;
+  margin-bottom: 20px;
 }
