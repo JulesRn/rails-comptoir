@@ -1,7 +1,7 @@
 
 <div class="cards" style="margin-top: 50px;">
 
-  <% @users.each do |user| %>
+  <% @user.seen_users.each do |user| %>
     <%= link_to user_path(user) do  %>
     <div class="card-presentation d-flex flex-column justify-content-center m-auto" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 40%), url(<%= user.photo %>)">
       <h2 class="card-name"><%= user.name %>, <%= user.age %></h2>
