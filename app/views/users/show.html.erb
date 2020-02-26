@@ -1,42 +1,30 @@
 
-<h2><%= @user.name %></h2>
-<p><%#= @user.address %></p>
-<p><%#= @user.rating %></p>
-<p><%= @user.description %></p>
-<p><%= @user.drinker? %></p>
-<p><%= @user.job %></p>
-<p><%= @user.sex %></p>
-<p><%= @user.photo %></p>
-<p><%= @user.sexual_orientation %></p>
-<p><%= @user.sport %></p>
-<p><%= @user.intention %></p>
-<p><%= @user.age %></p>
-<p><%= @user.height %></p>
-<p><%= @user.smoker? %></p>
-<p><%= @user.drinker? %></p>
-<p><%= @user.job %></p>
-<p><%= @user.sex %></p>
-<p><%= @user.sexual_orientation %></p>
-<p><%= @user.sport %></p>
-<p><%= @user.intention %></p>
-<p><%= @user.height %></p>
-<p><%= @user.smoker? %></p>
-<p><%= @user.drinker? %></p>
-
-
-<div class="container">
-  <div class="row justify-content-center"></div>
-    <div class="col-12" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @user.photo%>)">
-      <h2><%= @user.name %></h2>
-      <p><%= @user.age %></p>
-      <p><%= @user.description %></p>
+<div class="container_fluid">
+  <div class="card-photo" style=" background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 66, 88, 0) 42.71%, #FAA916 100%), url(<%= cl_image_path @user.photo%>)">
+    <div class="card-photo-icone d-flex">
+      <div class="card-photo-active">
+        <a href="#"><i class="fas fa-minus"></i></a>
+      </div>
+      <div class="card-photo-non-active">
+        <a href="#"><i class="fas fa-minus"></i></a>
+        <a href="#"><i class="fas fa-minus"></i></a>
+      </div>
+    <h2 class ="card-name"><%= @user.name %>, <%= @user.age %></h2>
+    <p class="card-description"><%= @user.description %></p>
+  </div>
+  <div class="card-infos">
+    <div class="icone d-flex justify-content-center">
+      <a class="btn btn-ghost" href="#"><%= @user.height %></a>
+      <a class="btn btn-ghost" href="#"><i class="fas fa-wine-glass-alt"></i><%#= @user.drinker? %></a>
+      <a class="btn btn-ghost" href="#"><i class="fas fa-smoking"></i><%#= @user.smoker? %></a>
     </div>
-    <div class="row justify-content-center">
-
+    <div class="card-details">
+      <p><%= @user.job %></p>
+      <p><%= @user.sex %></p>
+      <p><%= @user.sexual_orientation %></p>
+      <p><%= @user.sport %></p>
+      <p><%= @user.intention %></p>
     </div>
+  </div>
   <%= link_to "Signaler #{@user.name}", "#", class: "btn btn-ghost" %>
 </div>
-
-
-
-
