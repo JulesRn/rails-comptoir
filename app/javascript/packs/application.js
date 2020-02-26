@@ -56,12 +56,15 @@ if (countdown) {
 
   setInterval(() => {
     initTime = initTime - 1;
-    countdown.innerText = initTime;
+    var heure = parseInt((initTime / 3600), 10);
+    var reste = (initTime % 3600);
+    var minutes = parseInt((reste / 60),10);
+    var seconde = reste % 60;
+    countdown.innerText = heure + ":"
+  + minutes + ":" + seconde
     console.log(initTime);
   }, 1000);
-
-  // convertir initime en heures minutes secondes
-}
+};
 
 
 
