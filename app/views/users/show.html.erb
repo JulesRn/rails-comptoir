@@ -9,9 +9,10 @@
         <a href="#"><i class="fas fa-minus"></i></a>
         <a href="#"><i class="fas fa-minus"></i></a>
       </div>
+  </div>
     <h2 class ="card-name"><%= @user.name %>, <%= @user.age %></h2>
     <p class="card-description"><%= @user.description %></p>
-  </div>
+    </div>
   <div class="card-infos">
     <div class="icone d-flex justify-content-center">
       <a class="btn btn-ghost" href="#"><%= @user.height %></a>
@@ -20,11 +21,16 @@
     </div>
     <div class="card-details">
       <p><%= @user.job %></p>
+      <p><%= @user.sport %></p>
+      <p><%= @user.sexual_orientation %></p>
       <p><%= @user.sex %></p>
       <p><%= @user.sexual_orientation %></p>
-      <p><%= @user.sport %></p>
-      <p><%= @user.intention %></p>
+      <p><%= @user.sex %></p>
+      <p><%= @user.sexual_orientation %></p>
+      <p><%= @user.sex %></p>
     </div>
+   <div class="btn-signal">
+    <%= link_to "Signaler #{@user.name}", "#"%>
+   </div>
   </div>
-  <%= link_to "Signaler #{@user.name}", "#", class: "btn btn-ghost" %>
 </div>
