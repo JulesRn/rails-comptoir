@@ -8,17 +8,17 @@
       <p class="card-description"><%= user.description %></p>
     </div>
     <% end %>
+
     <div class="row mt-5 buttons">
       <div class="col-2">
-        <%= link_to likes_path, class: "btn btn-next"  do  %>
-        <p><i class="fas fa-times"></i></p>
+        <%= simple_form_for @unlike, url: unlikes_path, method: :post do |f| %>
+        <%= f.input :unliked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
+        <%= f.submit "X", class: "btn btn-next", id: "update-profile" %>
         <% end %>
       </div>
       <div class="col">
       <%= simple_form_for @like, url: likes_path, method: :post do |f| %>
       <%= f.input :liked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
-
-
       <%= f.submit "Rencontrer", class: "btn btn-like", id: "update-profile" do %>
         <p>
           <%= image_tag "LogoComptoir.png", style: "height: 100px;" %>

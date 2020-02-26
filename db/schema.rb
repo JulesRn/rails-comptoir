@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_25_132321) do
+ActiveRecord::Schema.define(version: 2020_02_26_120237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,15 @@ ActiveRecord::Schema.define(version: 2020_02_25_132321) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "unlikes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "unliked_user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["unliked_user_id"], name: "index_unlikes_on_unliked_user_id"
+    t.index ["user_id"], name: "index_unlikes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -111,4 +120,6 @@ ActiveRecord::Schema.define(version: 2020_02_25_132321) do
   add_foreign_key "meetings", "places"
   add_foreign_key "meetings", "users", column: "user1_id"
   add_foreign_key "meetings", "users", column: "user2_id"
+  add_foreign_key "unlikes", "users"
+  add_foreign_key "unlikes", "users", column: "unliked_user_id"
 end
