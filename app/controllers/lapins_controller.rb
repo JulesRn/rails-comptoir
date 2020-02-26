@@ -1,20 +1,31 @@
 class LapinsController < ApplicationController
   def show
     @lapin = Lapin.find(params[:id])
+    @start = @lapin.created_at
+    # @start_unix_time = @start.to_time.to_i
+    @end = @start + 1.day
+    @end_unix_time = @end.to_time.to_i
+
+    @now_unix_time = DateTime.now.in_time_zone.to_time.to_i
+
+    @countdown_in_seconds = @end_unix_time - @now_unix_time
+    @countdown_in_hours = Time.at(@countdown_in_seconds).utc.strftime('%H:%M:%S')
+
+
+
   end
 
   def new
     @meeting = Meeting.find(params[:meeting_id])
     @meeting.status = "cancelled"
     @user = current_user
-    @lapin_time = DateTime.now
-    @lapin = Lapin.new(user: @user, meeting: @meeting, lapin_time: @lapin_time)
+    @lapin = Lapin.new(user: @user, meeting: @meeting)
     @lapin.save!
     # countdown_time_in_seconds = 31_536_000
 
     # countdown_time_in_seconds.downto(0) do |seconds|
     # puts (@time + seconds).strftime('%H:%M:%S')
     # sleep r
-    redirect_to meeting_lapin_path(id: @lapin.id)
+    redirect_to lapin_path(id: @lapin.id)
   end
 end

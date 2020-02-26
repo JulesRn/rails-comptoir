@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # 'get' to: 'meetings#lapin'
   resources :meetings, only: :show do
-    resources :lapins, only: [:show, :new]
+    resources :lapins, only: [:new]
   end
+  resources :lapins, only: [:show]
 
   resources :likes, only: :create
   resources :users, only: [:create, :index, :show, :edit, :update, :new]
