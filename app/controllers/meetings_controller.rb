@@ -13,11 +13,7 @@ class MeetingsController < ApplicationController
     @dispo = current_user.first_matching_dispo_with(@liked_user)
   end
 
-  def destroy
-    @meeting = Meeting.find(params[:id])
-    @meeting.destroy
-    redirect_to user_path
-  end
-
 end
+
+
 
