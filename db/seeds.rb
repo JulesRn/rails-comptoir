@@ -38,7 +38,7 @@ Place.destroy_all
 # "https://www.glamourparis.com/uploads/images/thumbs/201603/19/jakohara_476006629_north_400x501_transparent.jpg"]
 SEX = ["Homme", "Femme"]
 SEXUAL_ORIENTATION =["hetero", "homo", "bi"]
-days =["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
+days = User::DAYS
 
 
 file = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639348/nqnbgq5h68wlhql62fkf.jpg")
