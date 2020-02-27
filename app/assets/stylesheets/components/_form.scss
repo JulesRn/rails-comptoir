@@ -143,6 +143,7 @@ input:checked + label {
     border-radius: 50px;
 }
 
+
 #user_intention {
   background-image: none;
   border-color: grey;
@@ -154,6 +155,18 @@ input:checked + label {
   height: 130px;
 }
 
+
+#new_like form {
+  height: 150px;
+}
+
+#new_like > .form-group {
+  margin: 0;
+}
+
+#new_unlike > .form-group {
+  margin: 0;
+}
 
 //   label::before {
 //       content: '';

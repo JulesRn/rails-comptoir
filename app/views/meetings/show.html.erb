@@ -6,7 +6,7 @@
               <h1 class="text-center"><%=@liked_user.name %></h1>
           </div>
         <%= link_to user_path(@liked_user) do  %>
-        <%= image_tag "#{@liked_user.photo}", alt: "best place ever", class: "avatar-date" %>
+        <%= cl_image_tag "#{@liked_user.photos[0].key}", alt: "best place ever", class: "avatar-date" %>
         <% end %>
 
         <div class="bottom-left-meeting">
