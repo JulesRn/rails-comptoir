@@ -3827,6 +3827,11 @@ jest-worker@^25.1.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
+jquery-touchswipe@^1.6.19:
+  version "1.6.19"
+  resolved "https://registry.yarnpkg.com/jquery-touchswipe/-/jquery-touchswipe-1.6.19.tgz#dfd5ddaec0b78212dd500d29707129b9c7fd6cd4"
+  integrity sha512-b0BGje9reNRU3u6ksAK9QqnX7yBRgLNe/wYG7DOfyDlhBlYjayIT8bSOHmcuvptIDW/ubM9CTW/mnZf9Rohuow==
+
 jquery@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
