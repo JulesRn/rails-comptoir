@@ -2,7 +2,7 @@ body, input, textarea {
   font-size: 55px;
 }
 
-.form-group {
+#myDIV .form-group {
   position: relative;
   height: 150px;
 
@@ -25,7 +25,7 @@ body, input, textarea {
   }
 }
 
-.form-check {
+#myDIV .form-check {
   input[type="checkbox"] {
     display: none;
 
@@ -60,14 +60,14 @@ body, input, textarea {
 
 }
 
-.form-check-input {
+#myDIV .form-check-input {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 20px 0;
 }
 
-.form-check-input {
+#myDIV .form-check-input {
   background: #b7b7b7;
   padding: 20px;
   border-radius: 5px;
