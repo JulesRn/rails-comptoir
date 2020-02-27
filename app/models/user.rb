@@ -61,7 +61,7 @@ class User < ApplicationRecord
             wanted_users << user
           end
         end
-      else
+      elsif cu_user.sexual_orientation == "bi"
         list_users.each do |user|
           if (user.sex == "Femme" && user.sexual_orientation == ("hetero"||"bi")) || (user.sex =="Homme" && user.sexual_orientation == ("homo"||"bi"))
             wanted_users << user
@@ -81,7 +81,7 @@ class User < ApplicationRecord
             wanted_users << user
           end
         end
-      else
+      elsif cu_user.sexual_orientation == "bi"
         list_users.each do |user|
           if (user.sex == "Femme" && user.sexual_orientation == ("homo"||"bi")) || (user.sex =="Homme" && user.sexual_orientation == ("hetero"||"bi"))
             wanted_users << user

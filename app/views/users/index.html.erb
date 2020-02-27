@@ -13,18 +13,18 @@
       <div class="row mt-5 buttons">
         <div class="col-2">
           <%= simple_form_for @unlike, url: unlikes_path, method: :post do |f| %>
-          <%= f.input :unliked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
-          <%= f.submit "X", class: "btn btn-next", id: "next-profile_#{user.id}" %>
+            <%= f.input :unliked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
+            <%= f.submit "X", class: "btn btn-next", id: "next-profile_#{user.id}" %>
           <% end %>
         </div>
         <div class="col">
           <%= simple_form_for @like, url: likes_path, method: :post do |f| %>
             <%= f.input :liked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
             <%= f.submit "Rencontrer", class: "btn btn-like", id: "meet-profile_#{user.id}" do %>
-              <p>
-                <%= image_tag "LogoComptoir.png", style: "height: 100px;" %>
+              <!-- <p>
+                <%#= image_tag "LogoComptoir.png", style: "height: 100px;" %>
                 Rencontrer
-              </p>
+              </p> -->
             <% end %>
           <% end %>
         </div>
