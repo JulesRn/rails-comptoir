@@ -1,0 +1,17 @@
+
+<div class="calendar" id="calendar-form">
+<%= simple_form_for current_user do |m| %>
+    <div class="card-centrer" style="max-width: 100vh height: 230px;">
+    <%= m.simple_fields_for :availabilities do |availability| %>
+      <div class="card-header" style="text-align: center">
+      <%= availability.object.days %>
+      </div>
+      <p class="card-text-calendar"style="text-align: center; text-decoration: none">
+      <%= availability.input :afterwork, input_html: { checked: availability.object.afterwork }, required: false, as: :boolean , inline_label: "18h : Afterwork" %>
+      <%= availability.input :diner_time, input_html: { checked: availability.object.diner_time },  required: false, as: :boolean, inline_label: "20h : Soirée" %>
+      </p>
+    <% end %>
+    <%= m.submit 'valider', class: 'btn-like' %>
+  </div>
+<% end %>
+</div>

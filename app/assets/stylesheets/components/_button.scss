@@ -12,6 +12,21 @@
   border: 2px solid;
 }
 
+
+.btn-ghost-small {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 4px 12px;
+  border-radius: 150px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid;
+}
+
 .buttons {
   display: flex;
   justify-content: between;
@@ -25,31 +40,27 @@
   box-shadow:0 0 50px lightgrey;
   background-color:white;
   width: 100%;
-  height:100%;
+  height:120px;
   border-radius: 30px;
-}
-
-.btn-next p {
   color:red;
   font-size: 80px;
   margin: 0;
 }
 
+
 .btn-like {
   box-shadow:0 0 50px lightgrey;
   background-color:white;
   width: 100%;
-  height:100%;
+  height:120px;
   border-radius: 30px;
   text-align: center;
   padding-top: 12px;
-}
-
-.btn-like p {
   color:navy;
   font-size: 60px;
   margin: 0;
 }
+
 
 .btn-signal {
   color: white;

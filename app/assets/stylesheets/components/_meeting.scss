@@ -1,38 +1,33 @@
 .avatar-date {
   border: 10px solid #FFFFFF;
-  box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-  width: 100px;
-  height: 100px;
-  background-position:bottom left;
-  position:absolute;
+  position: absolute;
   border-radius: 200px;
   width: 400px;
   height: 400px;
-  background-position: bottom left;
-  position: absolute;
   bottom: 50px;
   right: -50px;
+  object-fit: cover;
+  object-position: right;
 }
 
-.banner {
+.banner-meeting {
    height: 899px;
    position:relative;
      overflow: hidden;
 }
 
-.center-text {
+.center-text-meeting {
   margin-left: auto;
   margin-right: auto;
   color: white;
   position:absolute;
   top: 200px;
-  right: 200px;
+  right: 250px;
   font-weight: bold;
   font-weight: bold;
 }
-.center-text h1{
+.center-text-meeting h1{
  font-size: 80px;
   font-weight: bold;
   text-decoration: none;
@@ -52,25 +47,24 @@
   font-weight: bold;
   text-decoration: none;
   color: white;
-  padding-bottom: 300px;
+  padding-bottom: 500px;
 }
 
-
-.bottom-left {
+.bottom-left-meeting {
   position: absolute;
   color: white;
   bottom: 100px;
   left: 30px;
   font-family: 'Quicksand';
 }
-.bottom-left h2{
+.bottom-left-meeting h2{
   font-size: 100px;
   font-weight: bold;
   text-decoration: none;
   color: white;
 }
 
-.bottom-left h3{
+.bottom-left-meeting h3{
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
