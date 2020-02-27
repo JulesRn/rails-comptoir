@@ -13,8 +13,6 @@ class MeetingsController < ApplicationController
                     @meeting.user2
                   end
     @like = Like.find_by(user: current_user, liked_user: @liked_user)
-
-    @dispo = current_user.first_matching_dispo_with(@liked_user)
   end
 
 end

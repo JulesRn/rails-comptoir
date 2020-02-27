@@ -16,31 +16,27 @@ class LikesController < ApplicationController
 
     if @like.save
       create_meeting_if_match(@like.liked_user)
-      redirect_to users_path
+      redirect_to meeting_path(@meeting.id)
     else
       render "users/index"
     end
   end
 
   def create_meeting_if_match(user)
-      if user.liked_user == current_user
+     # if user.liked_user == current_user
         dispo = current_user.first_matching_dispo_with(user)
         next_day = TRANSLATION.key(dispo.first)
         next_date = Date.tomorrow.end_of_week(next_day)
-        raise
         next_hour = ''
-        if dispo.last == "afterwork"
-          next_hour = "18".to_i
-        else
-          next_hour = "20".to_i
-        end
+          if dispo.last == "afterwork"
+            next_hour = Time.at("18".to_i)
+          else
+            next_hour = Time.at("20".to_i)
+          end
 
-        Meeting.create(start_time: next_date, start_hour: next_hour, user1: current_user, user2: user, place: Place.all.sample)
-      end
-        # if the other user already liked, create a meeting
-    # transform date string into date object
-    # Meeting.creatr(user_1: )...
-  end
+        @meeting = Meeting.create(start_time: next_date, start_hour: next_hour, user1: current_user, user2: user, place: Place.all.sample)
 
+
+    end
 
 end

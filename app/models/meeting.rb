@@ -9,7 +9,7 @@ class Meeting < ApplicationRecord
 
   def time_for_feedback?
     # (time du debut du meeting + 30min ) > Time.zone.now
-    DateTime.new(start_time,start_hour) > Time.zone.now
+    # DateTime.new(start_time,start_hour) > Time.zone.now
 
   end
 end
