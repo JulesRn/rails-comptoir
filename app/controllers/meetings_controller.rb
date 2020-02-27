@@ -13,6 +13,11 @@ class MeetingsController < ApplicationController
                     @meeting.user2
                   end
     @like = Like.find_by(user: current_user, liked_user: @liked_user)
+
+    @day = @meeting.start_time.day
+    @month = @meeting.start_time.strftime('%B')
+    @hour =  @meeting.start_hour.strftime('%S')
+
   end
 
 end
