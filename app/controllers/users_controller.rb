@@ -4,6 +4,11 @@ class UsersController < ApplicationController
     @user = current_user
     @like = Like.new
     @unlike = Unlike.new
+
+    if request.referer.include?("lapins")
+      message = "#{@user.name}, Comptoir vous réouvre ses portes!"
+      TwilioTextMessenger.new(message).call(ENV['TWILIO_SID'], ENV['TWILIO_TOKEN'])
+    end
   end
 
   def show
