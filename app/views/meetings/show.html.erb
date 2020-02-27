@@ -19,9 +19,8 @@
     </div>
 
     <div class = "rdv">
-      <h1>Ton date est le :</h1>
-      <!-- <h2> <%# @dispo.each do |d|%> </h2>
-      <%# end %> -->
+      <h1>Ton date est le :<%= @meeting.start_time %></h1>
+      <h1>à: <%= @meeting.start_hour %>H</h1>
       <div class="annulation m-t:4">
          <%= link_to "Annuler le date",  meeting_lapins_path(@meeting), method: :post, class: "btn-ghost-small" %>
       </div>
