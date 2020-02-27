@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container text-center align-items-center" style="height: 100vh; width: 100%; margin-top:30vh;">
+<%= image_tag "LogoComptoir.png" , style: "height: 30vh"%>
+<h1 style="font-size: 80px;">COMPTOIR</h1>
+<%= link_to "Se connecter", new_user_session_path, class: "btn btn-dark", style: "font-size: 50px;
+    border-radius: 17px;
+    margin-top: 50px;
+    padding: 5px 80px;" %>
+    <br>
+<%= link_to "me créer un compte" ,new_user_registration_path, style: "font-size: 40px; color: lightgrey;" %>
+</div>
