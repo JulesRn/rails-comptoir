@@ -1,19 +1,14 @@
 .avatar-date {
   border: 10px solid #FFFFFF;
-  box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-  width: 100px;
-  height: 100px;
-  background-position:bottom left;
-  position:absolute;
+  position: absolute;
   border-radius: 200px;
   width: 400px;
   height: 400px;
-  background-position: bottom left;
-  position: absolute;
   bottom: 50px;
   right: -50px;
+  object-fit: cover;
+  object-position: right;
 }
 
 .banner-meeting {
