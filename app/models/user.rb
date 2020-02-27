@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :lapins
   has_many :liked_users, :class_name => 'Like', :foreign_key => 'liked_user_id', dependent: :destroy
   has_many :unliked_users, :class_name => 'Unlike', :foreign_key => 'unliked_user_id', dependent: :destroy
-  validates :email, :name, :description, :age, :height, :sex, :sexual_orientation, :photo, presence: true
+  validates :email, :name, :description, :age, :height, :sex, :sexual_orientation, presence: true
 
   def afterworks_dispos
     avails = self.availabilities.pluck(:days, :afterwork).delete_if { |arr| arr.last == false }
