@@ -36,7 +36,9 @@ Place.destroy_all
 # "https://www.glamourparis.com/uploads/images/thumbs/201603/19/jakohara_476006629_north_400x501_transparent.jpg"]
 SEX = ["Homme", "Femme"]
 SEXUAL_ORIENTATION =["hetero", "homo", "bi"]
-days =["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
+
+days = User::DAYS
+
 file = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639348/nqnbgq5h68wlhql62fkf.jpg")
 file2 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638612/pqqxbthn0bzqtilzsogq.jpg")
 file3 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638775/rbzkt3r5tpvupgxqbbhe.jpg")
@@ -172,5 +174,10 @@ html_doc.search('.card-content').each do |card|
 end
 #  Like.create(user: User.first, liked_user: User.last)
 # Like.create(user: User.second, liked_user: User.last)
+
+
+
 #    Like.create(user: User.third, liked_user: User.fourth)
+
+
 Meeting.create(user1_id: User.first[:id], user2_id: User.last[:id], place_id: Place.first[:id], date_time: Date.new)

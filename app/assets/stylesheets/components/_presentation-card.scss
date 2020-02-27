@@ -41,8 +41,8 @@
   font-size: 120px;
   bottom: 180px;
   left: 70px;
-  color:white;
-  margin-bottom: 40px;
+  color: white;
+  margin-bottom: 0px;
 }
 
 .card-desc {
@@ -51,7 +51,7 @@
   left: 70px;
   font-weight: normal;
   color:white;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .card-description p {
@@ -65,8 +65,10 @@
 }
 
 .card-infos {
+  min-height: 60vh;
   background-color: #FAA916;
   font-size: 50px;
-  color:white;
-  padding-left: 70px;
+  color: white;
+  padding: 30px 70px;
+  position:relative;
 }

@@ -79,4 +79,3 @@ document.addEventListener('turbolinks:load', () => {
 
 
 
-
