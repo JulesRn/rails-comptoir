@@ -98,16 +98,14 @@ class User < ApplicationRecord
   def seen_users
     cu_id = self.id
     cu_user = User.find(cu_id)
-    p list_users = interesting_users
+    list_users = interesting_users
     wanted_users = []
     list_users.each do |user|
-      p seen = false
+      seen = false
       user.liked_users.each do |like|
-        p like
         seen = true if like.user_id == cu_id
       end
       user.unliked_users.each do |unlike|
-        p unlike
         seen = true if unlike.user_id == cu_id
       end
       wanted_users << user if seen == false
