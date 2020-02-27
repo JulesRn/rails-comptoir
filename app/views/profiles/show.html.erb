@@ -17,11 +17,11 @@
   <button id="user-settings">Mes info</button>
   <div class="profile-settings" id="myDIV">
     <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
-      <%= f.input :sex, label: "Sexe", html: { autocomplete: false } %>
-      <%= f.input :sexual_orientation, label: "Orientation sexuelle" %>
+      <%= f.input :sex, collection: ["homme", "femme"], label: "Sexe", html: { autocomplete: false } %>
+      <%= f.input :sexual_orientation, collection: ["hetero", "bi", "homo"], label: "Orientation sexuelle" %>
       <%= f.input :name, label: "Nom" %>
-      <%= f.input :intention, label: "Je suis là pour :" %>
-      <%= f.input :height, label: "Taille" %>
+      <%= f.input :intention, collection: ["pas de plan d'un soir", "pas de serieux", "on verra bien"], label: "Type de rencontre :" %>
+      <%= f.input :height, label: "Taille en cm" %>
       <div class="s-d-check d-flex justify-content-center">
         <%= f.input :smoker, label: "Je fume"%>
         <%= f.input :drinker, label: "Je bois" %>

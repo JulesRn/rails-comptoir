@@ -2,6 +2,10 @@ class MeetingsController < ApplicationController
 
   def show
     @meeting = Meeting.find(params[:id])
+
+    redirect_to "feedback path" if @meeting.time_for_feedback?
+
+
     @place = @meeting.place
     @liked_user = if @meeting.user2.id == current_user.id
                     @meeting.user1
