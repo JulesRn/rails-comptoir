@@ -10,7 +10,10 @@ Rails.application.routes.draw do
 
   resources :likes, only: :create
   resources :unlikes, only: :create
-  resources :users, only: [:create, :index, :show, :edit, :update, :new]
+  resources :users, only: [:create, :index, :show, :edit, :update, :new] do
+    resources :availabilities, only: [:new, :create, :update, :edit]
+  end
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resource :profile, only: [:show, :update]

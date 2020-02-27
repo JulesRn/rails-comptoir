@@ -16,23 +16,23 @@
   right: -50px;
 }
 
-.banner {
+.banner-meeting {
    height: 899px;
    position:relative;
      overflow: hidden;
 }
 
-.center-text {
+.center-text-meeting {
   margin-left: auto;
   margin-right: auto;
   color: white;
   position:absolute;
   top: 200px;
-  right: 200px;
+  right: 250px;
   font-weight: bold;
   font-weight: bold;
 }
-.center-text h1{
+.center-text-meeting h1{
  font-size: 80px;
   font-weight: bold;
   text-decoration: none;
@@ -52,25 +52,24 @@
   font-weight: bold;
   text-decoration: none;
   color: white;
-  padding-bottom: 300px;
+  padding-bottom: 500px;
 }
 
-
-.bottom-left {
+.bottom-left-meeting {
   position: absolute;
   color: white;
   bottom: 100px;
   left: 30px;
   font-family: 'Quicksand';
 }
-.bottom-left h2{
+.bottom-left-meeting h2{
   font-size: 100px;
   font-weight: bold;
   text-decoration: none;
   color: white;
 }
 
-.bottom-left h3{
+.bottom-left-meeting h3{
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
