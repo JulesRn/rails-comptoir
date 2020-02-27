@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # 'get' to: 'meetings#lapin'
   resources :meetings, only: :show do
-    resources :lapins, only: [:new]
+    resources :lapins, only: [:create]
   end
   resources :lapins, only: [:show]
 

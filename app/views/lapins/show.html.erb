@@ -3,12 +3,17 @@
     <h1>Vous avez posé un lapin</h1>
     <img class="relative" src="http://recueil-de-png.r.e.pic.centerblog.net/51cf50a2.png" alt="">
     <%= link_to users_path do  %>
-    <img class="absolu"src="https://www.pinclipart.com/picdir/big/70-707378_coeur-bris-png-clipart.png" alt="">
-    <% end %>
+      <img class="absolu"src="https://www.pinclipart.com/picdir/big/70-707378_coeur-bris-png-clipart.png" alt="">
+    <%end %>
   </div>
   <div class ="chrono">
     <h2> Rendez-vous dans:</h2>
     <p id='countdown'><%= @countdown_in_seconds %></p>
   </div>
+<!--   <div>
+    <%#= simple_form_for :lapin, url: users_path, method: :get, html: { class: "hidden_simple_form"} do |f| %>
+    <%#= f.input :lapin, input_html: {value: 'lapin'} %>
+    <%#= f.submit 'submit', id: 'heart_like' %>
+    <%# end %>
+  </div> -->
 </div>
-

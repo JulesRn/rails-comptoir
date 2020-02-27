@@ -23,7 +23,7 @@
       <h2> <%= @dispo%> </h2>
 
       <div class="annulation m-t:4">
-         <%= link_to "Annuler le date",  new_meeting_lapin_path(@meeting), class: "btn btn-ghost" %>
+         <%= link_to "Annuler le date",  meeting_lapins_path(@meeting), method: :post, class: "btn btn-ghost" %>
       </div>
     </div>
   </div>

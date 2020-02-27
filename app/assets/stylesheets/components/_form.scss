@@ -138,6 +138,10 @@ input:checked + label {
     border-radius: 50px;
 }
 
+.hidden_simple_form {
+  display:none;
+}
+
 //   label::before {
 //       content: '';
 //       display: block;
