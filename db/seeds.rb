@@ -10,6 +10,7 @@ require "open-uri"
 
 Availability.destroy_all
 Like.destroy_all
+Unlike.destroy_all
 Lapin.destroy_all
 Meeting.destroy_all
 User.destroy_all
@@ -213,18 +214,14 @@ end
 
 
 
- Like.create(user: User.first, liked_user: User.last)
+#  Like.create(user: User.first, liked_user: User.last)
 
-Like.create(user: User.second, liked_user: User.last)
-
-
-   Like.create(user: User.third, liked_user: User.fourth)
+# Like.create(user: User.second, liked_user: User.last)
 
 
-
- Meeting.create(user1: User.first, user2: User.last)
-
-Meeting.create(user1: User.second, user2: User.last)
+#    Like.create(user: User.third, liked_user: User.fourth)
 
 
-   Meeting.create(user1: User.third, user2: User.fourth)
+
+Meeting.create(user1_id: User.first[:id], user2_id: User.last[:id], place_id: Place.first[:id], date_time: Date.new)
+
