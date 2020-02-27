@@ -43,7 +43,7 @@ file4 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639195/
 user1 = User.new(email:"jf@nomail.com", name: "jf", password: "coucou", description: "je suis BG", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "hetero")
 user1.photos.attach([{io: file, filename: " ", content_type: 'image/jpg'}, {io: file2, filename: " ", content_type: 'image/jpg'}, {io: file3, filename: " ", content_type: 'image/jpg'}, {io: file4, filename: " ", content_type: 'imagejpg'} ])
 user1.save!
-file1 = File.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639348/nqnbgq5h68wlhql62fkf.jpg")
+file1 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639348/nqnbgq5h68wlhql62fkf.jpg")
 user2 = User.new(email:"j@nomail.com", name: "Gigi", password: "coucou les copaings", description: "je suis une BG", age:27, height: "170", smoker: false,  drinker: true, sex: "Femme", sexual_orientation: "hetero")
 user2.photos.attach(io: file1, filename: " ", content_type: 'image/jpg')
 user2.save!
