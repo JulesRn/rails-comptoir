@@ -16,10 +16,14 @@ const swipeProfile = () => {
         // console.log(btnNext);
         var btnMeet = $(this).find(`#meet-profile_${profileId}`);
         // console.log(btnMeet);
+        var btnProfile = $(this).find(`.profile-link`);
+         console.log(btnProfile);
         if (direction === "left") {
           btnNext.click();
         } else if (direction === "right") {
           btnMeet.click();
+        } else if (direction === "up") {
+          btnProfile.click();
         }
       },
       threshold:0,
