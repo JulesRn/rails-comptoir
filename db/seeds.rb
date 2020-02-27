@@ -226,4 +226,5 @@ end
 
 
 Meeting.create(user1_id: User.first[:id], user2_id: User.last[:id], place_id: Place.first[:id], date_time: Date.new)
+Like.create(user_id: User.first[:id], liked_user_id: User.last[:id])
 
