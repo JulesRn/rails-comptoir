@@ -138,6 +138,18 @@ input:checked + label {
     border-radius: 50px;
 }
 
+#new_like form {
+  height: 150px;
+}
+
+#new_like > .form-group {
+  margin: 0;
+}
+
+#new_unlike > .form-group {
+  margin: 0;
+}
+
 //   label::before {
 //       content: '';
 //       display: block;
