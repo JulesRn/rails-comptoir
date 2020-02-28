@@ -15,15 +15,19 @@ class LikesController < ApplicationController
     @like.liked_user = User.find(params[:like][:liked_user])
 
     if @like.save
-      create_meeting_if_match(@like.liked_user)
-      redirect_to meeting_path(@meeting.id)
+      # create_meeting_if_match(@like.liked_user)
+      if create_meeting_if_match(@like.liked_user)
+        redirect_to meeting_path(@meeting)
+      else
+        redirect_to users_path
+      end
     else
       render "users/index"
     end
   end
 
   def create_meeting_if_match(user)
-     if user.liked_user == @like.user
+     if user.liked_users == @like.user
         dispo = current_user.first_matching_dispo_with(user)
         next_day = TRANSLATION.key(dispo.first)
         next_date = Date.tomorrow.end_of_week(next_day)
