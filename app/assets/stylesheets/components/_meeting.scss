@@ -23,12 +23,12 @@
   color: white;
   position: absolute;
   top: 250px;
-  right: 200px;
+  right: 300px;
   font-size: 100px;
   font-weight: bold;
 }
 .center-text-meeting h1{
- font-size: 80px;
+ font-size: 120px;
   font-weight: bold;
   text-decoration: none;
   color: white;
@@ -41,30 +41,38 @@
 }
 
 .rdv h1{
-  font-size: 70px;
+  font-size: 120px;
   font-weight: bold;
   text-decoration: none;
-  padding-bottom: 280px;
   padding-right: 20px;
   padding-top: 50px;
+}
+
+.rdv h2{
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-bottom: 150px;
+  padding-right: 20px;
 }
 
 .bottom-left-meeting {
   position: absolute;
   color: white;
-  bottom: 100px;
+  bottom: 200px;
   left: 30px;
   font-family: 'Quicksand';
 }
 .bottom-left-meeting h2{
-  font-size: 70px;
+  font-size: 60px;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration: underline;
+
   color: white;
 }
 
 .bottom-left-meeting h3{
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   text-decoration: none;
   color: white;
