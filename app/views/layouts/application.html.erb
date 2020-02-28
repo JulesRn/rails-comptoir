@@ -7,13 +7,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-     <link href="http://fr.allfont.net/allfont.css?fonts=digital-7" rel="stylesheet" type="text/css" />
      <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
 
   </head>
 
   <body style="background-color: white">
-    <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" %>
+    <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages" %>
     <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>

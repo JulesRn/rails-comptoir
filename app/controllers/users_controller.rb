@@ -4,6 +4,13 @@ class UsersController < ApplicationController
     @user = current_user
     @like = Like.new
     @unlike = Unlike.new
+
+    unless request.referer.nil?
+      if request.referer.include?("lapins")
+        message = "#{@user.name}, Comptoir te réouvre ses portes!"
+        TwilioTextMessenger.new(message).call(ENV['TWILIO_SID'], ENV['TWILIO_TOKEN'])
+      end
+    end
   end
 
   def show
@@ -33,7 +40,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :age, :description, :job, :intention, :sex, :sexual_orientation, :height, :sport, :smorker?, :drinker?, photos: [])
+    params.require(:user).permit(:name, :age, :description, :job, :intention, :sex, :sexual_orientation, :height, :sport, :smorker?, :drinker?, photos: [], availabilities_attributes: [:id, :afterwork, :diner_time])
   end
 
   private

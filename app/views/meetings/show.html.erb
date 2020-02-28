@@ -1,6 +1,6 @@
 
 <div class="ecran">
-    <div class= "banner-meeting" style = 'background-image: linear-gradient(0deg, rgba(250,169,22,1) 0%, rgba(0,0,0,0) 47%, rgba(0,0,0,0.9) 100%), url(<%= "#{@place.photo}" %>); background-size: cover;'>
+    <div class= "banner-meeting" style = 'background-image: linear-gradient(0deg, rgba(18,193,187,100) 0%, rgba(0,0,0,0) 47%, rgba(0,0,0,0.9) 100%), url(<%= "#{@place.photo}" %>); background-size: cover;'>
           <div class="center-text-meeting">
               <h1>Tu vas dater </h1>
               <h1 class="text-center"><%=@liked_user.name %></h1>
@@ -11,23 +11,26 @@
 
         <div class="bottom-left-meeting">
           <a href= <%="#{@place.url}"%> target ="_blank" style="text-decoration: none;">
-          <h2><%= @place.name %></h2>
+            <% if @place.name.size >= 13 %>
+              <h2 class="m-0" id="address"><%= @place.name.first(13) %>...</h2>
+            <% else %>
+              <h2 class="m-0" id="address"><%= @place.name %></h2>
+            <% end %>
           </a>
           <h3><%= @place.category %></h3>
           <h3><%= @place.address %></h3>
         </div>
     </div>
-
-    <div class = "rdv">
-      <h1>Ton date est le :</h1>
-      <!-- <h2> <%# @dispo.each do |d|%> </h2>
-      <%# end %> -->
-      <div class="annulation m-t:4">
-         <%= link_to "Annuler le date",  new_meeting_lapin_path(@meeting), class: "btn-ghost-small" %>
-      </div>
+    <div class="bottom-ecran">
+        <div class = "rdv">
+          <h1>Ton date est le : <%= @day %> <%= @month %> <br> à: <%= @hour%>H</h1>
+        </div>
+        <div class="annulation">
+          <%= link_to "Annuler le date",  meeting_lapins_path(@meeting), method: :post, class: "btn-ghost-small" %>
+        </div>
     </div>
   </div>
-</div>
+
 
 
 

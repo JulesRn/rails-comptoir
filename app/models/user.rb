@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  DAYS = ["lundi", "mardi",  "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many_attached :photos
@@ -11,6 +12,8 @@ class User < ApplicationRecord
   has_many :liked_users, :class_name => 'Like', :foreign_key => 'liked_user_id', dependent: :destroy
   has_many :unliked_users, :class_name => 'Unlike', :foreign_key => 'unliked_user_id', dependent: :destroy
   validates :email, :name, :description, :age, :height, :sex, :sexual_orientation, presence: true
+  after_create :create_user_weeks_availabilities
+  accepts_nested_attributes_for :availabilities
 
   def afterworks_dispos
     avails = self.availabilities.pluck(:days, :afterwork).delete_if { |arr| arr.last == false }
@@ -51,19 +54,19 @@ class User < ApplicationRecord
     when "Homme"
       if cu_user.sexual_orientation == "hetero"
         list_users.each do |user|
-          if user.sex == "Femme" && user.sexual_orientation == ("hetero"||"bi")
+          if user.sex == "Femme" && (user.sexual_orientation == "homo" || user.sexual_orientation == "bi")
             wanted_users << user
           end
         end
       elsif cu_user.sexual_orientation == "homo"
         list_users.each do |user|
-          if user.sex == "Homme" && user.sexual_orientation == ("homo"||"bi")
+          if user.sex == "Homme" && (user.sexual_orientation == "homo" || user.sexual_orientation == "bi")
             wanted_users << user
           end
         end
       elsif cu_user.sexual_orientation == "bi"
         list_users.each do |user|
-          if (user.sex == "Femme" && user.sexual_orientation == ("hetero"||"bi")) || (user.sex =="Homme" && user.sexual_orientation == ("homo"||"bi"))
+          if (user.sex == "Femme" && (user.sexual_orientation == "hetero" || user.sexual_orientation == "bi")) || (user.sex =="Homme" && (user.sexual_orientation == "homo" || user.sexual_orientation == "bi"))
             wanted_users << user
           end
         end
@@ -71,21 +74,21 @@ class User < ApplicationRecord
     when "Femme"
       if cu_user.sexual_orientation == "hetero"
         list_users.each do |user|
-          if user.sex == "Homme" && user.sexual_orientation == ("hetero"||"bi")
+          if user.sex == "Homme" && (user.sexual_orientation == "hetero" || user.sexual_orientation == "bi")
             wanted_users << user
           end
         end
       elsif cu_user.sexual_orientation == "homo"
         list_users.each do |user|
-          if user.sex == "Femme" && user.sexual_orientation == ("homo"||"bi")
+          if user.sex == "Femme" && (user.sexual_orientation == "homo" || user.sexual_orientation == "bi")
             wanted_users << user
           end
         end
       elsif cu_user.sexual_orientation == "bi"
         list_users.each do |user|
-          if (user.sex == "Femme" && user.sexual_orientation == ("homo"||"bi")) || (user.sex =="Homme" && user.sexual_orientation == ("hetero"||"bi"))
-            wanted_users << user
-          end
+        if (user.sex == "Femme" && (user.sexual_orientation == "homo" || user.sexual_orientation == "bi")) || (user.sex == "Homme" && (user.sexual_orientation == "hetero" || user.sexual_orientation == "bi"))
+          wanted_users << user
+        end
         end
       end
     end
@@ -95,16 +98,14 @@ class User < ApplicationRecord
   def seen_users
     cu_id = self.id
     cu_user = User.find(cu_id)
-    p list_users = interesting_users
+    list_users = interesting_users
     wanted_users = []
     list_users.each do |user|
-      p seen = false
+      seen = false
       user.liked_users.each do |like|
-        p like
         seen = true if like.user_id == cu_id
       end
       user.unliked_users.each do |unlike|
-        p unlike
         seen = true if unlike.user_id == cu_id
       end
       wanted_users << user if seen == false
@@ -112,4 +113,14 @@ class User < ApplicationRecord
     wanted_users
   end
 
+  def create_user_weeks_availabilities
+    DAYS.each do |day|
+      availability = Availability.new(
+        user: self,
+        days: day,
+        afterwork: true,
+        diner_time: true)
+      availability.save!
+    end
+  end
 end
