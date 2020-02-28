@@ -16,6 +16,8 @@ class FeedbacksController < ApplicationController
     def new
       @meeting = Meeting.find(params[:meeting_id])
       @feedback = Feedback.new
+
+
     end
 
     def create
