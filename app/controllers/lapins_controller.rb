@@ -17,7 +17,7 @@ class LapinsController < ApplicationController
     @lapin = Lapin.new(user: @user, meeting: @meeting)
     if @lapin.save
       message = "#{@user.name} t'a posé un lapin."
-      TwilioTextMessenger.new(message).call(ENV['TWILIO_SID'], ENV['TWILIO_TOKEN'])
+      # TwilioTextMessenger.new(message).call(ENV['TWILIO_SID'], ENV['TWILIO_TOKEN'])
       redirect_to lapin_path(id: @lapin.id)
       # format.html { redirect_to lapin_path(id: @lapin.id), notice: 'Le lapin a bien été notifié' }
       # format.json { render :show, status: :created, location: @lapin }

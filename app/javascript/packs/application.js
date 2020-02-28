@@ -55,6 +55,7 @@ if (buttonSettings) {
 // })
 document.addEventListener('turbolinks:load', () => {
     // Do your stuff!
+  let interval;
   const countdown = document.getElementById('countdown');
   if (countdown) {
     let initTime = parseInt(countdown.innerText, 10);
@@ -65,16 +66,20 @@ document.addEventListener('turbolinks:load', () => {
       var reste = (initTime % 3600);
       var minutes = parseInt((reste / 60),10);
       var seconde = reste % 60;
-      countdown.innerText = heure + ":"
-    + minutes + ":" + seconde
+      var newHour = heure + ":" + minutes + ":" + seconde
+
+      if (heure + minutes + seconde < 0) {
+        countdown.innerText = "00:00:00"
+        clearInterval(interval)
+        window.location.href = window.location.origin + '/users';
+      }
+
+      countdown.innerText = newHour
     }
     updateChrono();
-    setInterval(updateChrono, 1);
+    interval = setInterval(updateChrono, 1);
   };
- })
-
-
-text-center
+})
 
 
 
