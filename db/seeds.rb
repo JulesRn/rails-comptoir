@@ -39,7 +39,7 @@ SEXUAL_ORIENTATION =["hetero", "homo", "bi"]
 
 days = User::DAYS
 
-file1 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582884748/fqo1plwjis643fmukygn5fr4bzib.jpg")
+file1 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638787/u9fhhkoycfvci90usute.jpg")
 file2 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582639195/mqra2ye6msbzskc66swm.jpg")
 user1 = User.new(email:"mama@nomail.com", name: "Marine", password: "coucou", description: "Coucou, je cherche un BG :) swipe à droite si tu corresponds à cette description", age:25, height: "165", smoker: true,  drinker: true, sex: "Femme", sexual_orientation: "bi")
 user1.photos.attach([{io: file1, filename: " ", content_type: 'image/jpg'}, {io: file2, filename: " ", content_type: 'image/jpg'}])
@@ -48,7 +48,7 @@ puts "user created"
 
 
 file3 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582830793/xlo4g7dl2sfe5iffjscw.jpg")
-file4 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582830793/xlo4g7dl2sfe5iffjscw.jpg")
+file4 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582830786/uqv2sjnl33rhk1rood7v.jpg")
 user2 = User.new(email:"popo@nomail.com", name: "Popo", password: "coucou", description: "je suis une BG", age:27, height: "155", smoker: false,  drinker: true, sex: "Femme", sexual_orientation: "bi")
 user2.photos.attach([{io: file3, filename: " ", content_type: 'image/jpg'}, {io: file4, filename: " ", content_type: 'image/jpg'}])
 user2.save!
@@ -69,7 +69,7 @@ user4.save!
 puts "user created"
 
 file10 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582883336/jxtfuljaebdnnael51cr.jpg")
-file11 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638787/u9fhhkoycfvci90usute.jpg")
+file11 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582887308/zhjwgmujprznuvmlftag.jpg")
 user5 = User.new(email:"kikou@nomail.com", name: "Johanna", password: "coucou", description: "je suis le plus drole hehe", age:25, height: "180", smoker: true,  drinker: true, sex: "Femme", sexual_orientation: "bi")
 user5.photos.attach([{io: file10, filename: " ", content_type: 'image/jpg'}, {io: file11, filename: " ", content_type: 'image/jpg'}])
 user5.save!
@@ -90,7 +90,7 @@ user7.save!
 puts "user created"
 
 file16 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582722565/d3wkilfzavnix29zvfyu.jpg")
-file17 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582638787/u9fhhkoycfvci90usute.jpg")
+file17 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582887380/t9yxtzwoe5byswv3gofl.jpg")
 user8 = User.new(email:"j@nomail.com", name: "Gigi", password: "coucou", description: "je suis une BG", age:27, height: "170", smoker: false,  drinker: true, sex: "Femme", sexual_orientation: "bi")
 user8.photos.attach([{io: file16, filename: " ", content_type: 'image/jpg'}, {io: file17, filename: " ", content_type: 'image/jpg'}])
 user8.save!
