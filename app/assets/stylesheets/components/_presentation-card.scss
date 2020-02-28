@@ -26,6 +26,8 @@
   font-size: 120px;
   bottom: 180px;
   left: 70px;
+  font-family: 'Quicksand';
+  font-weight: bold;
 }
 
 .card-description {
@@ -34,7 +36,8 @@
   left: 75px;
   top: 1320px;
   max-width: 85%;
-  font-weight: normal;
+  font-family: 'Quicksand';
+  font-weight: bold;
 }
 
 .card-nickname {
@@ -43,6 +46,8 @@
   left: 70px;
   color: white;
   margin-bottom: 0px;
+  font-family: 'Quicksand';
+  font-weight: bold;
 }
 
 .card-desc {
@@ -52,6 +57,8 @@
   font-weight: normal;
   color:white;
   margin-bottom: 0px;
+  font-family: 'Quicksand';
+  font-weight: bold;
 }
 
 .card-description p {
@@ -66,8 +73,7 @@
 
 .card-infos {
   min-height: 60vh;
-  background-color: #FAA916;
-  font-size: 50px;
+  background-color: #12C1BB;
   color: white;
   padding: 30px 70px;
   position:relative;
