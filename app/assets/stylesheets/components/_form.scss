@@ -103,11 +103,6 @@ input:checked + label {
   background-image: none;
   border-color: grey;
   border-radius: 50px;
-  justify-content: center;
-  font-size: 41px;
-  padding-left: 30px;
-  padding-top: 20px;
-  height: 130px;
 }
 
 .s-d-check {
@@ -144,19 +139,6 @@ input:checked + label {
 }
 
 
-
-#user_intention {
-  background-image: none;
-  border-color: grey;
-  border-radius: 50px;
-  justify-content: center;
-  font-size: 41px;
-  padding-left: 30px;
-  padding-top: 20px;
-  height: 130px;
-}
-
-
 #calendar-form .form-check {
   input[type="checkbox"] {
     display: none;
@@ -177,7 +159,7 @@ input:checked + label {
     border: 1px solid #fff;
     border-radius: 100px;
     color: #fff;
-    background-color: #6a8494;
+    background-color: #12c1bb;
     box-shadow: 0 0 20px rgba(0, 0, 0, .2);
     white-space: nowrap;
 
@@ -193,7 +175,6 @@ input:checked + label {
     }
   }
 }
-
 
 #new_like form {
   height: 150px;
