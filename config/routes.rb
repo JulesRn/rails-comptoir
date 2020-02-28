@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # 'get' to: 'meetings#lapin'
   resources :meetings, only: :show do
     resources :lapins, only: [:create]
+    resources :feedbacks
   end
   resources :lapins, only: [:show]
 
