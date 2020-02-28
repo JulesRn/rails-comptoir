@@ -1,6 +1,6 @@
 <h1> Feedback new</h1>
 
-<%= simple_form_for @feedback do |f| %>
+<%= simple_form_for [@meeting, @feedback] do |f| %>
 <%= f.input :present, label: "Ton date était présent ?" %>
 <%= f.input :continue, label: "Voir les autres personnes au comptoir ?" %>
 <% end %>

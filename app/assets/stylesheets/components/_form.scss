@@ -103,6 +103,22 @@ input:checked + label {
   background-image: none;
   border-color: grey;
   border-radius: 50px;
+  justify-content: center;
+  font-size: 41px;
+  padding-left: 30px;
+  padding-top: 20px;
+  height: 130px;
+}
+
+#user_intention {
+  background-image: none;
+  border-color: grey;
+  border-radius: 50px;
+  justify-content: center;
+  font-size: 41px;
+  padding-left: 30px;
+  padding-top: 20px;
+  height: 130px;
 }
 
 .s-d-check {
