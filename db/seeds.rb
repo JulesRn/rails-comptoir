@@ -240,7 +240,5 @@ html_doc.search('.card-content').each do |card|
   puts "#{bar_name} created!"
 end
 
-
 Meeting.create(user1_id: User.first[:id], user2_id: User.last[:id], place_id: Place.first[:id], start_time: Date.new, start_hour: Date.new)
 Like.create(user_id: User.first[:id], liked_user_id: User.last[:id])
-
