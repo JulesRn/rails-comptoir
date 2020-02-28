@@ -3,7 +3,8 @@
 
   <% @user.seen_users.each do |user| %>
     <div class="card-profile" id="user-<%= user.id %>">
-      <%= link_to user_path(user), class: "profile-link" do  %>
+
+      <%= link_to user_path(user), class: 'profile-link' do  %>
         <div class="card-presentation d-flex flex-column justify-content-center m-auto" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 40%), url('http://res.cloudinary.com/dlh4cl5ih/image/upload/<%= user.photos[0].key%>')">
           <h2 class="card-name"><%= user.name %>, <%= user.age %></h2>
           <p class="card-description"><%= user.description %></p>
@@ -14,13 +15,18 @@
         <div class="col-2">
           <%= simple_form_for @unlike, url: unlikes_path, method: :post do |f| %>
             <%= f.input :unliked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
-            <%= f.submit "X", class: "btn btn-next", id: "next-profile_#{user.id}" %>
+            <div class="small-3 columns">
+              <%= button_tag type: 'submit', class: "button postfix btn btn-next", id: "next-profile_#{user.id}" do %>
+                <i class="fas fa-times" aria-hidden="true"></i>
+              <% end %>
+            </div>
+            <%#= f.submit 'X', class: "btn btn-next", id: "next-profile_#{user.id}" %>
           <% end %>
         </div>
         <div class="col">
           <%= simple_form_for @like, url: likes_path, method: :post do |f| %>
             <%= f.input :liked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
-            <%= f.submit "Rencontrer", class: "btn btn-like", id: "meet-profile_#{user.id}" do %>
+            <%= f.submit "Rencontrer", class: "btn btn-like", id: "meet-profile_#{user.id}"  do %>
               <!-- <p>
                 <%#= image_tag "LogoComptoir.png", style: "height: 100px;" %>
                 Rencontrer

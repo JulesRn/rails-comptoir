@@ -14,6 +14,7 @@ class User < ApplicationRecord
   validates :email, :name, :description, :age, :height, :sex, :sexual_orientation, presence: true
   after_create :create_user_weeks_availabilities
   accepts_nested_attributes_for :availabilities
+  has_many :feedbacks
 
   def afterworks_dispos
     avails = self.availabilities.pluck(:days, :afterwork).delete_if { |arr| arr.last == false }

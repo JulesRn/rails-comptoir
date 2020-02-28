@@ -2,6 +2,7 @@ class Meeting < ApplicationRecord
   belongs_to :user1, class_name: 'User'
   belongs_to :user2, class_name: 'User'
   belongs_to :place
+  has_many :feedbacks
 
   validates :user1_id, :user2_id, :place_id, :start_hour, :start_time, presence: true
   STATUS = ["cancelled", "occured"]
