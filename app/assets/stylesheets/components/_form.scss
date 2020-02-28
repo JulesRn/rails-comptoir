@@ -103,6 +103,11 @@ input:checked + label {
   background-image: none;
   border-color: grey;
   border-radius: 50px;
+  justify-content: center;
+  font-size: 41px;
+  padding-left: 30px;
+  padding-top: 20px;
+  height: 130px;
 }
 
 .s-d-check {
@@ -136,6 +141,19 @@ input:checked + label {
     font-weight: bold;
     font-size: 33px;
     border-radius: 50px;
+}
+
+
+
+#user_intention {
+  background-image: none;
+  border-color: grey;
+  border-radius: 50px;
+  justify-content: center;
+  font-size: 41px;
+  padding-left: 30px;
+  padding-top: 20px;
+  height: 130px;
 }
 
 
@@ -175,6 +193,7 @@ input:checked + label {
     }
   }
 }
+
 
 #new_like form {
   height: 150px;

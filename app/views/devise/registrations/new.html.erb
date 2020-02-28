@@ -19,17 +19,17 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :sex,
-                required: true,
+                required: true, collection: ["homme", "femme"],
                 input_html: { autocomplete: "Sexe" }%>
     <%= f.input :sexual_orientation,
-                required: true,
+                required: true, collection: ["hetero", "bi", "homo"],
                 input_html: { autocomplete: "Orientation sexuelle" }%>
     <%= f.input :intention,
-                required: true,
+                required: true, collection: ["pas de plan d'un soir", "pas de serieux", "on verra bien"],
                 input_html: { autocomplete: "Quel type de rencontre cherchez-vous ?" }%>
     <%= f.input :height,
                 required: true,
-                input_html: { autocomplete: "Taille" }%>
+                input_html: { autocomplete: "Taille en cm" }%>
     <div class="s-d-check d-flex justify-content-center">
       <%= f.input :smoker,
                   input_html: { autocomplete: "Je fume" }%>
