@@ -78,7 +78,7 @@ puts "user created"
 file12 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582830205/qjnjdqu2keemt2rs9hsf.jpg")
 file13 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1582830210/kuvjcxxda1bwvajmzwt8.jpg")
 user6 = User.new(email:"marie@nomail.com", name: "Marie", password: "coucou", description: "la plus intello", age:28, height: "160", smoker: true,  drinker: true, sex: "Femme", sexual_orientation: "bi")
-user6.photos.attach([{io: file112, filename: " ", content_type: 'image/jpg'}, {io: file13, filename: " ", content_type: 'image/jpg'}])
+user6.photos.attach([{io: file12, filename: " ", content_type: 'image/jpg'}, {io: file13, filename: " ", content_type: 'image/jpg'}])
 user6.save!
 puts "user created"
 
