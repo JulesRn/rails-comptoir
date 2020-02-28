@@ -2,7 +2,7 @@
 <div class="justify-content-center text-center">
 
   <% @user = current_user %>
-  <div class="profile" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 40%), url('<%= @user.photo %>');">
+  <div class="profile" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 40%), url('http://res.cloudinary.com/dlh4cl5ih/image/upload/<%= @user.photos[0].key%>');">
     <h2 id="profile-name"> <%= current_user.name %>, <%= @user.age %> </h2>
     <p id="profile-description"> <%= current_user.description %> </p>
   </div>

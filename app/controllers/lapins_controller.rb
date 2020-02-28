@@ -5,9 +5,7 @@ class LapinsController < ApplicationController
     # @start_unix_time = @start.to_time.to_i
     @end = @start + 1.day
     @end_unix_time = @end.to_time.to_i
-
     @now_unix_time = DateTime.now.in_time_zone.to_time.to_i
-
     @countdown_in_seconds = @end_unix_time - @now_unix_time
     @countdown_in_hours = Time.at(@countdown_in_seconds).utc.strftime('%H:%M:%S')
   end

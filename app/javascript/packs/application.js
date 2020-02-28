@@ -60,7 +60,7 @@ document.addEventListener('turbolinks:load', () => {
     let initTime = parseInt(countdown.innerText, 10);
 
     const updateChrono = () => {
-      initTime = initTime - 1;
+      initTime = initTime - 100;
       var heure = parseInt((initTime / 3600), 10);
       var reste = (initTime % 3600);
       var minutes = parseInt((reste / 60),10);
@@ -69,10 +69,12 @@ document.addEventListener('turbolinks:load', () => {
     + minutes + ":" + seconde
     }
     updateChrono();
-    setInterval(updateChrono, 1000);
+    setInterval(updateChrono, 1);
   };
  })
 
+
+text-center
 
 
 
