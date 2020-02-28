@@ -74,6 +74,8 @@ document.addEventListener('turbolinks:load', () => {
  })
 
 
+text-center
+
 
 
 
