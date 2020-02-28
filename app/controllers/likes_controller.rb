@@ -23,7 +23,7 @@ class LikesController < ApplicationController
   end
 
   def create_meeting_if_match(user)
-     # if user.liked_user == current_user
+     if user.liked_user == @like.user
         dispo = current_user.first_matching_dispo_with(user)
         next_day = TRANSLATION.key(dispo.first)
         next_date = Date.tomorrow.end_of_week(next_day)
@@ -35,7 +35,7 @@ class LikesController < ApplicationController
           end
 
         @meeting = Meeting.create(start_time: next_date, start_hour: next_hour, user1: current_user, user2: user, place: Place.all.sample)
-
+        end
 
     end
 
