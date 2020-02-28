@@ -54,19 +54,19 @@ class User < ApplicationRecord
     when "Homme"
       if cu_user.sexual_orientation == "hetero"
         list_users.each do |user|
-          if user.sex == "Femme" && user.sexual_orientation == ("hetero"||"bi")
+          if user.sex == "Femme" && (user.sexual_orientation == "homo" || user.sexual_orientation == "bi")
             wanted_users << user
           end
         end
       elsif cu_user.sexual_orientation == "homo"
         list_users.each do |user|
-          if user.sex == "Homme" && user.sexual_orientation == ("homo"||"bi")
+          if user.sex == "Homme" && (user.sexual_orientation == "homo" || user.sexual_orientation == "bi")
             wanted_users << user
           end
         end
       elsif cu_user.sexual_orientation == "bi"
         list_users.each do |user|
-          if (user.sex == "Femme" && user.sexual_orientation == ("hetero"||"bi")) || (user.sex =="Homme" && user.sexual_orientation == ("homo"||"bi"))
+          if (user.sex == "Femme" && (user.sexual_orientation == "hetero" || user.sexual_orientation == "bi")) || (user.sex =="Homme" && (user.sexual_orientation == "homo" || user.sexual_orientation == "bi"))
             wanted_users << user
           end
         end
@@ -74,21 +74,21 @@ class User < ApplicationRecord
     when "Femme"
       if cu_user.sexual_orientation == "hetero"
         list_users.each do |user|
-          if user.sex == "Homme" && user.sexual_orientation == ("hetero"||"bi")
+          if user.sex == "Homme" && (user.sexual_orientation == "hetero" || user.sexual_orientation == "bi")
             wanted_users << user
           end
         end
       elsif cu_user.sexual_orientation == "homo"
         list_users.each do |user|
-          if user.sex == "Femme" && user.sexual_orientation == ("homo"||"bi")
+          if user.sex == "Femme" && (user.sexual_orientation == "homo" || user.sexual_orientation == "bi")
             wanted_users << user
           end
         end
       elsif cu_user.sexual_orientation == "bi"
         list_users.each do |user|
-          if (user.sex == "Femme" && user.sexual_orientation == ("homo"||"bi")) || (user.sex =="Homme" && user.sexual_orientation == ("hetero"||"bi"))
-            wanted_users << user
-          end
+        if (user.sex == "Femme" && (user.sexual_orientation == "homo" || user.sexual_orientation == "bi")) || (user.sex == "Homme" && (user.sexual_orientation == "hetero" || user.sexual_orientation == "bi"))
+          wanted_users << user
+        end
         end
       end
     end
