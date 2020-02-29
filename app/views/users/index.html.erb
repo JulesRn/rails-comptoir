@@ -34,6 +34,9 @@
             <% end %>
           <% end %>
         </div>
+        <div class="d-none">
+          <%= link_to user_path(user), class: 'btn-show', id: "show-profile_#{user.id}" %>
+        </div>
       </div>
         <%#= link_to likes_path, class: "btn btn-like d-flex justify-content-center" do  %>
         <%# end %>
