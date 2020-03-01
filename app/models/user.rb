@@ -2,6 +2,8 @@ class User < ApplicationRecord
   DAYS = ["lundi", "mardi",  "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  geocoded_by :position
+  after_validation :geocode, if: :will_save_change_to_position?
   has_many_attached :photos
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
