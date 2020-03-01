@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon justify-content-between">
+<div class="navbar navbar-expand-sm navbar-light navbar-comptoir justify-content-between" style="background:linear-gradient(155.21deg, #4ADEDE 0%, #2EBCE7 74.5%, #1CA7EC 100%);border-radius: 0px 0px 30px 30px;">
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,13 +8,14 @@
   <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item dropdown">
-          <%= image_tag "iconfinder_menu-alt_134216.svg", class: "dropdown-toggle",style: "height:80px;" , id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to profile_path, "profile", method: :get, class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
+          <%= link_to profile_path do %>
+          <i class="fas fa-bars px-2" style="color:white;text-decoration:none; font-size: 80px;"></i>
+          <% end %>
+          <%#= image_tag "bars-solid.svg", class: "dropdown-toggle", style: "height:80px;backgound-color:white;" , id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> -->
+            <%#= link_to profile_path, "profile", method: :get, class: "dropdown-item" %>
+            <%#= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <!-- </div> -->
       <% else %>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
@@ -23,16 +24,15 @@
     </ul>
   </div>
 
-  <div class="col-7 ">
-  <%= link_to users_path, class: "navbar-brand d-flex align-items-center offset-1" do %>
-    <%= image_tag "LogoComptoir.png" %>
-    <h1 class="navbar-name">Comptoir</h1>
+  <div class="col ">
+  <%= link_to users_path, class: "navbar-brand-comptoir d-flex justify-content-center" do %>
+    <%= image_tag "LogoComptoir.png", style: "height: 7vh;margin:0px;" %>
   <% end %>
   </div>
 
     <div class="col-2 ">
     <%= link_to availabilities_path do %>
-      <i class="far fa-calendar-check" style="color:#0A6378;text-decoration:none"></i>
+      <i class="far fa-calendar-check" style="color:white;text-decoration:none; font-size: 80px;"></i>
     <% end %>
   </div>
 

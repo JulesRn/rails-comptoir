@@ -1,16 +1,17 @@
-.navbar-lewagon {
+.navbar-comptoir {
   justify-content: center;
   background: white;
   width: 100%;
-  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 450px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-comptoir .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 140px;
+.navbar-brand-comptoir {
+  margin: none;
 }
 
 .navbar-name {
