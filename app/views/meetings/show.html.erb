@@ -29,6 +29,8 @@
           <a href= <%="#{@place.url}"%> target="_blank" style="text-decoration: none;">
             <% if @place.name.size >=22 %>
             <h2 class="m-0" id="address"><%= @place.name.first(22) %></h2>
+            <% else %>
+            <h2 class="m-0" id="address"><%= @place.name %></h2>
             <% end %>
           </a>
           <h3><%= @place.address %></h3>
