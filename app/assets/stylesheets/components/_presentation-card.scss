@@ -69,6 +69,8 @@
   display: flex;
   flex-wrap: no-wrap;
   overflow-x: hidden;
+  position:relative;
+  top: -430px;
 }
 
 .card-infos {
