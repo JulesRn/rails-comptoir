@@ -12,7 +12,7 @@
   </head>
 
   <body style="background-color: white">
-    <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages" %>
+    <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages"|| controller.controller_name == "sessions" %>
     <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>
