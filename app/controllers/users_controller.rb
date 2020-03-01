@@ -15,6 +15,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @current_user = current_user
+    @like = Like.new
+    @unlike = Unlike.new
   end
 
   def new

@@ -75,8 +75,12 @@
 
 .card-infos {
   min-height: 60vh;
-  background-color: #12C1BB;
+  background:linear-gradient(155.21deg, #4ADEDE 0%, #2EBCE7 74.5%, #1CA7EC 100%);
   color: white;
-  padding: 30px 70px;
+  padding: 50px 70px;
   position:relative;
+  top: -50px;
+  border-radius: 40px 40px 0px 0px;
+  box-shadow: 0px -10px 20px rgba(0,0,0,0.25);
+  font-family: 'Fredoka One';
 }

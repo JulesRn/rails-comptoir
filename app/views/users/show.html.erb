@@ -1,68 +1,91 @@
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-    <ol class="carousel-indicators">
-      <%if @user.photos.attached?%>
-        <% @user.photos.each_with_index do |photo, index| %>
-          <% if index == 0 %>
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <% else %>
-            <li data-target="#carouselExampleIndicators" data-slide-to="<%= index %>"></li>
-          <% end %>
-        <% end %>
-      <% else %>
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <% end %>
-    </ol>
-
-
-    <div class="carousel-inner">
-      <%if @user.photos.attached?%>
-        <% @user.photos.each_with_index do |photo, index| %>
-          <% if index == 0 %>
-            <% active_photo = "active" %>
-          <% else %>
-            <% active_photo = "  " %>
-          <% end %>
-        <div class="carousel-item <%= active_photo %>">
-        <%= cl_image_tag photo.key, class: "justify-content-center w-100", style: "height:70vh;object-fit:cover;"%>
-       </div>
-       <% end %>
-      <% else %>
-        <%= image_tag "download.jpeg", alt: "First slide", class: "d-block w-100" %>
-      <% end %>
-    </div>
-
+  <ol class="carousel-indicators" style="height: 2vh;margin-bottom: 7%;">
     <%if @user.photos.attached?%>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+      <% @user.photos.each_with_index do |photo, index| %>
+        <% if index == 0 %>
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <% else %>
+          <li data-target="#carouselExampleIndicators" data-slide-to="<%= index %>"></li>
+        <% end %>
+      <% end %>
+    <% else %>
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <% end %>
+  </ol>
+
+
+  <div class="carousel-inner">
+    <%if @user.photos.attached?%>
+      <% @user.photos.each_with_index do |photo, index| %>
+        <% if index == 0 %>
+          <% active_photo = "active" %>
+        <% else %>
+          <% active_photo = "  " %>
+        <% end %>
+      <div class="carousel-item <%= active_photo %>">
+      <%= cl_image_tag photo.key, class: "justify-content-center w-100", style: "height:65vh;object-fit:cover;"%>
+     </div>
+     <% end %>
+    <% else %>
+      <%= image_tag "download.jpeg", alt: "First slide", class: "d-block w-100" %>
     <% end %>
   </div>
 
-  <div class="card-infos">
-      <h2 class ="card-nickname"><%= @user.name %>, <%= @user.age %></h2>
-      <p class="card-desc"><%= @user.height / 100 %>m <%= @user.height % 100 %></p>
-      <p class="card-desc"><%= @user.description %></p>
-    <div class="icone d-flex justify-content-around">
-      <% if @user.drinker == true %>
-        <a class="btn btn-ghost justify-content-center" href="#"><i class="fas fa-wine-glass-alt"></i> <p>  Je bois</p> </a>
-        <% else %>
-        <a class="btn btn-ghost justify-content-center" href="#"><i class="fas fa-wine-glass-alt"></i> <p>  Je ne bois pas</p> </a>
-      <%end %>
-      <%if @user.smoker == true %>
-        <a class="btn btn-ghost justify-content-center" href="#"><i class="fas fa-smoking"></i> <p>  Je fume</p></a>
+  <%if @user.photos.attached?%>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  <% end %>
+</div>
+
+<div class="card-infos">
+  <%= link_to users_path do %>
+    <i class="fas fa-arrow-circle-up btn-up-index"></i>
+  <% end %>
+    <h2 class ="card-nickname"><%= @user.name %>, <%= @user.age %></h2>
+    <p class="card-desc"><%= @user.height / 100 %>m <%= @user.height % 100 %></p>
+    <p class="card-desc"><%= @user.description %></p>
+  <div class="icone d-flex justify-content-center w-100">
+    <% if @user.drinker == true %>
+      <a class="btn btn-ghost justify-content-center" href="#"><!-- <i class="fas fa-wine-glass-alt"></i> --> <p>  Je bois</p> </a>
       <% else %>
-        <a class="btn btn-ghost justify-content-center" href="#"><i class="fas fa-smoking"></i> <p>  Je ne fume pas</p></a>
-      <% end %>
-    </div>
-    <div class="card-details">
-      <p><%= @user.job %></p>
-      <p><%= @user.sport %></p>
-    </div>
-    <%= link_to "Signaler #{@user.name}", "#", class: "btn btn-signal"%>
+      <a class="btn btn-ghost justify-content-center" href="#"><!-- <i class="fas fa-wine-glass-alt"></i> --> <p>  Je ne bois pas</p> </a>
+    <%end %>
+    <%if @user.smoker == true %>
+      <a class="btn btn-ghost justify-content-center" href="#"><!-- <i class="fas fa-smoking"></i> --> <p>  Je fume</p></a>
+    <% else %>
+      <a class="btn btn-ghost justify-content-center" href="#"><!-- <i class="fas fa-smoking"></i> --> <p>  Je ne fume pas</p></a>
+    <% end %>
   </div>
+  <div class="card-details">
+    <p><%= @user.job %></p>
+    <p><%= @user.sport %></p>
+  </div>
+  <%= link_to "Signaler #{@user.name}", "#", class: "btn btn-signal"%>
+</div>
+
+<div class="row buttons-show">
+  <div class="col-2">
+    <%= simple_form_for @unlike, url: unlikes_path, method: :post do |f| %>
+      <%= f.input :unliked_user, input_html: {value: "#{@user.id}"}, as: :hidden %>
+      <div class="small-3 columns">
+        <%= button_tag type: 'submit', class: "button postfix btn btn-next", id: "next-profile_#{@user.id}" do %>
+          <i class="fas fa-times" aria-hidden="true"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="col">
+    <%= simple_form_for @like, url: likes_path, method: :post do |f| %>
+      <%= f.input :liked_user, input_html: {value: "#{@user.id}"}, as: :hidden %>
+      <%= f.submit "Rencontrer", class: "btn btn-like", id: "meet-profile_#{@user.id}"  do %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

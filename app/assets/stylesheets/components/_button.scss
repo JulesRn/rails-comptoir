@@ -1,18 +1,16 @@
 .btn-ghost {
-  padding: 8px 10px;
-  border-radius: 24px;
-  opacity: 0.6;
+  padding: 15px 60px;
+  border-radius: 50px;
   transition: opacity 0.3s ease;
   font-size: 70px;
   font-weight: bold;
   color: white;
   border: 2px solid;
   display: flex;
-  width: 50%;
+  margin-left: 20px;
 & p {
     font-size: 40px;
-    margin-left: 20px;
-    margin-top: 5px;
+    margin: 0px;
   }
 }
 
@@ -38,6 +36,20 @@
   height: 220px;
   width: 100%;
   margin: 50px 0px;
+}
+
+.buttons-show {
+  display: flex;
+  justify-content: between;
+  padding: 70px 50px;
+  height: 280px;
+  width: 100%;
+  margin: 0px;
+  position: sticky;
+  bottom: 0px;
+  background-color:white;
+  border-radius: 30px 30px 0px 0px;
+  box-shadow: 0px -10px 20px rgba(0,0,0,0.25);
 }
 
 .btn-next {
@@ -97,6 +109,11 @@
     padding: 15px 80px;
 }
 
-.other-links > a {
+.btn-up-index {
+  font-size: 140px;
   color:white;
+  position:absolute;top:-60px;
+  left: 750px;
+  text-shadow: 0px 0px 20px rgba(0,0,0,0.25)
 }
+
