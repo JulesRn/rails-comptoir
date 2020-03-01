@@ -1,14 +1,29 @@
 .avatar-date {
-  border: 10px solid #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  position: absolute;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 300px;
-  width: 600px;
-  height: 600px;
-  bottom: 50px;
-  right: -100px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
-  object-position: right;
+  object-position: center;
+}
+
+.card-category-meeting {
+  background-position: center;
+  height: 480px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position:relative;
+  top:-150px;
 }
 
 .banner-meeting {
@@ -18,20 +33,16 @@
 }
 
 .center-text-meeting {
-  margin-left: auto;
-  margin-right: auto;
   color: white;
-  position: absolute;
-  top: 250px;
-  right: 300px;
   font-size: 100px;
-  font-weight: bold;
+  font-family:'Fredoka One';
+  padding-top: 165px;
 }
 .center-text-meeting h1{
- font-size: 120px;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
+    font-size: 120px;
+    font-family: 'Fredoka One';
+    text-align: center;
+    font-weight: normal;
 }
 
 .bottom-ecran {
@@ -59,22 +70,34 @@
 .bottom-left-meeting {
   position: absolute;
   color: white;
-  bottom: 200px;
+  bottom: 30px;
   left: 30px;
-  font-family: 'Quicksand';
+  font-family: 'Fredoka One';
 }
 .bottom-left-meeting h2{
   font-size: 60px;
   font-weight: bold;
   text-decoration: underline;
-
   color: white;
+}
+
+.bottom-left-meeting p {
+  font-size: 40px;
+  width:40%;
+  text-align:center;
+  font-weight: bold;
+  background-color:rgba(0,0,0,0.5);
+  border-radius:20px;
+  padding: 10px 20px;
+  color: white;
+  position:relative;
+  top:-210px;
+  right:-490px;
 }
 
 .bottom-left-meeting h3{
   font-size: 40px;
   font-weight: bold;
-  text-decoration: none;
   color: white;
 }
 
@@ -87,7 +110,9 @@
   height: 100px;
 }
 
-.ecran {
-  height: 100vh;
-  background: #12c1bb;
+.row-meeting {
+  margin-top: 100px;
+  padding: 0px 80px;
+  font-family:'Fredoka One';
+  color:white;
 }
