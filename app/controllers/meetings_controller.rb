@@ -25,6 +25,3 @@ class MeetingsController < ApplicationController
   end
 
 end
-
-
-

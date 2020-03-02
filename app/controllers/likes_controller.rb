@@ -31,20 +31,21 @@ class LikesController < ApplicationController
       end
       @meeting = Meeting.create(start_time: next_date, start_hour: next_hour, user1: current_user, user2: user, place: Place.all.sample)
 
-      # geocode_meeting(@meeting)
+      geocode_meeting(@meeting)
       redirect_to pre_show_meeting_path(@meeting)
     else
       redirect_to users_path
     end
   end
 
-  # def geocode_meeting(meeting)
-  #   user_1 = User.find(meeting.user1_id)
-  #   user_2 = User.find(meeting.user2_id)
-  #   meeting.update(
-  #     latitude: (user_1.latitude + user_2.latitude)/2,
-  #     longitude: (user_1.longitude + user_2.longitude)/2
-  #     )
-  #   meeting_places = Place.near([meeting.latitude, meeting.longitude], 2, units: :km)
-  # end
+  def geocode_meeting(meeting)
+    user_1 = User.find(meeting.user1_id)
+    user_2 = User.find(meeting.user2_id)
+    meeting.update(
+      latitude: (user_1.latitude + user_2.latitude)/2,
+      longitude: (user_1.longitude + user_2.longitude)/2
+      )
+    meeting_places = Place.near([meeting.latitude, meeting.longitude], 2, units: :km)
+    meeting.update(place: meeting_places.sample)
+  end
 end
