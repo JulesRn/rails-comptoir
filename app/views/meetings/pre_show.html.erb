@@ -1,2 +1,7 @@
-<h1><%= @meeting.user1.name %></h1>
-<h1><%= @meeting.user2.name %></h1>
+
+<div class="page" style="background-image:linear-gradient(180deg, rgba(74, 222, 222, 0.05) 71.48%, rgba(46, 188, 231, 0.7) 93.1%, #1CA7EC 100%), url('http://res.cloudinary.com/dlh4cl5ih/image/upload/<%= @meeting.user1.photos[0].key%>');height: 100vh;background-size: cover;background-position: center;position:relative;">
+     <h2 class="card-name " style="color:white; text-align: center; font-family: 'Fredoka One';position:absolute;bottom: 500px;"><%= @meeting.user1.name %> souhaite aussi te rencontrer ! </h2>
+     <%= link_to 'Découvrir le lieu de RDV', meeting_path(@meeting), class: "btn btn-white", style: "margin-top: 50px; position:absolute; bottom: 150px;
+    right: 120px;" %>
+     <%= link_to "Je ne souhaite plus rencontrer #{@meeting.user1.name}",  meeting_lapins_path(@meeting), method: :post, style: "color:white;margin-top: 50px; position:absolute;bottom: 40px;right: 160px; text-decoration: underline;font-size: 40px;" %>
+</div>
