@@ -11,8 +11,13 @@ class User < ApplicationRecord
   has_many :user2_meetings, :class_name => 'Meeting', :foreign_key => 'user2_id'
   has_many :availabilities
   has_many :lapins
-  has_many :liked_users, :class_name => 'Like', :foreign_key => 'liked_user_id', dependent: :destroy
+
+  has_many :likes
+  has_many :liked_users, through: :likes, class_name: 'User'
+  # has_many :liked_users, :class_name => 'Like', :foreign_key => 'liked_user_id', dependent: :destroy
   has_many :unliked_users, :class_name => 'Unlike', :foreign_key => 'unliked_user_id', dependent: :destroy
+
+
   validates :email, :name, :description, :age, :height, :sex, :sexual_orientation, presence: true
   after_create :create_user_weeks_availabilities
   accepts_nested_attributes_for :availabilities
@@ -105,8 +110,8 @@ class User < ApplicationRecord
     wanted_users = []
     list_users.each do |user|
       seen = false
-      user.liked_users.each do |like|
-        seen = true if like.user_id == cu_id
+      user.liked_users.each do |user|
+        seen = true if user.id == cu_id
       end
       user.unliked_users.each do |unlike|
         seen = true if unlike.user_id == cu_id
