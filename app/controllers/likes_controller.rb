@@ -24,20 +24,21 @@ class LikesController < ApplicationController
   end
 
   def create_meeting_if_match(user)
-      # if user.liked_users == @like.user
-        dispo = current_user.first_matching_dispo_with(user)
-        next_day = TRANSLATION.key(dispo.first)
-        next_date = Date.tomorrow.end_of_week(next_day)
-        next_hour = ''
-          if dispo.last == "afterwork"
-            next_hour = Time.at("18".to_i)
-          else
-            next_hour = Time.at("20".to_i)
-          end
+    if user.liked_users.include?(current_user)
+      dispo = current_user.first_matching_dispo_with(user)
+      next_day = TRANSLATION.key(dispo.first)
+      next_date = Date.tomorrow.end_of_week(next_day)
+      next_hour = ''
+      if dispo.last == "afterwork"
+        next_hour = Time.at("18".to_i)
+      else
+        next_hour = Time.at("20".to_i)
+      end
 
-        @meeting = Meeting.create(start_time: next_date, start_hour: next_hour, user1: current_user, user2: user, place: Place.all.sample)
-      # end
-
+      @meeting = Meeting.create(start_time: next_date, start_hour: next_hour, user1: current_user, user2: user, place: Place.all.sample)
+    else
+      raise
     end
+  end
 
 end
