@@ -37,7 +37,6 @@ class LikesController < ApplicationController
 
       @meeting = Meeting.create(start_time: next_date, start_hour: next_hour, user1: current_user, user2: user, place: Place.all.sample)
     else
-      raise
     end
   end
 
