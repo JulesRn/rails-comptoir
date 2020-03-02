@@ -48,7 +48,6 @@ class LikesController < ApplicationController
       longitude: (user_1.longitude + user_2.longitude)/2
       )
     meeting_places = Place.near([meeting.latitude, meeting.longitude], 2, units: :km)
-    raise
-    final_place = meeting_places.sample
+    meeting.update(place: meeting_places.sample)
   end
 end
