@@ -1,4 +1,6 @@
 class Meeting < ApplicationRecord
+  # geocoded_by :address
+  # after_validation :geocode, if: :will_save_change_to_address?
   belongs_to :user1, class_name: 'User'
   belongs_to :user2, class_name: 'User'
   belongs_to :place

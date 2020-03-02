@@ -14,8 +14,10 @@ class User < ApplicationRecord
 
   has_many :likes
   has_many :liked_users, through: :likes, class_name: 'User'
+  has_many :unlikes
+  has_many :unliked_users, through: :unlikes, class_name: 'User'
   # has_many :liked_users, :class_name => 'Like', :foreign_key => 'liked_user_id', dependent: :destroy
-  has_many :unliked_users, :class_name => 'Unlike', :foreign_key => 'unliked_user_id', dependent: :destroy
+  # has_many :unliked_users, :class_name => 'Unlike', :foreign_key => 'unliked_user_id', dependent: :destroy_all
 
 
   validates :email, :name, :description, :age, :height, :sex, :sexual_orientation, presence: true
@@ -104,21 +106,23 @@ class User < ApplicationRecord
   end
 
   def seen_users
-    cu_id = self.id
-    cu_user = User.find(cu_id)
-    list_users = interesting_users
-    wanted_users = []
-    list_users.each do |user|
-      seen = false
-      user.liked_users.each do |user|
-        seen = true if user.id == cu_id
-      end
-      user.unliked_users.each do |unlike|
-        seen = true if unlike.user_id == cu_id
-      end
-      wanted_users << user if seen == false
-    end
-    wanted_users
+    users = interesting_users - self.liked_users
+    users - self.unliked_users
+    # cu_id = self.id
+    # cu_user = User.find(cu_id)
+    # list_users = interesting_users
+    # wanted_users = []
+    # list_users.each do |user|
+    #   seen = false
+    #   user.liked_users.each do |user|
+    #     seen = true if user.id == cu_id
+    #   end
+    #   user.unliked_users.each do |unlike|
+    #     seen = true if unlike.user_id == cu_id
+    #   end
+    #   wanted_users << user if seen == false
+    # end
+    # wanted_users
   end
 
   def create_user_weeks_availabilities
