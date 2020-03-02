@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:name, :age, :photo, :height, :description, :sex, :sexual_orientation, :intention, :drinker, :smoker])
   end
 
+  def default_url_options
+    { host: ENV["www.comptoir.fun"] || "localhost:3000" }
+  end
 
   # def request_date_feedback
   #   redirect_to users_path if true
