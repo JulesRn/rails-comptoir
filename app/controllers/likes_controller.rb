@@ -35,8 +35,8 @@ class LikesController < ApplicationController
       @meeting = Meeting.create(start_time: next_date, start_hour: next_hour, user1: current_user, user2: user, place: Place.all.sample)
 
       # geocode_meeting(@meeting)
-
       redirect_to meeting_path(@meeting)
+
     end
 
   end
