@@ -21,7 +21,7 @@
   </head>
 
   <body style="background-color: white">
-    <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages"|| controller.controller_name == "sessions"|| controller.action_name == "show" %>
+    <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages"|| controller.controller_name == "sessions"|| (controller.action_name == "show" && controller.controller_name != "profiles") %>
     <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>
