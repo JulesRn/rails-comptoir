@@ -22,10 +22,13 @@
 
   <div class="profile-availabilities">
     <% current_user.availabilities %>
-
   </div>
 
-  <button id="user-settings">Mes info</button>
+  <div style="margin-bottom: 40px">
+    <%= link_to "Mon profil", user_path(@user), class:"btn-option-profile", style:"padding:25px 145px;" %>
+  </div>
+
+  <button id="user-settings" class="btn-option-profile">Mes info</button>
   <div class="profile-settings" id="myDIV">
     <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
       <%= f.input :sex, collection: ["homme", "femme"], label: "Sexe", html: { autocomplete: false } %>
@@ -43,6 +46,11 @@
       <%= f.submit "Submit", class: "btn btn-primary", id: "update-profile" %>
     <% end %>
   </div>
+
+  <div style="margin-top: 40px; margin-bottom: 80px;">
+  <%= link_to "Me déconnecter", destroy_user_session_path, method: :delete, class:"btn-option-profile", style:"padding:25px 60px;" %>
+  </div>
+
 </div>
 
 
