@@ -28,7 +28,7 @@
     <%= link_to "Mon profil", user_path(@user), class:"btn-option-profile", style:"padding:25px 145px;" %>
   </div>
 
-  <button id="user-settings" class="btn-option-profile">Mes info</button>
+  <button id="user-settings" class="btn-option-profile">Mes infos</button>
   <div class="profile-settings" id="myDIV">
     <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
       <%= f.input :sex, collection: ["homme", "femme"], label: "Sexe", html: { autocomplete: false } %>
