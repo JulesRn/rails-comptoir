@@ -17,7 +17,7 @@ class LikesController < ApplicationController
     if @like.save
       # create_meeting_if_match(@like.liked_user)
       create_meeting_if_match(@like.liked_user)
-      redirect_to meeting_path(@meeting)
+      render "users/index"
     else
       render "users/index"
     end
@@ -36,7 +36,9 @@ class LikesController < ApplicationController
       end
 
       @meeting = Meeting.create(start_time: next_date, start_hour: next_hour, user1: current_user, user2: user, place: Place.all.sample)
+      redirect_to meeting_path(@meeting)
     else
+
     end
   end
 
