@@ -10,11 +10,10 @@ class LikesController < ApplicationController
   sunday: "dimanche"
 }
   def create
-    @like = Like.new
+    @like = Like.create
     @like.user = current_user
     @like.liked_user = User.find(params[:like][:liked_user])
     @like.save
-      # create_meeting_if_match(@like.liked_user)
     create_meeting_if_match(@like.liked_user)
   end
 
@@ -30,7 +29,6 @@ class LikesController < ApplicationController
         next_hour = Time.at("20".to_i)
       end
       @meeting = Meeting.create(start_time: next_date, start_hour: next_hour, user1: current_user, user2: user, place: Place.all.sample)
-
       geocode_meeting(@meeting)
       redirect_to pre_show_meeting_path(@meeting)
     else
