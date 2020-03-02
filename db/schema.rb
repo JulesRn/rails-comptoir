@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_084029) do
+ActiveRecord::Schema.define(version: 2020_03_02_103711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_084029) do
     t.string "status", default: "occured"
     t.datetime "start_time"
     t.datetime "start_hour"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["place_id"], name: "index_meetings_on_place_id"
     t.index ["user1_id"], name: "index_meetings_on_user1_id"
     t.index ["user2_id"], name: "index_meetings_on_user2_id"
