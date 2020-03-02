@@ -83,6 +83,14 @@ document.addEventListener('turbolinks:load', () => {
 
 
 
+// const match = document.getElementById('Rencontrer');
+
+// if (match) {
+//   buttonSettings.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     hideOrDisplayMenu();
+//   })
+// }
 
 
 
