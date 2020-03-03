@@ -71,7 +71,7 @@
 </div>
 
 <div class="row buttons-show">
-  <div class="col-2">
+  <div class="col-3">
     <%= simple_form_for @unlike, url: unlikes_path, method: :post do |f| %>
       <%= f.input :unliked_user, input_html: {value: "#{@user.id}"}, as: :hidden %>
       <div class="small-3 columns">
@@ -81,7 +81,7 @@
       </div>
     <% end %>
   </div>
-  <div class="col">
+  <div class="col-9">
     <%= simple_form_for @like, url: likes_path, method: :post do |f| %>
       <%= f.input :liked_user, input_html: {value: "#{@user.id}"}, as: :hidden %>
       <%= f.submit "Rencontrer", class: "btn btn-like", id: "meet-profile_#{@user.id}"  do %>

@@ -30,9 +30,9 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   position: relative;
-  top: -90px;
+  top: -40px;
   background-size: cover;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 .banner-meeting {
@@ -80,13 +80,15 @@
 .bottom-left-meeting {
   height: fit-content;
   position: absolute;
-  top: 30px;
+  top: 90px;
+  left: 20px;
 }
 
-.bottom-left-meeting h2 {
+.bottom-left-meeting a > h2 {
   color: white;
   font-family: 'Fredoka One';
   font-size:30px;
+  margin: 0px;
 }
 
 .bottom-left-meeting h3 {
@@ -103,8 +105,9 @@
   border-radius: 11px;
   padding: 5px 10px;
   color: white;
-  top: -210px;
-  right: -460px;
+  position :absolute;
+  top: -75px;
+  right: -15px;
   width: fit-content;
 }
 
@@ -159,7 +162,7 @@
   font-weight: bold;
   margin: auto;
   position: relative;
-  top: -75px;
+  top: -25px;
   color: white;
   font-size: 30px;
   width: fit-content;
