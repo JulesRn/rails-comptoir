@@ -71,6 +71,7 @@ document.addEventListener('turbolinks:load', () => {
       if (heure + minutes + seconde < 0) {
         countdown.innerText = "00:00:00"
         clearInterval(interval)
+        debbuger;
         window.location.href = window.location.origin + '/users';
       }
 
