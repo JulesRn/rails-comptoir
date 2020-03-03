@@ -128,12 +128,12 @@ user15.photos.attach([{io: file30, filename: " ", content_type: 'image/jpg'}, {i
 user15.save!
 puts "user created"
 
-file32 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583155639/nd3wdy3isfy4u9o34m60njgvw17k.jpg")
-file33 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583155636/m2dbtbvznw9x1r97m7be17nh82ho.jpg")
-user16 = User.new(email:"doudou@nomail.com", name: "Edouard", password: "coucou", description: "hellooooo", age:30, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
-user16.photos.attach([{io: file32, filename: " ", content_type: 'image/jpg'}, {io: file33, filename: " ", content_type: 'image/jpg'}])
-user16.save!
-puts "user created"
+# file32 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583155639/nd3wdy3isfy4u9o34m60njgvw17k.jpg")
+# file33 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583155636/m2dbtbvznw9x1r97m7be17nh82ho.jpg")
+# user16 = User.new(email:"doudou@nomail.com", name: "Edouard", password: "coucou", description: "hellooooo", age:30, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+# user16.photos.attach([{io: file32, filename: " ", content_type: 'image/jpg'}, {io: file33, filename: " ", content_type: 'image/jpg'}])
+# user16.save!
+# puts "user created"
 
 file34 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583162789/DSC_4457-1_Marc_Merle_h6gjen.jpg")
 file35 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164246/IMG_4698_mvgcor.jpg")
