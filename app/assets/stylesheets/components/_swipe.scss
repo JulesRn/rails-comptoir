@@ -75,11 +75,11 @@ $green: #B1DA96;
     }
 
     &.to-left {
-      transform: translateX(-30rem) rotate(-30deg) !important;
+      transform: translateX(-100vw) rotate(-30deg) !important;
     }
 
     &.to-right {
-      transform: translate(30rem) rotate(30deg) !important;
+      transform: translate(100vw) rotate(30deg) !important;
     }
 
     &.below {

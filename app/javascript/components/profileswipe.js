@@ -2,12 +2,14 @@ const swipeProfile = () => {
   // console.log($(".card-profile"));
   // console.log("hello");
 
-  var profiles = $(".card-profile");
+$( document ).ready(function() {
+  console.log( "ready!" );
+
+  var profiles = $(document.querySelectorAll(".card-profile"));
   console.log(profiles);
 
   var animating = false;
   var cardsCounter = 0;
-  // var numOfCards = 6;
   var decisionVal = 80;
   var pullDeltaX = 0;
   var deg = 0;
@@ -111,6 +113,7 @@ const swipeProfile = () => {
   })
 
 
+});
 }
 
 

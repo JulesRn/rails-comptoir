@@ -1,12 +1,15 @@
-<div style="height: 100vh; width: 100%; background-image: url('https://ik.imagekit.io/youshould/default_7_SkbNi54z4.jpg');padding-top:20vh; background-size: cover; ">
-<div class="container d-flex flex-column justify-content-center" style="background-color: rgba(0,0,0,0.5);padding: 80px;border-radius: 35px;" >
+<div class="avatar-feedback" style="height: 100vh; width: 100%; background-image: linear-gradient(180deg, rgba(74, 222, 222, 0.1) 36.58%, rgba(46, 188, 231, 0.5) 83.48%, #1CA7EC 100%), url('<%= cl_image_path @like.photos.first.key %>');padding-top:20vh; background-size: cover; background-position: center;">
+<div class="container d-flex flex-column justify-content-center" >
 <div class="container " id="feedback-form">
   <%= simple_form_for [@meeting, @feedback] do |f| %>
-  <%= f.input :was_present, label: "Ton date était présent ?" %>
-  <%= f.input :content, label: "Un commentaire ?" %>
+  <div class="feedback-form">
+  <%= f.input_field :was_present, :as => :radio_buttons, label: "Ton date était présent ?" %>
+  </div>
+  <%= f.submit "Confirmer"%>
 </div>
 <br>
- <button class="btn btn-primary"> <%= link_to users_path %> Voir les autres personnes au comptoir ? </button>
+<h2 style="color: white; font-family: Fredoka One;"> Voir les autres personnes au</h2>
+ <button class="btn-like"> <% link_to users_path %>  Comptoir  </button>
 <% end %>
 
 </div>

@@ -24,7 +24,6 @@ require("channels")
 import "bootstrap";
 import 'jquery-touchswipe/jquery.touchSwipe';
 import { swipeProfile } from "../components/profileswipe";
-swipeProfile();
 
 
 const hideOrDisplayMenu = () => {
@@ -54,6 +53,7 @@ if (buttonSettings) {
 //   displayMenu();
 // })
 document.addEventListener('turbolinks:load', () => {
+  swipeProfile();
     // Do your stuff!
   let interval;
   const countdown = document.getElementById('countdown');
