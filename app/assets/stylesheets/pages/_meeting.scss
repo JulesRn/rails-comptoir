@@ -78,12 +78,18 @@
 }
 
 .bottom-left-meeting {
-      height: fit-content;
-    position: absolute;
-    top: 95px;
+  height: fit-content;
+  position: absolute;
+  top: 30px;
 }
 
-.bottom-left-meeting h2, h3 {
+.bottom-left-meeting h2 {
+  color: white;
+  font-family: 'Fredoka One';
+  font-size:30px;
+}
+
+.bottom-left-meeting h3 {
   color: white;
   font-family: 'Fredoka One';
   font-size:15px;
@@ -155,7 +161,7 @@
   position: relative;
   top: -75px;
   color: white;
-  font-size: 26px;
+  font-size: 30px;
   width: fit-content;
   padding: 5px 15px;
 }
