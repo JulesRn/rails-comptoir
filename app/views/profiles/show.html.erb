@@ -9,7 +9,7 @@
     top: 320px;
     width: 100%;
     text-align: center;"> Bonjour, <%= @user.name %> ! </h2>
-  <div class="profile" style="background-image: url(http://res.cloudinary.com/dlh4cl5ih/image/upload/q7lszdnsc7op9ixo8rqnm0t8i9ah);
+  <div class="profile" style="background-image: url('http://res.cloudinary.com/dlh4cl5ih/image/upload/<%= @user.photos[0].key%>');
     height: 500px;
     width: 500px;
     border-radius: 250px;

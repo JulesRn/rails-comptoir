@@ -92,7 +92,7 @@ user10.save!
 puts "user created"
 
 file24 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247037/IMG_6770_ywj4jt.jpg")
-file25 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247478/WhatsApp_Image_2020-03-03_at_15.56.56_1_gllmta.jpg")
+file25 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583251942/WhatsApp_Image_2020-03-03_at_15.56.56_3_grgtkb.jpg")
 user11 = User.new(email:"thomasr@nomail.com", name: "Thomas", password: "coucou", description: "Le foot c’est ma passion. Même si je me prends des petit ponts ( cimer Karim). Ps lapin garantit si soir de match", age:25, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user11.photos.attach([{io: file24, filename: " ", content_type: 'image/jpg'}, {io: file25, filename: " ", content_type: 'image/jpg'}])
 user11.save!
