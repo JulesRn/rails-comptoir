@@ -1,0 +1,44 @@
+.page {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.preshow-card-name {
+    font-size: 30px;
+    bottom: 120px;
+    width: 90%;
+    left: 5%;
+    align-self: auto;
+    font-family: 'Fredoka One';
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    position: absolute;
+}
+
+.btn-white-date {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #1CA7EC;
+  background-color: white;
+  border: none;
+  font-size: 25px;
+  border-radius: 11px;
+  width: 50%;
+  font-family: 'Fredoka One';
+  font-weight: bold;
+  position: absolute;
+  left: 25%;
+  bottom: 9%;
+}
+
+.btn-date-annulation {
+    color: white;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 40px;
+    right: 115px;
+    text-decoration: underline;
+    font-size: 20px;
+}
