@@ -2,7 +2,7 @@ const swipeProfile = () => {
   // console.log($(".card-profile"));
   // console.log("hello");
 
-  var profiles = document.querySelectorAll(".card-profile");
+  var profiles = $(document.querySelectorAll(".card-profile"));
   console.log(profiles);
 
   var animating = false;

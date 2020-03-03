@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :meetings, only: :show do
     resources :lapins, only: [:create]
     resources :feedbacks
+
+    member do
+      get :pre_show
+    end
   end
   resources :lapins, only: [:show]
 

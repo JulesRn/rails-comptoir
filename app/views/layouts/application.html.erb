@@ -11,6 +11,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<%= request.original_url %>" />
     <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="1200" />
     <meta property="og:description" content="<%= meta_description %>" />
     <meta property="og:site_name" content="<%= meta_title %>" />
 
@@ -20,8 +22,10 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
   </head>
 
-  <body style="background-color: white">
-    <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages"|| controller.controller_name == "sessions"|| controller.action_name == "show" || controller.controller_name == "feedbacks" %>
+
+  <body style="background-color: white;<%  if controller.action_name == "show"  %> overflow: visible; <% else %> overflow: hidden; <% end %>"   >
+    <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages"|| controller.controller_name == "sessions"|| (controller.action_name == "show" && controller.controller_name != "profiles") || controller.controller_name == "feedbacks" %>
+
     <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>

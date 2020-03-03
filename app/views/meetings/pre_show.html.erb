@@ -1,0 +1,9 @@
+
+<div class="page" style="background-image:linear-gradient(180deg, rgba(74, 222, 222, 0.05) 71.48%, rgba(46, 188, 231, 0.7) 93.1%, #1CA7EC 100%), url('http://res.cloudinary.com/dlh4cl5ih/image/upload/<%= @meeting.user2.photos[0].key%>');width: 100%; height: 100vh;background-size: cover;background-position: center;position:relative;">
+     <div class="match-love" style="background-image: url(<%= image_path('logo_comptoir_match.svg')%>)">
+     </div>
+     <h2 class="card-name love-title effet_3d" style="color:white; text-align: center; font-family: 'Fredoka One';position:absolute;bottom: 350px;right: 70px;"><%= @meeting.user2.name %> <br> souhaite aussi te rencontrer ! </h2>
+     <%= link_to 'Ton date', meeting_path(@meeting), class: "btn btn-white-date", style: "margin-top: 50px; position:absolute; bottom: 150px;
+    right: 280px;" %>
+     <%= link_to "Annuler le date",  meeting_lapins_path(@meeting), method: :post, style: "color:white; margin-top: 50px; position:absolute;bottom: 40px;right: 370px; text-decoration: underline; font-size: 40px;" %>
+</div>

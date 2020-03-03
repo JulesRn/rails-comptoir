@@ -20,7 +20,9 @@ class MeetingsController < ApplicationController
 
   end
 
+  def pre_show
+    @meeting = Meeting.find(params[:id])
+
+  end
+
 end
-
-
-
