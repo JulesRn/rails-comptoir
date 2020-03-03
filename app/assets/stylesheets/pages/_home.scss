@@ -7,7 +7,7 @@
 
 .home-container {
     padding-top: 20vh;
-    height: -webkit-fill-available;
+    padding-bottom:50vh;
   }
 
 #home-logo {
@@ -19,6 +19,7 @@
     color: white;
     font-size: 60px;
     text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 4vh;
 }
 
 #home-btn-white {

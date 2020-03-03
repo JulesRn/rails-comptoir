@@ -1,0 +1,43 @@
+.session-background {
+  background: linear-gradient(155.21deg, #4ADEDE 0%, #2EBCE7 74.5%, #1CA7EC 100%);
+  font-family: 'Fredoka One';
+  padding-top: 5vh;
+  padding-bottom: 50vh;
+}
+
+.session-title {
+  font-size: 30px;
+  color: white;
+  text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.session-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 5vh;
+}
+
+#session-btn-white {
+  height: 8%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #1CA7EC;
+  background-color: white;
+  border: none;
+  font-size: 25px;
+  padding: 4px 10px;
+  margin-top: 0px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.other-links {
+  margin-top:3%;
+}
+
+.other-links a {
+  color:white;
+  font-size: 15px;
+  margin-top: 2%;
+}
