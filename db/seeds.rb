@@ -123,7 +123,7 @@ puts "user created"
 
 file30 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583162894/DSC_4430-1_Thanh-an_Le_qlwgdp.jpg")
 file31 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583162959/lny3z90h3tvc57nodxl1.png")
-user15 = User.new(email:"thanan@nomail.com", name: "Than-An", password: "coucou", description: "hellooooo", age:25, height: "165", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user15 = User.new(email:"thanan@nomail.com", name: "Thanh-An", password: "coucou", description: "hellooooo", age:25, height: "165", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user15.photos.attach([{io: file30, filename: " ", content_type: 'image/jpg'}, {io: file31, filename: " ", content_type: 'image/jpg'}])
 user15.save!
 puts "user created"
