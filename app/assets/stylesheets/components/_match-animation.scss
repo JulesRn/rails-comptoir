@@ -1,9 +1,16 @@
 .match-love {
   // width: 100%;
     height: 850px;
-    width: 100vw;
-    padding-top: 15vh;
+    // width: 300px;
+    // padding-top: 15vh;
     // height: 100px;
+        width: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    position: absolute;
+    left: 50px;
+    top: 270px;
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0;
@@ -12,7 +19,7 @@
     background-position: center;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
-    animation-delay: 0.3s;
+    animation-delay: 0.4s;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: forwards;
@@ -23,7 +30,7 @@
 .love-title {
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
-    animation-delay: 0.4s;
+    animation-delay: 0.5s;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: forwards;
