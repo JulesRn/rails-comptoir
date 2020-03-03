@@ -147,42 +147,6 @@ user18.photos.attach([{io: file22, filename: " ", content_type: 'image/jpg'}, {i
 user18.save!
 puts "user created"
 
-Availability.create(
-  user_id: 1,
-  afterwork: false,
-  diner_time: true,
-  days: "lundi, mercredi, vendredi"
-  )
-Availability.create(
-  user_id: 2,
-  afterwork: true,
-  diner_time: true,
-  days: "lundi, dimanche"
-  )
-Availability.create(
-  user_id: 3,
-  afterwork: true,
-  diner_time: false,
-  days: "samedi"
-  )
-Availability.create(
-  user_id: 4,
-  afterwork: false,
-  diner_time: true,
-  days: "lundi, mardi, mercredi, jeudi, vendredi"
-  )
-Availability.create(
-  user_id: 5,
-  afterwork: true,
-  diner_time: true,
-  days: "lundi"
-  )
-Availability.create(
-  user_id: 6,
-  afterwork: true,
-  diner_time: true,
-  days: "lundi, mercredi, vendredi"
-  )
 url = "https://www.timeout.fr/paris/bar/100-meilleurs-bars"
 response = open(url).read
 html_doc = Nokogiri::HTML(open(url), nil, 'utf-8')
