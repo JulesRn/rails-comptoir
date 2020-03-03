@@ -17,13 +17,14 @@
         <% end %>
       </div>
     </div>
-    <div class="row row-meeting flex-column text-center" style="margin-top:50px;">
+
+    <div class="row row-meeting flex-column text-center hide-meeting" id="" style="margin-top:50px;">
       <p style="opacity: 0.6;margin:0px;">Aura lieu</p>
       <p style="margin:0px;font-size: 80px">Le <%= @day %> <%= @month %> à <%= @hour%>h</p>
       <p style="opacity: 0.6;margin:0px;">au</p>
     </div>
   </div>
-    <div class= "card-category-meeting" style = 'background-image: linear-gradient(180deg, rgba(74, 222, 222, 0.2) 0%, rgba(46, 188, 231, 0.2) 71.35%, rgba(28, 167, 236, 0.2) 100%), url(<%= "#{@place.photo}" %>); background-size: cover; border-radius: 30px;'>
+    <div class= "card-category-meeting hide-meeting" id="" style = 'background-image: linear-gradient(180deg, rgba(74, 222, 222, 0.2) 0%, rgba(46, 188, 231, 0.2) 71.35%, rgba(28, 167, 236, 0.2) 100%), url(<%= "#{@place.photo}" %>); background-size: cover; border-radius: 30px;'>
         <div class="bottom-left-meeting">
           <p><%= @place.category %></p>
            <a href= <%="#{@place.url}"%> target ="_blank" style="text-decoration: none;">
@@ -37,6 +38,30 @@
           <h3><%= @place.address %></h3>
         </div>
     </div>
-        <div class="btn-annulation" style="width: 80%;margin: 0 auto;margin-bottom: 5%;">
+        <div class="btn-annulation hide-meeting" id="" style="width: 80%;margin: 0 auto;margin-bottom: 5%;">
           <%= link_to "Annuler le date",  meeting_lapins_path(@meeting), method: :post, style: "color:white;" %>
         </div>
+
+<ul class="loader">
+  <p id="loader-p"> À la recherche du comptoir idéal</p>
+  <li>
+    <div class="circle"></div>
+    <div class="ball"></div>
+  </li>
+  <li>
+    <div class="circle"></div>
+    <div class="ball"></div>
+  </li>
+  <li>
+    <div class="circle"></div>
+    <div class="ball"></div>
+  </li>
+  <li>
+    <div class="circle"></div>
+    <div class="ball"></div>
+  </li>
+  <li>
+    <div class="circle"></div>
+    <div class="ball"></div>
+  </li>
+</ul>
