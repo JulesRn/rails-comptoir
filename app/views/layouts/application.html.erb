@@ -23,7 +23,9 @@
     <meta property="og:site_name" content="<%= meta_title %>" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
-
+    <!-- permet d'enlever le rubberbandscroll dans l'app -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <!-- permet d'enlever le rubberbandscroll dans l'app -->
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
@@ -31,7 +33,7 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
   </head>
 
-  <body style="background: linear-gradient(0deg, rgba(255,255,255,0) 86%, rgba(0,0,0,1) 88%); <%  if controller.action_name == "show"  %> overflow: visible; <% else %> overflow: hidden; <% end %>"   >
+  <body style="background: linear-gradient(0deg, rgba(255,255,255,0) 86%, rgba(0,0,0,1) 88%); height: 100vh; <%  if controller.action_name == "show"  %> overflow: visible; <% else %> overflow: hidden; <% end %>"   >
     <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages"|| controller.controller_name == "sessions"|| (controller.action_name == "show" && controller.controller_name != "profiles") %>
 
     <%= render 'shared/navbar' %>
@@ -39,5 +41,27 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+
+    <!-- permet d'enlever le rubberbandscroll dans l'app -->
+
+    <% unless (controller.action_name == "show" && controller.controller_name != "users") || (controller.action_name == "show" && controller.controller_name != "profiles") %>
+      <script>
+        document.body.addEventListener('touchmove', function(event) {
+          event.preventDefault();
+        }, {
+          passive: false,
+          useCapture: false
+        });
+
+        window.onresize = function() {
+          $(document.body).width(window.innerWidth).height(window.innerHeight);
+        }
+
+        $(function() {
+          window.onresize();
+        });
+      </script>
+    <% end %>
+    <!-- permet d'enlever le rubberbandscroll dans l'app -->
   </body>
 </html>
