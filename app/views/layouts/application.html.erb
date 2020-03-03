@@ -6,6 +6,12 @@
     <%= csp_meta_tag %>
     <%= favicon_link_tag %>
 
+    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
+    <%= render 'shared/ios_pwa_links' %>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable"  content="yes">
+
     <!-- Facebook Open Graph data -->
     <meta charset="UTF-8">
     <meta property="og:title" content="<%= meta_title %>" />
@@ -16,7 +22,8 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:description" content="<%= meta_description %>" />
     <meta property="og:site_name" content="<%= meta_title %>" />
-   <!--  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
@@ -24,8 +31,9 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
   </head>
 
-  <body style="background-color: white;<%  if controller.action_name == "show"  %> overflow: visible; <% else %> overflow: hidden; <% end %>"   >
+  <body style="background: linear-gradient(0deg, rgba(255,255,255,0) 86%, rgba(0,0,0,1) 88%); <%  if controller.action_name == "show"  %> overflow: visible; <% else %> overflow: hidden; <% end %>"   >
     <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages"|| controller.controller_name == "sessions"|| (controller.action_name == "show" && controller.controller_name != "profiles") %>
+
     <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>

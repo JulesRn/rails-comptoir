@@ -29,6 +29,7 @@ swipeProfile();
 
 
 
+
 const hideOrDisplayMenu = () => {
   const x = document.getElementById("myDIV");
   if (x.style.display === "block") {
@@ -56,6 +57,7 @@ if (buttonSettings) {
 //   displayMenu();
 // })
 document.addEventListener('turbolinks:load', () => {
+  swipeProfile();
     // Do your stuff!
   let interval;
   const countdown = document.getElementById('countdown');
