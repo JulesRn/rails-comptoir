@@ -1,5 +1,5 @@
 
-<div class="index_wrapper">
+<div class="index_wrapper ">
   <div class="cards">
     <% @user.seen_users.each do |user| %>
       <div class="card-profile" id="user-<%= user.id %>">
@@ -11,8 +11,8 @@
           </div>
         <% end %>
 
-        <div class="row mt-5 buttons">
-          <div class="col-2">
+        <div class="row buttons">
+          <div class="col-3">
             <%= simple_form_for @unlike, url: unlikes_path, method: :post do |f| %>
               <%= f.input :unliked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
               <div class="small-3 columns">
@@ -23,7 +23,7 @@
               <%#= f.submit 'X', class: "btn btn-next", id: "next-profile_#{user.id}" %>
             <% end %>
           </div>
-          <div class="col">
+          <div class="col-9">
             <%= simple_form_for @like, url: likes_path, method: :post do |f| %>
               <%= f.input :liked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
               <%= f.submit "Rencontrer", class: "btn btn-like", id: "meet-profile_#{user.id}"  do %>
