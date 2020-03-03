@@ -2,7 +2,7 @@ const swipeProfile = () => {
   // console.log($(".card-profile"));
   // console.log("hello");
 
-  var profiles = $(".card-profile");
+  var profiles = document.querySelectorAll(".card-profile");
   console.log(profiles);
 
   var animating = false;
@@ -20,7 +20,7 @@ const swipeProfile = () => {
     function pullChange() {
       animating = true;
       deg = pullDeltaX / 10;
-      $card.css("transform", "translateX("+ pullDeltaX +"px) rotate("+ deg +"deg)");
+      $card.css("transform", "translateX(-'100vw') rotate("+ deg +"deg)");
 
       // var opacity = pullDeltaX / 100;
       // var rejectOpacity = (opacity >= 0) ? 0 : Math.abs(opacity);
