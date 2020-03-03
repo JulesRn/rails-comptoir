@@ -1,0 +1,161 @@
+.meeting-topbar {
+  height: 70vh;
+  background: linear-gradient(107.13deg, #4ADEDE 13.24%, #2EBCE7 68.32%, #1CA7EC 90.44%);
+  border-radius: 30px 30px 20px 20px;
+}
+
+.avatar-date {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 300px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-category-meeting {
+  background-position: center;
+  height: 200px;
+  width: 85%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: -90px;
+  background-size: cover;
+  border-radius: 30px;
+}
+
+.banner-meeting {
+   height: 1099px;
+   position:relative;
+     overflow: hidden;
+}
+
+.center-text-meeting {
+  color: white;
+  font-size: 100px;
+  font-family: 'Fredoka One';
+  text-align: center;
+}
+
+.center-text-meeting h1{
+    font-size: 50px;
+    font-family: 'Fredoka One';
+    text-align: center;
+    font-weight: normal;
+  }
+
+.bottom-ecran {
+  background: #12c1bb;
+  color: white;
+  text-align: center;
+}
+
+.rdv h1{
+  font-size: 120px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-right: 20px;
+  padding-top: 50px;
+}
+
+.rdv h2{
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-bottom: 150px;
+  padding-right: 20px;
+}
+
+.bottom-left-meeting {
+      height: fit-content;
+    position: absolute;
+    top: 95px;
+}
+
+.bottom-left-meeting h2, h3 {
+  color: white;
+  font-family: 'Fredoka One';
+  font-size:15px;
+}
+
+.bottom-left-meeting p {
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 11px;
+  padding: 5px 10px;
+  color: white;
+  top: -210px;
+  right: -460px;
+  width: fit-content;
+}
+
+
+.annulation {
+  padding-right: 70px;
+}
+
+.pic  {
+  width: 100px;
+  height: 100px;
+}
+
+.row-meeting {
+  font-family: 'Fredoka One';
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4%;
+}
+
+.col-avatar {
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  /* flex-grow: 1; */
+  width: 300px;
+}
+
+.col-text {
+  font-size: 36px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  text-align: center;
+  align-self: center;
+}
+
+.font-correction {
+  font-size: 20px;
+}
+
+.opacity-margin {
+  opacity: 0.6;
+  margin:0px;
+}
+
+.meeting-btn-annulation {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(155.21deg, #4ADEDE 0%, #2EBCE7 74.5%, #1CA7EC 100%);
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Fredoka One';
+  font-weight: bold;
+  margin: auto;
+  position: relative;
+  top: -75px;
+  color: white;
+  font-size: 26px;
+  width: fit-content;
+  padding: 5px 15px;
+}

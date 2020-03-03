@@ -1,1 +1,41 @@
 // Specific CSS for your home-page
+.home-background {
+  background: linear-gradient(155.21deg, #4ADEDE 0%, #2EBCE7 74.5%, #1CA7EC 100%);
+  font-family: 'Fredoka One';
+  height: inherit;
+}
+
+.home-container {
+    padding-top: 20vh;
+    height: -webkit-fill-available;
+  }
+
+#home-logo {
+  height: 30vh;
+}
+
+#home-title {
+    font-family: 'Fredoka One';
+    color: white;
+    font-size: 60px;
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+#home-btn-white {
+  height: 8%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #1CA7EC;
+  background-color: white;
+  border: none;
+  font-size: 25px;
+  padding: 4px 10px;
+  margin-top: 0px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+#home-link-connexion {
+  font-size: 15px;
+  color: white;
+  margin-top: 20px;
+}

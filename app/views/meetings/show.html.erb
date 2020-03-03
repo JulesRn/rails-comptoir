@@ -1,42 +1,44 @@
 
-  <div style="height: 70vh; background:linear-gradient(107.13deg, #4ADEDE 13.24%, #2EBCE7 68.32%, #1CA7EC 90.44%);border-radius: 0px 0px 50px 50px;">
-    <div class="center-text-meeting text-center w-100">
+  <div class="meeting-topbar">
+    <div class="center-text-meeting">
       <%= image_tag "LogoComptoir.png", alt: "alttext", style: "height:7vh"%>
       <h1>Ton date</h1>
     </div>
-    <div class="row row-meeting">
-      <div class="col">
+    <div class="row-meeting">
+      <div class="col-avatar">
         <%= link_to user_path(@liked_user) do  %>
           <%= cl_image_tag "#{@liked_user.photos[0].key}", alt: "match photo", class: "avatar-date" %>
         <% end %>
       </div>
-      <div class="col text-center d-flex flex-column" style="padding-top: 10%;">
+      <div class="col-text" >
         <p style="opacity: 0.6;margin:0px;">avec</p>
-        <%= link_to new_meeting_feedback_path(@meeting), style: "font-size: 80px" do %>
+        <%= link_to new_meeting_feedback_path(@meeting) do %>
           <p><%=@liked_user.name %></p>
         <% end %>
       </div>
     </div>
-    <div class="row row-meeting flex-column text-center" style="margin-top:50px;">
-      <p style="opacity: 0.6;margin:0px;">Aura lieu</p>
-      <p style="margin:0px;font-size: 80px">Le <%= @day %> <%= @month %> à <%= @hour%>h</p>
-      <p style="opacity: 0.6;margin:0px;">au</p>
+    <div class="m-2 row-meeting ">
+      <div class="col-text font-correction">
+      <p  class= "opacity-margin">Aura lieu</p>
+      <p class="m-0">Le <%= @day %> <%= @month %> à <%= @hour%>h</p>
+      <p class= "opacity-margin">au</p>
+      </div>
     </div>
   </div>
-    <div class= "card-category-meeting" style = 'background-image: linear-gradient(180deg, rgba(74, 222, 222, 0.2) 0%, rgba(46, 188, 231, 0.2) 71.35%, rgba(28, 167, 236, 0.2) 100%), url(<%= "#{@place.photo}" %>); background-size: cover; border-radius: 30px;'>
+    <div class= "card-category-meeting" style = 'background-image: linear-gradient(180deg, rgba(74, 222, 222, 0.2) 0%, rgba(46, 188, 231, 0.2) 71.35%, rgba(28, 167, 236, 0.2) 100%), url(<%= "#{@place.photo}" %>);'>
         <div class="bottom-left-meeting">
           <p><%= @place.category %></p>
-           <a href= <%="#{@place.url}"%> target ="_blank" style="text-decoration: none;">
+          <a href= <%="#{@place.url}"%> target ="_blank" style="text-decoration: none;">
             <% if @place.name.size >=22 %>
-            <h2 class="m-0" id="address"><%= @place.name.first(22) %></h2>
+            <h2 class=""><%= @place.name.first(22) %></h2>
             <% else %>
-            <h2 class="m-0" id="address"><%= @place.name %></h2>
+            <h2 class=""><%= @place.name %></h2>
             <% end %>
           </a>
           <h3><%= @place.address %></h3>
         </div>
     </div>
-        <div class="btn-annulation" style="width: 80%;margin: 0 auto;margin-bottom: 5%;">
+        <div class="meeting-btn-annulation">
           <%= link_to "Annuler le date",  meeting_lapins_path(@meeting), method: :post, style: "color:white;" %>
         </div>
 
