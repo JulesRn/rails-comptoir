@@ -65,6 +65,7 @@ document.addEventListener('turbolinks:load', () => {
     let initTime = parseInt(countdown.innerText, 10);
 
     const updateChrono = () => {
+
       initTime = initTime - 100;
       var heure = parseInt((initTime / 3600), 10);
       var reste = (initTime % 3600);
