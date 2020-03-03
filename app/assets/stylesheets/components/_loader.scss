@@ -9,17 +9,23 @@ html {
 }
 
 body {
-  background: #00acc1;
+  background: white;
 }
 
 .loader {
-  width: 700px;
   height: 70px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 25px -125px;
+  margin-top:5vh;
+  margin-bottom: 30vh;
   list-style-type: none;
+  background-color:yellow;
+}
+
+#loader-p {
+  font-family: 'Fredoka One';
+  font-size: 24px;
+  color: black;
+  margin: Opx auto;
+  text-align: center;
 }
 
 .loader li {
@@ -35,9 +41,11 @@ body {
   border-top: 0;
   border-left: 0;
   border-right: 0;
+  background-color:black;
 }
 
 .ball {
+  background-color:black;
   position: absolute;
   content: "";
   width: 30px;
@@ -172,12 +180,3 @@ body {
   }
 }
 
-#loader-p {
-  font-family: Fredoka One;
-  font-size: 60px;
-  color: white;
-  width: 100%;
-  text-align: center;
-  margin-left: -200px;
-
-}
