@@ -1,9 +1,9 @@
 #countdown {
   display: inline-block;
-  font-size: 200px;
-  color: white;
+  font-size: 150px;
+  color: #1CA7EC;
   line-height: 1;
-  font-family: 'Digital-7';
+  font-family: Fredoka One;
 }
 
 .lapin {
@@ -12,19 +12,25 @@
 .lapin h1{
   padding-bottom: 100px;
   padding-top: 200px;
-  font-family: 'Quicksand';
+  font-family: Fredoka One;
   font-size: 70px;
   font-weight: bold;
 }
 
 .chrono {
   text-align: center;
+  background-color: white;
+  width: 90%;
+  color: #1CA7EC;
+  border-radius: 50px;
+  margin: 300px auto;
+
 }
 
 .chrono h2{
   padding-bottom: 100px;
   padding-top: 50px;
-  font-family: 'Quicksand';
+  font-family: Fredoka One;
   font-size: 70px;
   font-weight: bold;
 }

@@ -64,6 +64,7 @@ document.addEventListener('turbolinks:load', () => {
 
   if(document.getElementById('countdown')) {
     initChrono();
+
   };
 
   if(document.querySelector(".fa-calendar-check")) {
