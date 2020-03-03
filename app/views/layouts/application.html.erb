@@ -31,10 +31,8 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
   </head>
 
-
-
-  <body style="background-color: white;<%  if controller.action_name == "show"  %> overflow: visible; <% else %> overflow: hidden; <% end %>"   >
-    <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages"|| controller.controller_name == "sessions"|| (controller.action_name == "show" && controller.controller_name != "profiles") || controller.controller_name == "feedbacks" %>
+  <body style="background: linear-gradient(0deg, rgba(255,255,255,0) 86%, rgba(0,0,0,1) 88%); <%  if controller.action_name == "show"  %> overflow: visible; <% else %> overflow: hidden; <% end %>"   >
+    <% unless controller.controller_name == "lapins" || controller.controller_name == "meetings" || controller.controller_name == "pages"|| controller.controller_name == "sessions"|| (controller.action_name == "show" && controller.controller_name != "profiles") %>
 
     <%= render 'shared/navbar' %>
     <% end %>
