@@ -2,12 +2,14 @@ const swipeProfile = () => {
   // console.log($(".card-profile"));
   // console.log("hello");
 
+$( document ).ready(function() {
+  console.log( "ready!" );
+
   var profiles = $(document.querySelectorAll(".card-profile"));
   console.log(profiles);
 
   var animating = false;
   var cardsCounter = 0;
-  // var numOfCards = 6;
   var decisionVal = 80;
   var pullDeltaX = 0;
   var deg = 0;
@@ -20,7 +22,7 @@ const swipeProfile = () => {
     function pullChange() {
       animating = true;
       deg = pullDeltaX / 10;
-      $card.css("transform", "translateX(-'100vw') rotate("+ deg +"deg)");
+      $card.css("transform", "translateX("+ pullDeltaX +"px) rotate("+ deg +"deg)");
 
       // var opacity = pullDeltaX / 100;
       // var rejectOpacity = (opacity >= 0) ? 0 : Math.abs(opacity);
@@ -111,6 +113,7 @@ const swipeProfile = () => {
   })
 
 
+});
 }
 
 
