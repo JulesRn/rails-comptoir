@@ -26,6 +26,8 @@ import 'jquery-touchswipe/jquery.touchSwipe';
 import { swipeProfile } from "../components/profileswipe";
 import { initCalendar } from "../components/init_calendar";
 import { initChrono } from "../components/init_chrono";
+import { loadAnimation } from "../components/load_animation";
+// import com.steelkiwi.library.SlidingSquareLoaderView
 swipeProfile();
 
 
@@ -51,6 +53,8 @@ if (buttonSettings) {
 }
 
 
+
+
 // const buttonUpdateProfile = document.getElementById('update-profile');
 // buttonUpdateProfile.addEventListener('click', (event) => {
 //   event.preventDefault();
@@ -70,8 +74,11 @@ document.addEventListener('turbolinks:load', () => {
   if(document.querySelector(".fa-calendar-check")) {
     initCalendar();
   }
-})
 
+  loadAnimation();
+
+
+})
 
 
 // const match = document.getElementById('Rencontrer');
