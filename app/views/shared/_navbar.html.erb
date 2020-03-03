@@ -9,11 +9,11 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? && controller.controller_name != "profiles" %>
           <%= link_to profile_path do %>
-            <i class="fas fa-bars px-2" style="color:white;text-decoration:none; font-size: 80px;"></i>
+            <i class="fas fa-bars px-2" style="color:white;text-decoration:none; font-size: 35px;"></i>
           <% end %>
         <% elsif %>
           <%= link_to users_path do %>
-            <i class="fas fa-bars px-2" style="color:white;text-decoration:none; font-size: 80px;"></i>
+            <i class="fas fa-bars px-2" style="color:white;text-decoration:none; font-size: 35px;"></i>
           <% end %>
           <%#= image_tag "bars-solid.svg", class: "dropdown-toggle", style: "height:80px;backgound-color:white;" , id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> -->
@@ -34,7 +34,7 @@
   </div>
 
     <div class="col-2 ">
-      <i class="far fa-calendar-check" style="color:white;text-decoration:none; font-size: 80px;"></i>
+      <i class="far fa-calendar-check" style="color:white;text-decoration:none; font-size: 35px;"></i>
   </div>
 
 </div>

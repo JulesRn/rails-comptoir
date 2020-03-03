@@ -12,14 +12,14 @@
       </div>
       <div class="col text-center d-flex flex-column" style="padding-top: 10%;">
         <p style="opacity: 0.6;margin:0px;">avec</p>
-        <%= link_to new_meeting_feedback_path(@meeting), style: "font-size: 80px" do %>
+        <%= link_to new_meeting_feedback_path(@meeting), style: "font-size: 50px" do %>
           <p><%=@liked_user.name %></p>
         <% end %>
       </div>
     </div>
     <div class="row row-meeting flex-column text-center" style="margin-top:50px;">
       <p style="opacity: 0.6;margin:0px;">Aura lieu</p>
-      <p style="margin:0px;font-size: 80px">Le <%= @day %> <%= @month %> à <%= @hour%>h</p>
+      <p style="margin:0px;font-size: 50px">Le <%= @day %> <%= @month %> à <%= @hour%>h</p>
       <p style="opacity: 0.6;margin:0px;">au</p>
     </div>
   </div>

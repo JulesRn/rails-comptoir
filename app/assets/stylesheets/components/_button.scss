@@ -2,14 +2,14 @@
   padding: 15px 60px;
   border-radius: 50px;
   transition: opacity 0.3s ease;
-  font-size: 70px;
+  font-size: 30px;
   font-weight: bold;
   color: white;
   border: 2px solid;
   display: flex;
   margin-left: 20px;
 & p {
-    font-size: 40px;
+    font-size: 23px;
     margin: 0px;
   }
 }
@@ -23,7 +23,7 @@
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
-  font-size: 30px;
+  font-size: 15px;
   font-weight: bold;
   color: white;
   border: 2px solid;
@@ -32,10 +32,11 @@
 .buttons {
   display: flex;
   justify-content: between;
-  padding: 50px;
+  padding: 5px;
   height: 220px;
   width: 100%;
   margin: 50px 0px;
+  padding-top: 0px;
 }
 
 .buttons-show {
@@ -55,14 +56,15 @@
 .btn-next {
   box-shadow:0 10px 20px rgba(0,0,0,0.25);
   background:linear-gradient(155.21deg, #4ADEDE 0%, #2EBCE7 74.5%, #1CA7EC 100%);
-  width: 100%;
-  height:120px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 30px;
   font-family: 'Fredoka One';
   font-weight: bold;
-  font-size: 80px;
+  font-size: 28px;
   color:white;
   margin: 0;
+  padding: 5px;
 }
 
 .btn-option-profile {
@@ -73,7 +75,7 @@
   border-radius: 30px;
   font-family: 'Fredoka One';
   font-weight: bold;
-  font-size: 60px;
+  font-size: 28px;
   color: white;
   margin: 0;
 }
@@ -83,13 +85,13 @@
   box-shadow:0 10px 20px rgba(0,0,0,0.25);
   background:linear-gradient(155.21deg, #4ADEDE 0%, #2EBCE7 74.5%, #1CA7EC 100%);
   width: 100%;
-  height:120px;
+  height: 4rem;
   border-radius: 30px;
   text-align: center;
   padding-top: 12px;
   font-family: 'Fredoka One';
   font-weight: bold;
-  font-size: 60px;
+  font-size: 28px;
   margin: 0;
   color:white;
 }
@@ -104,7 +106,7 @@
   padding-top: 12px;
   font-family: 'Fredoka One';
   font-weight: bold;
-  font-size: 60px;
+  font-size: 28px;
   margin: 0;
   position: relative;
   top: -50px;
@@ -115,7 +117,7 @@
 .btn-signal {
   color: white;
   font-weight: bold;
-  font-size: 31px;
+  font-size: 19px;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-text-decoration: underline white;
@@ -134,7 +136,7 @@
     color: #1CA7EC;;
     background-color: white;
     border: none;
-    font-size: 50px;
+    font-size: 28px;
     border-radius: 17px;
     padding: 15px 80px;
 }
@@ -144,7 +146,7 @@
     color: #1CA7EC;;
     background-color: white;
     border: none;
-    font-size: 70px;
+    font-size: 30px;
     border-radius: 17px;
     padding: 15px 80px 15px 80px;
     font-family: 'Fredoka One';
@@ -169,4 +171,9 @@
   font-style: normal;
   font-weight: normal;
   padding: 10px 30px 10px 30px;
+}
+
+#new_like {
+  width: 100%;
+  padding: 0px 10px;
 }

@@ -1,5 +1,5 @@
 .card-profile {
-  padding-top: 40px;
+  padding-top: 20px;
   flex: 0 0 auto;
   width: 100%;
   &:nth-of-type(2) {
@@ -11,7 +11,7 @@
 .card-presentation {
   background-size: cover;
   background-position: center;
-  height: 1400px;
+  height: 545px;
   width: 95%;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@
 
 .card-name {
   position: absolute;
-  font-size: 120px;
+  font-size: 50px;
   bottom: 180px;
   left: 70px;
   font-family: 'Quicksand';
@@ -36,7 +36,7 @@
 
 .card-description {
   position: absolute;
-  font-size: 40px;
+  font-size: 29px;
   left: 75px;
   top: 1320px;
   max-width: 85%;
@@ -45,7 +45,7 @@
 }
 
 .card-nickname {
-  font-size: 120px;
+  font-size: 50px;
   bottom: 180px;
   left: 70px;
   color: white;
@@ -55,7 +55,7 @@
 }
 
 .card-desc {
-  font-size: 55px;
+  font-size: 29px;
   bottom: 110px;
   left: 70px;
   font-weight: normal;

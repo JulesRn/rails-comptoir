@@ -1,8 +1,7 @@
 <div style="background:linear-gradient(155.21deg, #4ADEDE 0%, #2EBCE7 74.5%, #1CA7EC 100%); font-family: 'Fredoka One';">
 <div class="container text-center align-items-center" style="height: 100vh; width: 100%; padding-top:30vh;">
 <%= image_tag "LogoComptoir.png" , style: "height: 27vh;"%>
-<h1 style="font-size: 120px;font-family: 'Fredoka One';color: white;font-size: 140px;
-    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);">Comptoir</h1>
+<h1 class="title_form">Comptoir</h1>
 <% if !user_signed_in? %>
 <%= link_to "Me connecter", new_user_session_path, class: "btn btn-white", style: "margin-top: 50px;" %>
   <% else %>
@@ -10,6 +9,6 @@
 <% end %>
 
     <br>
-<%= link_to "Me créer un compte" ,new_user_registration_path, style: "font-size: 35px; color: white; margin-top: 50px;" %>
+<%= link_to "Me créer un compte" ,new_user_registration_path, style: "font-size: 20px; color: white; margin-top: 50px;" %>
 </div>
 </div>
