@@ -6,6 +6,12 @@
     <%= csp_meta_tag %>
     <%= favicon_link_tag %>
 
+    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
+    <%= render 'shared/ios_pwa_links' %>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable"  content="yes">
+
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="<%= meta_title %>" />
     <meta property="og:type" content="website" />
@@ -15,12 +21,16 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:description" content="<%= meta_description %>" />
     <meta property="og:site_name" content="<%= meta_title %>" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+
+
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
   </head>
+
 
 
   <body style="background-color: white;<%  if controller.action_name == "show"  %> overflow: visible; <% else %> overflow: hidden; <% end %>"   >
