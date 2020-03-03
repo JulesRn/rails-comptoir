@@ -1,5 +1,5 @@
 body, input, textarea {
-  font-size: 55px;
+  font-size: 30px;
 }
 
 #myDIV .form-group {
@@ -168,16 +168,17 @@ input:checked + label {
   }
   label {
     position: relative;
-    padding-left: 90px;
-
-    margin: 20px;
-    padding: 15px 30px 15px 78px;
+    padding-left: 60px;
+    font-size: 24px;
+    align-self: center;
     border: 1px solid #fff;
     border-radius: 100px;
     color: #fff;
     background-color: #12c1bb;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
+    height: 50px;
+    width: 150px;
 
     &::before {
       content: "";
@@ -187,7 +188,7 @@ input:checked + label {
       width: 40px;
       height: 40px;
       left: 19px;
-      top: 18px;
+      top: -5px;
     }
   }
 }

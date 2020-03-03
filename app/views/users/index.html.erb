@@ -47,7 +47,7 @@
   <%= simple_form_for current_user do |m| %>
       <div class="card-centrer" style="max-width: 100vh height: 230px;">
       <%= m.simple_fields_for :availabilities do |availability| %>
-        <div class="card-head" style="text-align: center">
+        <div class="card-head" style="text-align: center;font-size: 30px;">
         <%= availability.object.days %>
         </div>
         <div class="input-hour d-flex justify-content-center">
