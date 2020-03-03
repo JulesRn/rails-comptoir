@@ -24,6 +24,10 @@ require("channels")
 import "bootstrap";
 import 'jquery-touchswipe/jquery.touchSwipe';
 import { swipeProfile } from "../components/profileswipe";
+import { initCalendar } from "../components/init_calendar";
+swipeProfile();
+
+
 
 
 const hideOrDisplayMenu = () => {
@@ -79,6 +83,10 @@ document.addEventListener('turbolinks:load', () => {
     updateChrono();
     interval = setInterval(updateChrono, 1);
   };
+
+  if(document.querySelector(".fa-calendar-check")) {
+    initCalendar();
+  }
 })
 
 
@@ -91,6 +99,34 @@ document.addEventListener('turbolinks:load', () => {
 //     hideOrDisplayMenu();
 //   })
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
