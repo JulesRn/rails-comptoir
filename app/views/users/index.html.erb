@@ -1,48 +1,69 @@
 
-<div class="cards">
+<div class="index_wrapper">
+  <div class="cards">
+    <% @user.seen_users.each do |user| %>
+      <div class="card-profile" id="user-<%= user.id %>">
 
-  <% @user.seen_users.each do |user| %>
-    <div class="card-profile" id="user-<%= user.id %>">
+        <%= link_to user_path(user), class: 'profile-link' do  %>
+          <div class="card-presentation d-flex flex-column justify-content-center m-auto demo__card" style="background-image:linear-gradient(180deg, rgba(74, 222, 222, 0.05) 71.48%, rgba(46, 188, 231, 0.7) 93.1%, #1CA7EC 100%), url('http://res.cloudinary.com/dlh4cl5ih/image/upload/<%= user.photos[0].key%>')">
+            <h2 class="card-name"><%= user.name %>, <%= user.age %></h2>
+            <p class="card-description"><%= user.description %></p>
+          </div>
+        <% end %>
 
-      <%= link_to user_path(user), class: 'profile-link' do  %>
-        <div class="card-presentation d-flex flex-column justify-content-center m-auto demo__card" style="background-image:linear-gradient(180deg, rgba(74, 222, 222, 0.05) 71.48%, rgba(46, 188, 231, 0.7) 93.1%, #1CA7EC 100%), url('http://res.cloudinary.com/dlh4cl5ih/image/upload/<%= user.photos[0].key%>')">
-          <h2 class="card-name"><%= user.name %>, <%= user.age %></h2>
-          <p class="card-description"><%= user.description %></p>
-        </div>
-      <% end %>
-
-      <div class="row mt-5 buttons">
-        <div class="col-2">
-          <%= simple_form_for @unlike, url: unlikes_path, method: :post do |f| %>
-            <%= f.input :unliked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
-            <div class="small-3 columns">
-              <%= button_tag type: 'submit', class: "button postfix btn btn-next", id: "next-profile_#{user.id}" do %>
-                <i class="fas fa-times" aria-hidden="true"></i>
-              <% end %>
-            </div>
-            <%#= f.submit 'X', class: "btn btn-next", id: "next-profile_#{user.id}" %>
-          <% end %>
-        </div>
-        <div class="col">
-          <%= simple_form_for @like, url: likes_path, method: :post do |f| %>
-            <%= f.input :liked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
-            <%= f.submit "Rencontrer", class: "btn btn-like", id: "meet-profile_#{user.id}"  do %>
-              <!-- <p>
-                <%#= image_tag "LogoComptoir.png", style: "height: 100px;" %>
-                Rencontrer
-              </p> -->
+        <div class="row mt-5 buttons">
+          <div class="col-2">
+            <%= simple_form_for @unlike, url: unlikes_path, method: :post do |f| %>
+              <%= f.input :unliked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
+              <div class="small-3 columns">
+                <%= button_tag type: 'submit', class: "button postfix btn btn-next", id: "next-profile_#{user.id}" do %>
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                <% end %>
+              </div>
+              <%#= f.submit 'X', class: "btn btn-next", id: "next-profile_#{user.id}" %>
             <% end %>
-          <% end %>
+          </div>
+          <div class="col">
+            <%= simple_form_for @like, url: likes_path, method: :post do |f| %>
+              <%= f.input :liked_user, input_html: {value: "#{user.id}"}, as: :hidden %>
+              <%= f.submit "Rencontrer", class: "btn btn-like", id: "meet-profile_#{user.id}"  do %>
+                <!-- <p>
+                  <%#= image_tag "LogoComptoir.png", style: "height: 100px;" %>
+                  Rencontrer
+                </p> -->
+              <% end %>
+            <% end %>
+          </div>
+          <div class="d-none">
+            <%= link_to user_path(user), class: 'btn-show', id: "show-profile_#{user.id}" %>
+          </div>
         </div>
-        <div class="d-none">
-          <%= link_to user_path(user), class: 'btn-show', id: "show-profile_#{user.id}" %>
-        </div>
+          <%#= link_to likes_path, class: "btn btn-like d-flex justify-content-center" do  %>
+          <%# end %>
       </div>
-        <%#= link_to likes_path, class: "btn btn-like d-flex justify-content-center" do  %>
-        <%# end %>
+    <% end %>
+  </div>
+  <div class="calendar" id="calendar-form" style="line-height: 73px;">
+  <%= simple_form_for current_user do |m| %>
+      <div class="card-centrer" style="max-width: 100vh height: 230px;">
+      <%= m.simple_fields_for :availabilities do |availability| %>
+        <div class="card-head" style="text-align: center">
+        <%= availability.object.days %>
+        </div>
+        <div class="input-hour d-flex justify-content-center">
+          <p class="card-text-calendar"style="text-align: center; text-decoration: none">
+          <%= availability.input :afterwork, input_html: { checked: availability.object.afterwork }, required: false, as: :boolean , label: "18h  <i class='fas fa-briefcase'></i>".html_safe %>
+          <%= availability.input :diner_time, input_html: { checked: availability.object.diner_time },  required: false, as: :boolean, label: "20h  <i class='fas fa-cocktail'></i>".html_safe %>
+          </p>
+        </div>
+        <% end %>
+
+      <%= m.submit 'valider', class: 'btn-like' %>
     </div>
   <% end %>
+  </div>
 </div>
+
 
 
 

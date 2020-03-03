@@ -13,6 +13,7 @@
     <meta name="mobile-web-app-capable"  content="yes">
 
     <!-- Facebook Open Graph data -->
+    <meta charset="UTF-8">
     <meta property="og:title" content="<%= meta_title %>" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<%= request.original_url %>" />
@@ -23,9 +24,11 @@
     <meta property="og:site_name" content="<%= meta_title %>" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
+
     <!-- permet d'enlever le rubberbandscroll dans l'app -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     <!-- permet d'enlever le rubberbandscroll dans l'app -->
+
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
