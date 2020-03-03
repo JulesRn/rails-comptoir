@@ -16,7 +16,11 @@ class FeedbacksController < ApplicationController
     def new
       @meeting = Meeting.find(params[:meeting_id])
       @feedback = Feedback.new
-
+      @liked_user = if @meeting.user2.id == current_user.id
+                    @like = @meeting.user1
+                  else
+                    @like = @meeting.user2
+                  end
 
     end
 
