@@ -152,7 +152,9 @@
 .opacity-margin {
   opacity: 0.6;
   margin:0px;
-  font-size: 20px;
+  font-size: 25px;
+  font-family: 'Quicksand';
+  font-weight: bold;
 }
 
 .meeting-btn-annulation {
@@ -178,4 +180,21 @@
 
 .meeting-hour:hover {
   color:white;
+}
+
+.meeting-hour_name {
+  font-size: 36px;
+  color:white;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.with{
+  opacity: 0.6;
+  font-size: 25px;
+  text-align: left;
+  margin-left: 20px;
+  font-family: 'Quicksand';
+  font-weight: bold;
+  margin-bottom: 2px;
 }
