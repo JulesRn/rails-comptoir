@@ -60,7 +60,7 @@ user5.save!
 puts "user created"
 
 file14 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583249022/IMG_4769_juhnqe.jpg")
-user6 = User.new(email:"jm@nomail.com", name: "Jean-Mouloud", password: "coucou", description: "Je te laisserai piquer mes frites si tu aimes ma brioche 😜.", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
+user6 = User.new(email:"jm@nomail.com", name: "Jean-Mi", password: "coucou", description: "Je te laisserai piquer mes frites si tu aimes ma brioche 😜.", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
 user6.photos.attach([{io: file14, filename: " ", content_type: 'image/jpg'}])
 user6.save!
 puts "user created"
