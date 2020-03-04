@@ -12,6 +12,7 @@ const initChrono = () => {
 
     if (heure + minutes + seconde < 1) {
       countdown.innerText = "00:00:00"
+      debugger
       clearInterval(interval)
       window.location.href = window.location.origin + '/users';
     }
