@@ -23,26 +23,31 @@
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
   position: relative;
+    padding: 30px;
 }
 
 .card-name {
-  position: absolute;
+  // position: absolute;
   font-size: 50px;
-  bottom: 120px;
-  left: 30px;
+  // bottom: 120px;
+  // left: 30px;
   font-family: 'Fredoka One';
   font-weight: bold;
 }
 
 .card-description {
-    position: absolute;
+    // position: absolute;
     font-size: 19px;
-    left: 30px;
-    top: 445px;
+    // left: 30px;
+    // top: 445px;
     max-width: 90%;
     font-family: 'Quicksand';
     font-weight: bold;
     line-height: 1;
+
+    div {
+      height: 40%;
+    }
 }
 
 .card-nickname {
