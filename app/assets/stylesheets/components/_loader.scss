@@ -8,13 +8,13 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  background: #00acc1;
-}
+// body {
+//   background: #00acc1;
+// }
 
 .loader {
-  width: 700px;
-  height: 70px;
+  width: 200px;
+  height: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -28,8 +28,8 @@ body {
 }
 
 .circle {
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   border-radius: 0 0 50% 50%;
   border: 6px solid #fff;
   border-top: 0;
@@ -178,6 +178,6 @@ body {
   color: white;
   width: 100%;
   text-align: center;
-  margin-left: -200px;
+  // margin-left: -200px;
 
 }
