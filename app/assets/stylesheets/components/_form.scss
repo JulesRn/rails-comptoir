@@ -85,10 +85,6 @@ body, input, textarea {
   }
 }
 
-input:checked + label {
-  background-color: #ab576c;
-}
-
 #user_smoker #user_drinker {
   font-size: 55px;
   width: 50px;
@@ -336,7 +332,7 @@ input:checked + label {
   font-style: normal;
   font-weight: normal;
     input {
-      display: none;
+      // visibility: hidden;
 
       &:checked + label::before {
         background-color: black !important;

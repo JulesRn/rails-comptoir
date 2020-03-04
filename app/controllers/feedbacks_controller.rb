@@ -28,7 +28,14 @@ class FeedbacksController < ApplicationController
       @meeting = Meeting.find(params[:meeting_id])
       @meeting.status = "occured"
       @user = current_user
-      @feedback = Feedback.new(user: @user, meeting: @meeting)
+      result_present = params[:feedback][:was_present] == "Oui"
+      @feedback = Feedback.new(user: @user, meeting: @meeting, was_present: result_present)
+      if @feedback.save!
+        if params[:redirect] == "Oui"
+          redirect_to users_path
+        else
+          redirect_to profile_path(@user)
+        end
+      end
     end
-
 end
