@@ -1,4 +1,4 @@
-<div class="avatar-feedback" style="height: 100vh; width: 100%; background-image: linear-gradient(180deg, rgba(74, 222, 222, 0.1) 36.58%, rgba(46, 188, 231, 0.5) 83.48%, #1CA7EC 100%), url('<%= cl_image_path @like.photos.first.key %>');padding-top:20vh; background-size: cover; background-position: center; position: absolute;
+<div class="avatar-feedback" style="height: 100vh; width: 100%; background-image: linear-gradient(180deg, rgba(4, 37, 37, 0.38) 36.58%, rgba(46, 188, 231, 0.5) 83.48%, #1CA7EC 100%), url('<%= cl_image_path @like.photos.first.key %>');padding-top:20vh; background-size: cover; background-position: center; position: absolute;
     top: 0;">
   <div class="container d-flex flex-column justify-content-center text-center" >
       <%= simple_form_for [@meeting, @feedback] do |f| %>
@@ -7,12 +7,14 @@
           <label for="feedback_was_present_oui" class="btn-figma-design">Oui</label>
           <input type="radio" value="Non" name="feedback[was_present]" id="feedback_was_present_non" style="padding: 22px;">
           <label for="feedback_was_present_non" class="btn-figma-design">Non</label>
-          <h2 style="color: white; font-family: Fredoka One;"> Voir les autres personnes au Comptoir</h2>
-          <input type="radio" value="Oui" name="redirect" id="redirect_oui" style="padding: 22px;">
-          <label for="redirect_oui" class="btn-figma-design trigger_submit">Oui</label>
-          <input type="radio" value="Non" name="redirect" id="redirect_non" style="padding: 22px;">
-          <label for="redirect_non" class="btn-figma-design trigger_submit">Non</label>
-      <%= f.submit "Confirmer", style: "display:none;"%>
+          <div class="feedback-bottom">
+            <h2 style="color: white; font-family: Fredoka One;"> Voir les autres personnes au Comptoir</h2>
+            <input type="radio" value="Oui" name="redirect" id="redirect_oui" style="padding: 22px;">
+            <label for="redirect_oui" class="btn-figma-design trigger_submit">Oui</label>
+            <input type="radio" value="Non" name="redirect" id="redirect_non" style="padding: 22px;">
+            <label for="redirect_non" class="btn-figma-design trigger_submit">Non</label>
+        <%= f.submit "Confirmer", style: "display:none;"%>
+      </div>
       <% end %>
     <br>
 
