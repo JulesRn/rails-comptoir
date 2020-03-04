@@ -138,7 +138,7 @@ puts "user created"
 
 file38 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583245634/IMG_6753_ggkn4j.jpg")
 file39 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246433/IMG_6749_xtxfc5.jpg")
-user17 = User.new(email:"hugo@nomail.com", name: "Hugo", password: "coucou", description: "Top 2 au wagon, Ma nouvelle résolution 2020? 1920 x 1080. Si tu partages mon humour, tu sais ce qu’il te restes à faire.", age:28, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user17 = User.new(email:"hugo@nomail.com", name: "Hugo", password: "coucou", description: "Top 2 au wagon, Ma nouvelle résolution 2020? 1920 x 1080. Si tu partages mon humour, tu sais ce qu’il te reste à faire.", age:28, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user17.photos.attach([{io: file38, filename: " ", content_type: 'image/jpg'}, {io: file39, filename: " ", content_type: 'image/jpg'}])
 user17.save!
 puts "user created"
