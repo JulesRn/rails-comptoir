@@ -36,12 +36,13 @@
 
 .card-description {
     position: absolute;
-    font-size: 15px;
+    font-size: 19px;
     left: 30px;
     top: 445px;
     max-width: 90%;
-    font-family: 'Fredoka One';
+    font-family: 'Quicksand';
     font-weight: bold;
+    line-height: 1;
 }
 
 .card-nickname {
@@ -55,12 +56,13 @@
 }
 
 .card-desc {
-  font-size: 20px;
+  font-size: 23px;
   font-weight: normal;
   color: white;
   margin-bottom: 0px;
-  font-family: 'Fredoka One';
+  font-family: 'Quicksand';
   font-weight: bold;
+  padding-top: 10px;
 }
 
 .card-description p {
