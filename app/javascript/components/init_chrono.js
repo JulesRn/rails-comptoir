@@ -10,7 +10,7 @@ const initChrono = () => {
     var seconde = reste % 60;
     var newHour = heure + ":" + minutes + ":" + seconde
 
-    if (heure + minutes + seconde < 0) {
+    if (heure + minutes + seconde < 1) {
       countdown.innerText = "00:00:00"
       clearInterval(interval)
       window.location.href = window.location.origin + '/users';
