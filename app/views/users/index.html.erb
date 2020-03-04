@@ -44,6 +44,7 @@
     <% end %>
   </div>
   <div class="calendar" id="calendar-form" >
+    <p class="font-correction-availabilities">Mes disponibilités</p>
       <div class="card-centrer font-correction-availabilities" >
   <%= simple_form_for current_user do |m| %>
       <%= m.simple_fields_for :availabilities do |availability| %>
