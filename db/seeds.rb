@@ -37,7 +37,7 @@ puts "user created"
 
 file5 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246911/IMG_6765_oaefr2.jpg")
 file6 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246895/IMG_6764_c91js7.jpg")
-user3 = User.new(email:"ashley@nomail.com", name: "Ashley", password: "coucou", description: "Ne sais pas parler anglais ! La vie est un flocon d’espoir. Si tu es un prof de cross-fit tu marques des points.", age:21, height: "170", smoker: true,  drinker: false, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
+user3 = User.new(email:"ashley@nomail.com", name: "Ashley", password: "coucou", description: "Ne sais pas parler anglais ! La vie est un flocon d’espoir.", age:21, height: "170", smoker: true,  drinker: false, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
 user3.photos.attach([{io: file5, filename: " ", content_type: 'image/jpg'}, {io: file6, filename: " ", content_type: 'image/jpg'}])
 user3.save!
 puts "user created"
