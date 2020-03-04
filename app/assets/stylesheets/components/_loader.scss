@@ -17,15 +17,24 @@ body {
   margin-top:5vh;
   margin-bottom: 30vh;
   list-style-type: none;
-  background-color:yellow;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.opacity-0 {
+  background-color: transparent;
+}
+
+.margin-loader {
+  margin-left: 13%;
 }
 
 #loader-p {
-  font-family: 'Fredoka One';
+  font-family: Fredoka One;
   font-size: 24px;
-  color: black;
-  margin: Opx auto;
+  color: white;
+  margin: 15px auto;
   text-align: center;
+  padding-top: 20px;
 }
 
 .loader li {
@@ -34,18 +43,18 @@ body {
 }
 
 .circle {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 0 0 50% 50%;
   border: 6px solid #fff;
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  background-color:black;
+  // background-color:white;
 }
 
 .ball {
-  background-color:black;
+  background-color:white;
   position: absolute;
   content: "";
   width: 30px;
@@ -178,5 +187,13 @@ body {
     -webkit-transform: translatey(30px);
     opacity: 0;
   }
+}
+
+.loader {
+  width: 85%;
+  height: 200px;
+  margin: -45px auto;
+  border-radius: 15px;
+
 }
 
