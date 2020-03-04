@@ -15,7 +15,7 @@
   </ol>
 
 
-  <div class="carousel-inner">
+  <div class="carousel-inner rounded-top-corner">
     <%if @user.photos.attached?%>
       <% @user.photos.each_with_index do |photo, index| %>
         <% if index == 0 %>
