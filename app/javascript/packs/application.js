@@ -27,6 +27,7 @@ import { swipeProfile } from "../components/profileswipe";
 import { initCalendar } from "../components/init_calendar";
 import { initChrono } from "../components/init_chrono";
 import { loadAnimation } from "../components/load_animation";
+import { hiddenSubmit } from "../components/init_hiddensubmit";
 // import com.steelkiwi.library.SlidingSquareLoaderView
 swipeProfile();
 
@@ -73,11 +74,12 @@ document.addEventListener('turbolinks:load', () => {
 
   if(document.querySelector(".fa-calendar-check")) {
     initCalendar();
-  }
+  };
 
+  if (document.querySelector(".avatar-feedback")) {
+    hiddenSubmit();
+  };
   loadAnimation();
-
-
 })
 
 
