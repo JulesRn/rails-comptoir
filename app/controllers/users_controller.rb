@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     unless request.referer.nil?
       if request.referer.include?("lapins")
         message = "#{@user.name}, Comptoir te réouvre ses portes!"
-        TwilioTextMessenger.new(message).call(ENV['TWILIO_SID'], ENV['TWILIO_TOKEN'])
+        #TwilioTextMessenger.new(message).call(ENV['TWILIO_SID'], ENV['TWILIO_TOKEN'])
       end
     end
   end
