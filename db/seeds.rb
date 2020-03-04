@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "nokogiri"
 require "open-uri"
+Feedback.destroy_all
 Availability.destroy_all
 Like.destroy_all
 Unlike.destroy_all

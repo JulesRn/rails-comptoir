@@ -51,17 +51,22 @@
     <h2 class ="card-nickname"><%= @user.name %>, <%= @user.age %></h2>
     <p class="card-desc"><%= @user.height / 100 %>m <%= @user.height % 100 %></p>
     <p class="card-desc"><%= @user.description %></p>
-  <div class="icone d-flex justify-content-center w-100">
-    <% if @user.drinker == true %>
-      <a class="btn btn-ghost justify-content-center" href="#"><!-- <i class="fas fa-wine-glass-alt"></i> --> <p>  Je bois</p> </a>
-      <% else %>
-      <a class="btn btn-ghost justify-content-center" href="#"><!-- <i class="fas fa-wine-glass-alt"></i> --> <p>  Je ne bois pas</p> </a>
-    <%end %>
-    <%if @user.smoker == true %>
-      <a class="btn btn-ghost justify-content-center" href="#"><!-- <i class="fas fa-smoking"></i> --> <p>  Je fume</p></a>
-    <% else %>
-      <a class="btn btn-ghost justify-content-center" href="#"><!-- <i class="fas fa-smoking"></i> --> <p>  Je ne fume pas</p></a>
-    <% end %>
+  <div class="icone d-flex justify-content-center w-100 icone-center">
+   <!--  <%# if @user.drinker == true %>
+      <a class="btn btn-ghost justify-content-center" href="#"> <i class="fas fa-wine-glass-alt"></i> --><!--  <p>  Je bois</p> </a> -->
+      <%# else %>
+      <!-- <a class="btn btn-ghost justify-content-center" href="#"> --><!-- <i class="fas fa-wine-glass-alt"></i> --> <!-- <p>  Je ne bois pas</p> </a>
+    <%#end %> -->
+    <%#if @user.smoker == true %>
+      <!-- <a class="btn btn-ghost justify-content-center" href="#"> --><!-- <i class="fas fa-smoking"></i> --> <!-- <p>  Je fume</p></a> -->
+    <%# else %>
+      <!-- a class="btn btn-ghost justify-content-center" href="#"> --><!-- <i class="fas fa-smoking"></i> --><!--  <p>  Je ne fume pas</p></a> -->
+    <%# end %>
+    <i class="fas fa-dumbbell"></i>
+    <i class="fas fa-wine-glass-alt"></i>
+    <i class="fas fa-smoking-ban"></i>
+    <i class="fas fa-balance-scale"></i>
+
   </div>
   <div class="card-details">
     <p><%= @user.job %></p>
