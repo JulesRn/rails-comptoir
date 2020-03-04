@@ -21,14 +21,14 @@
     <div class="m-2 row-meeting ">
       <div class="col-text font-correction">
       <p  class= "opacity-margin">Aura lieu</p>
-      <p class="m-0">Le <%= @day %> <%= @month %> à <%= @hour%>h</p>
+      <p class="m-0 meeting-hour">Le <%= @day %> <%= @month %> à <%= @hour%>h</p>
       <p class= "opacity-margin">au</p>
       </div>
     </div>
   </div>
 
 
-    <div class= "card-category-meeting hide-meeting" style = 'background-image: linear-gradient(180deg, rgba(74, 222, 222, 0.2) 0%, rgba(46, 188, 231, 0.2) 71.35%, rgba(28, 167, 236, 0.2) 100%), url(<%= "#{@place.photo}" %>);'>
+    <div class= "card-category-meeting hide-meeting" style = 'background-image: linear-gradient(rgba(74, 222, 222, 0.2) 0%, rgba(6, 73, 93, 0.55) 71.35%, rgba(2, 15, 21, 0.73) 100%), url(https://media.timeout.com/images/103849258/630/472/image.jpg);display: block;", url(<%= "#{@place.photo}" %>);'>
         <div class="bottom-left-meeting">
           <p><%= @place.category %></p>
           <% if @place.url.match(/^https/) %>
