@@ -30,7 +30,7 @@ puts "user created"
 
 file3 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583166333/IMG_20200302_172427_rtafov.jpg")
 file4 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583166019/gbrmaqcou91smw7hhxpz.jpg")
-user2 = User.new(email:"cecile@nomail.com", name: "Cécile", password: "coucou", description: "Développeurs pro, si tu veux devenir le contrôleur de ma view (les vrais comprendront) alors tu es fait pour moi!", age:22, height: "170", smoker: true,  drinker: true, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
+user2 = User.new(email:"cecile@nomail.com", name: "Cécile", password: "coucou", description: "Développeuse pro, si tu veux devenir le contrôleur de ma view (les vrais comprendront) alors tu es fait pour moi!", age:22, height: "170", smoker: true,  drinker: true, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
 user2.photos.attach([{io: file3, filename: " ", content_type: 'image/jpg'}, {io: file4, filename: " ", content_type: 'image/jpg'}])
 user2.save!
 puts "user created"
@@ -44,7 +44,7 @@ puts "user created"
 
 file7 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583162595/IMG_6609_lzseja.jpg")
 file8 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583249310/WhatsApp_Image_2020-03-03_at_16.28.12_ua3nbe.jpg")
-user4 = User.new(email:"jessica@nomail.com", name: "Jessica", password: "coucou", description: "Instagrammeuse pro, Ma vie c’est les plantes et les selfies. Like moi pour plus de folies in your life! Yolo", age:25, height: "170", smoker: false,  drinker: false, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
+user4 = User.new(email:"jessica@nomail.com", name: "Jessica", password: "coucou", description: "Instagrammeuse pro, Ma vie c’est les plantes et les selfies. Likes moi pour plus de folie in your life! Yolo", age:25, height: "170", smoker: false,  drinker: false, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
 user4.photos.attach([{io: file7, filename: " ", content_type: 'image/jpg'}, {io: file8, filename: " ", content_type: 'image/jpg'}])
 user4.save!
 puts "user created"
@@ -58,7 +58,7 @@ user5.save!
 puts "user created"
 
 file14 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583249022/IMG_4769_juhnqe.jpg")
-user6 = User.new(email:"jm@nomail.com", name: "Jean-Mouloud", password: "coucou", description: "Je te laisserai piquer mes frites si tu aimes ma brioche.", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
+user6 = User.new(email:"jm@nomail.com", name: "Jean-Mouloud", password: "coucou", description: "Je te laisserai piquer mes frites si tu aimes ma brioche 😜.", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
 user6.photos.attach([{io: file14, filename: " ", content_type: 'image/jpg'}])
 user6.save!
 puts "user created"
@@ -93,14 +93,15 @@ puts "user created"
 
 file24 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247037/IMG_6770_ywj4jt.jpg")
 file25 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583251942/WhatsApp_Image_2020-03-03_at_15.56.56_3_grgtkb.jpg")
-user11 = User.new(email:"thomasr@nomail.com", name: "Thomas", password: "coucou", description: "Le foot c’est ma passion. Même si je me prends des petit ponts ( cimer Karim). Ps : Lapin garantit si soir de match", age:25, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user11 = User.new(email:"thomasr@nomail.com", name: "Thomas", password: "coucou", description: "Le foot c’est ma passion. Même si je me prends des petit ponts ( cimer Karim). Ps : Lapin garanti si soir de match", age:25, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user11.photos.attach([{io: file24, filename: " ", content_type: 'image/jpg'}, {io: file25, filename: " ", content_type: 'image/jpg'}])
 user11.save!
 puts "user created"
 
 file26 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247880/WhatsApp_Image_2020-03-03_at_15.56.54_poqg4l.jpg")
 file27 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247030/IMG_6758_a3oxws.jpg")
-user12 = User.new(email:"alex@nomail.com", name: "Alex", password: "coucou", description: "Passion sport et code! Si tu veux qu’on boive un verre à refaire le méthode Ruby on Rails clique direct !", age:30, height: "185", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user12 = User.new(email:"alex@nomail.com", name: "Alex", password: "coucou", description: "Passion code et blague!Comment fait-on pour arrêter les pleurs d’un geek?
+– On le console ", age:30, height: "185", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user12.photos.attach([{io: file26, filename: " ", content_type: 'image/jpg'}, {io: file27, filename: " ", content_type: 'image/jpg'}])
 user12.save!
 puts "user created"
@@ -121,14 +122,14 @@ puts "user created"
 
 file34 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247925/WhatsApp_Image_2020-03-03_at_15.56.54_1_qygqjp.jpg")
 file35 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164246/IMG_4698_mvgcor.jpg")
-user15 = User.new(email:"marc@nomail.com", name: "Marc", password: "coucou", description: "J’aime figma, c’est ma passion. Mais par-dessus tout je connais les bar de Paris et leur playlist alors come on bb tu ne seras plus jamais perdu! Ps: j’ai le coronavirus.", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user15 = User.new(email:"marc@nomail.com", name: "Marc", password: "coucou", description: "J’aime figma, c’est ma passion. Mais par-dessus tout je connais les bar de Paris et leur playlist alors come on bb tu ne seras plus jamais perdu!", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user15.photos.attach([{io: file34, filename: " ", content_type: 'image/jpg'}, {io: file35, filename: " ", content_type: 'image/jpg'}])
 user15.save!
 puts "user created"
 
 file36 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246471/IMG_6762_nvdx2e.jpg")
 file37 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247596/WhatsApp_Image_2020-03-03_at_15.56.55_2_xki5o1.jpg")
-user16 = User.new(email:"thomass@nomail.com", name: "Thomas", password: "coucou", description: "Né dans la compagne. Envie d’enfin trouver l’amour dans la « city of love »", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user16 = User.new(email:"thomass@nomail.com", name: "Thomas", password: "coucou", description: "On ne dit pas : un geek tombe malade.On dit : il attrape un virus.", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user16.photos.attach([{io: file36, filename: " ", content_type: 'image/jpg'}, {io: file37, filename: " ", content_type: 'image/jpg'}])
 user16.save!
 puts "user created"
@@ -189,5 +190,9 @@ html_doc.search('.card-content').each do |card|
   puts "#{bar_name} created!"
 end
 
-Meeting.create(user1_id: User.first[:id], user2_id: User.last[:id], place_id: Place.first[:id], start_time: Date.new, start_hour: Date.new)
-Like.create(user_id: User.first[:id], liked_user_id: User.last[:id])
+User.all.each do |user|
+  Like.create(user: user, liked_user: User.last)
+end
+
+Like.where(user: [user18, user16]).destroy_all
+
