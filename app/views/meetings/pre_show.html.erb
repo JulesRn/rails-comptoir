@@ -3,7 +3,7 @@
      <div class="match-love" style="background-image: url(<%= image_path('logo_comptoir_match.svg')%>)">
      </div>
 
-    <h2 class="preshow-card-name love-title" ><%= @meeting.user2.name %> <br> souhaite aussi te rencontrer !</h2>
+    <h2 class="preshow-card-name love-title" ><div class="name-date"><%=@meeting.user2.name %></div>souhaite aussi te rencontrer !</h2>
 
      <%= link_to 'Voir mon date', meeting_path(@meeting), class: "btn btn-white-date" %>
      <%= link_to "Annuler le date",  meeting_lapins_path(@meeting), method: :post, class: "btn-date-annulation"%>
