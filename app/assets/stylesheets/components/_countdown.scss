@@ -10,7 +10,7 @@
   text-align: center;
 }
 .lapin h1{
-  padding-bottom: 100px;
+  // padding-bottom: 100px;
   padding-top: 200px;
   font-family: Fredoka One;
   font-size: 70px;
@@ -23,13 +23,13 @@
   width: 90%;
   color: #1CA7EC;
   border-radius: 50px;
-  margin: 300px auto;
+  // margin: 300px auto;
 
 }
 
 .chrono h2{
   padding-bottom: 100px;
-  padding-top: 50px;
+  // padding-top: 50px;
   font-family: Fredoka One;
   font-size: 70px;
   font-weight: bold;
@@ -43,8 +43,11 @@
   height: 100vh;
 }
 
-.relative {
+.relative_lapin {
   position: relative;
+  width: 75%;
+  right: 60px;
+  bottom: 75px;
 }
 
 .absolu {
