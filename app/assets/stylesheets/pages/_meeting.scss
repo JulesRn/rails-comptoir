@@ -107,9 +107,9 @@
   border-radius: 11px;
   padding: 5px 10px;
   color: white;
-  position :absolute;
-  top: -75px;
-  right: -15px;
+  position: absolute;
+  top: -85px;
+  right: 115px;
 }
 
 
@@ -173,5 +173,9 @@
 
 .meeting-hour {
   font-size: 36px;
+  color:white;
+}
+
+.meeting-hour:hover {
   color:white;
 }
