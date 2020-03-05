@@ -1,16 +1,16 @@
 <div class="avatar-feedback avatar-questions" style="background-image: linear-gradient(180deg, rgba(4, 37, 37, 0.38) 36.58%, rgba(46, 188, 231, 0.5) 83.48%, #1CA7EC 100%), url('<%= cl_image_path @like.photos.first.key %>');">
   <div class="container d-flex flex-column justify-content-center text-center" >
       <%= simple_form_for [@meeting, @feedback] do |f| %>
-          <h2 class="font-question">  Ton date était-il présent ? </h2>
-          <input type="radio" value="Oui" name="feedback[was_present]" id="feedback_was_present_oui" style="padding: 22px;">
+          <h2 class="font-question shadowing">  Ton date était-il présent ? </h2>
+          <input type="radio" value="Oui" name="feedback[was_present]" id="feedback_was_present_oui" class="shadowing" style="padding: 22px;">
           <label for="feedback_was_present_oui" class="btn-figma-design">Oui</label>
-          <input type="radio" value="Non" name="feedback[was_present]" id="feedback_was_present_non" style="padding: 22px;">
+          <input type="radio" value="Non" name="feedback[was_present]" id="feedback_was_present_non" class="shadowing" style="padding: 22px;">
           <label for="feedback_was_present_non" class="btn-figma-design">Non</label>
           <div class="feedback-bottom">
-            <h2 class="font-question"> Retenter l'expérience Comptoir ? </h2>
-            <input type="radio" value="Oui" name="redirect" id="redirect_oui" style="padding: 22px;">
+            <h2 class="font-question shadowing"> Retenter l'expérience Comptoir ? </h2>
+            <input type="radio" value="Oui" name="redirect" id="redirect_oui" class="shadowing" style="padding: 22px;">
             <label for="redirect_oui" class="btn-figma-design trigger_submit">Oui</label>
-            <input type="radio" value="Non" name="redirect" id="redirect_non" style="padding: 22px;">
+            <input type="radio" value="Non" name="redirect" id="redirect_non" class="shadowing" style="padding: 22px;">
             <label for="redirect_non" class="btn-figma-design trigger_submit">Non</label>
         <%= f.submit "Confirmer", style: "display:none;"%>
       </div>
