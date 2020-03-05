@@ -22,16 +22,23 @@ SEXUAL_ORIENTATION =["hetero", "homo", "bi"]
 
 days = User::DAYS
 
+file36 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246471/IMG_6762_nvdx2e.jpg")
+file37 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247596/WhatsApp_Image_2020-03-03_at_15.56.55_2_xki5o1.jpg")
+user16 = User.new(email:"thomass@nomail.com", name: "Thomas", password: "coucou", description: "On ne dit pas : un geek tombe malade.On dit : il attrape un virus.", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user16.photos.attach([{io: file36, filename: " ", content_type: 'image/jpg'}, {io: file37, filename: " ", content_type: 'image/jpg'}])
+user16.save!
+puts "user created"
+
 file28 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246686/IMG_6778_i39x0k.jpg")
 file29 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246700/IMG_6776_lqzfs2.jpg")
-user13 = User.new(email:"fabien@nomail.com", name: "Fabien", password: "coucou", description: "Ton père ne bosserait pas chez Nintendo? Vu ton corps de DS ça semblerait logique", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user13 = User.new(email:"fabien@nomail.com", name: "Fabien", password: "coucou", description: "Ton père ne bosserait pas chez Nintendo? Vu ton corps de DS ça semblerait logique.", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user13.photos.attach([{io: file28, filename: " ", content_type: 'image/jpg'}, {io: file29, filename: " ", content_type: 'image/jpg'}])
 user13.save!
 puts "user created"
 
 file38 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583245634/IMG_6753_ggkn4j.jpg")
 file39 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246433/IMG_6749_xtxfc5.jpg")
-user17 = User.new(email:"hugo@nomail.com", name: "Hugo", password: "coucou", description: "Top 2 au wagon, Ma nouvelle résolution 2020? 1920 x 1080. Si tu partages mon humour, tu sais ce qu’il te reste à faire.", age:28, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user17 = User.new(email:"hugo@nomail.com", name: "Hugo", password: "coucou", description: "Top 2 au wagon, ma nouvelle résolution 2020? 1920 x 1080. Si tu partages mon humour, tu sais ce qu’il te reste à faire.", age:28, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user17.photos.attach([{io: file38, filename: " ", content_type: 'image/jpg'}, {io: file39, filename: " ", content_type: 'image/jpg'}])
 user17.save!
 puts "user created"
@@ -74,7 +81,7 @@ puts "user created"
 
 file26 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247880/WhatsApp_Image_2020-03-03_at_15.56.54_poqg4l.jpg")
 file27 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247030/IMG_6758_a3oxws.jpg")
-user12 = User.new(email:"alex@nomail.com", name: "Alex", password: "coucou", description: "Passion code et blague!Comment fait-on pour arrêter les pleurs d’un geek?
+user12 = User.new(email:"alex@nomail.com", name: "Alex", password: "coucou", description: "Passion code et blague! Comment fait-on pour arrêter les pleurs d’un geek?
 – On le console ", age:30, height: "185", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user12.photos.attach([{io: file26, filename: " ", content_type: 'image/jpg'}, {io: file27, filename: " ", content_type: 'image/jpg'}])
 user12.save!
@@ -82,7 +89,7 @@ puts "user created"
 
 file20 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247462/WhatsApp_Image_2020-03-03_at_15.56.57_s6qbed.jpg")
 file21 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247468/WhatsApp_Image_2020-03-03_at_15.56.56_xdddml.jpg")
-user9 = User.new(email:"diane@nomail.com", name: "Diane", password: "coucou", description: "Ton nom ne serait pas Google? tu es tout ce que je recherche !", age:25, height: "180", smoker: true,  drinker: true, sex: "Femme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user9 = User.new(email:"diane@nomail.com", name: "Diane", password: "coucou", description: "Ton nom ne serait pas Google? tu es tout ce que je recherche!", age:25, height: "180", smoker: true,  drinker: true, sex: "Femme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user9.photos.attach([{io: file20, filename: " ", content_type: 'image/jpg'}, {io: file21, filename: " ", content_type: 'image/jpg'}])
 user9.save!
 puts "user created"
@@ -102,7 +109,6 @@ user3.photos.attach([{io: file5, filename: " ", content_type: 'image/jpg'}, {io:
 user3.save!
 puts "user created"
 
-
 file14 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583249022/IMG_4769_juhnqe.jpg")
 user6 = User.new(email:"jean@nomail.com", name: "Jean", password: "coucou", description: "Je te laisserai piquer mes frites si tu aimes ma brioche 😜.", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
 user6.photos.attach([{io: file14, filename: " ", content_type: 'image/jpg'}])
@@ -111,11 +117,10 @@ puts "user created"
 
 file18 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247609/WhatsApp_Image_2020-03-03_at_15.56.55_giv1th.jpg")
 file19= URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247604/WhatsApp_Image_2020-03-03_at_15.56.55_1_ouagtg.jpg")
-user8 = User.new(email:"eugenie@nomail.com", name: "Eugénie", password: "coucou", description: "L’amour c’est comme le jardinage, ça commence par une pelle et ça fini par un râteau", age:29, height: "170", smoker: false,  drinker: true, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
+user8 = User.new(email:"eugenie@nomail.com", name: "Eugénie", password: "coucou", description: "L’amour c’est comme le jardinage, ça commence par une pelle et ça fini par un râteau.", age:29, height: "170", smoker: false,  drinker: true, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
 user8.photos.attach([{io: file18, filename: " ", content_type: 'image/jpg'}, {io: file19, filename: " ", content_type: 'image/jpg'}])
 user8.save!
 puts "user created"
-
 
 file40 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247478/WhatsApp_Image_2020-03-03_at_15.56.56_1_gllmta.jpg")
 file41 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246341/IMG_6773_ojg8sx.jpg")
@@ -131,7 +136,6 @@ user11.photos.attach([{io: file24, filename: " ", content_type: 'image/jpg'}, {i
 user11.save!
 puts "user created"
 
-
 file30 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583245714/IMG_6747_c4fseg.jpg")
 file31 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583245732/IMG_6748_hm2j2v.jpg")
 user14 = User.new(email:"nicolas@nomail.com", name: "Nicolas", password: "coucou", description: "Le roi de la musique. Si tu souhaites que je te joue des airs de foly toute la soirée deviens  ma Juliette je serai Roméo sous ton balcon. Kiss", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
@@ -139,12 +143,6 @@ user14.photos.attach([{io: file30, filename: " ", content_type: 'image/jpg'}, {i
 user14.save!
 puts "user created"
 
-file36 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246471/IMG_6762_nvdx2e.jpg")
-file37 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247596/WhatsApp_Image_2020-03-03_at_15.56.55_2_xki5o1.jpg")
-user16 = User.new(email:"thomass@nomail.com", name: "Thomas", password: "coucou", description: "On ne dit pas : un geek tombe malade.On dit : il attrape un virus.", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
-user16.photos.attach([{io: file36, filename: " ", content_type: 'image/jpg'}, {io: file37, filename: " ", content_type: 'image/jpg'}])
-user16.save!
-puts "user created"
 
 file22 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164597/qy2uvmqfybaxdwk1livk.jpg")
 file23 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164582/IMG_20200302_165429_klxzly.jpg")
