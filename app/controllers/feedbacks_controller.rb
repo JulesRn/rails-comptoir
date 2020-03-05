@@ -34,7 +34,10 @@ class FeedbacksController < ApplicationController
         if params[:redirect] == "Oui"
           redirect_to users_path
         else
-          redirect_to profile_path(@user)
+          # redirect_to destroy_user_session_path(@user), method: :delete
+          sign_out :user
+          flash[:notice] = "A bientôt au Comptoir"
+          redirect_to root_path
         end
       end
     end
