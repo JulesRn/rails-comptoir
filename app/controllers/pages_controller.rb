@@ -6,4 +6,8 @@ class PagesController < ApplicationController
 
   end
 
+  def goodbye
+    @user = current_user
+  end
+
 end

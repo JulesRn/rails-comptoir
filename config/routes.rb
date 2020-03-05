@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'lapin/show'
+  get '/goodbye', to: 'pages#goodbye'
   devise_for :users
   root to: 'pages#home'
   # 'get' to: 'meetings#lapin'
