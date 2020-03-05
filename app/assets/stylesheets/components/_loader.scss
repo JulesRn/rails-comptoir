@@ -193,7 +193,29 @@ body {
   width: 85%;
   height: 200px;
   margin: -45px auto;
-  border-radius: 15px;
+  border-radius: 30px;
 
+}
+
+.loader-logo {
+//   background-image:url('logo_comptoir_match.svg');
+  margin: -95px 3px 0 3px;
+  p{
+    color: white;
+    font-size: 25px;
+    font-family: Quicksand;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px 61px 0px 61px;
+  }
+  svg {
+  height: 150px;
+  margin: 50px 90px 50px 90px;
+
+  }
+//   background-position: center;
+//   background-position: cover;
+//   background-repeat: no-repeat;
+//   margin-top: 15px;
 }
 
