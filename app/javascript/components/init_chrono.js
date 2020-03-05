@@ -19,6 +19,7 @@ const initChrono = () => {
     countdown.innerText = newHour
   }
   updateChrono();
+
   interval = setInterval(updateChrono, 12);
 }
 
