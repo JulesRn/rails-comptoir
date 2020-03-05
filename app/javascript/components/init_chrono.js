@@ -8,7 +8,7 @@ const initChrono = () => {
     var reste = (initTime % 3600);
     var minutes = parseInt((reste / 60),10);
     var seconde = reste % 60;
-    var newHour = heure + ":" + minutes + ":" + seconde
+    var newHour = heure + ":" + "00" + ":" + "00"
 
     if (heure + minutes + seconde < 1) {
       countdown.innerText = "00:00:00"
@@ -19,7 +19,7 @@ const initChrono = () => {
     countdown.innerText = newHour
   }
   updateChrono();
-  interval = setInterval(updateChrono, 1);
+  interval = setInterval(updateChrono, 12);
 }
 
 
