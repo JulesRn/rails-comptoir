@@ -108,6 +108,8 @@ class User < ApplicationRecord
   def seen_users
     users = interesting_users - self.liked_users
     users - self.unliked_users
+
+
     # cu_id = self.id
     # cu_user = User.find(cu_id)
     # list_users = interesting_users
