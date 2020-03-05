@@ -46,12 +46,12 @@
 
 <div class="card-infos">
   <%= link_to users_path do %>
-    <i class="fas fa-arrow-circle-up btn-up-index"></i>
+    <i class="fas fa-arrow-circle-up btn-up-index shadowing"></i>
   <% end %>
-    <h2 class ="card-nickname"><%= @user.name %>, <%= @user.age %></h2>
-    <p class="card-desc"><i class="fas fa-ruler"></i> <%= @user.height / 100 %>m <%= @user.height % 100 %></p>
-    <p class="card-desc"><%= @user.description %></p>
-  <div class="icone d-flex justify-content-center w-100 icone-center">
+    <h2 class ="card-nickname shadowing"><%= @user.name %>, <%= @user.age %></h2>
+    <p class="card-desc shadowing"><i class="fas fa-ruler"></i> <%= @user.height / 100 %>m <%= @user.height % 100 %></p>
+    <p class="card-desc shadowing"><%= @user.description %></p>
+  <div class="icone d-flex justify-content-center w-100 icone-center shadowing">
    <!--  <%# if @user.drinker == true %>
       <a class="btn btn-ghost justify-content-center" href="#"> <i class="fas fa-wine-glass-alt"></i> --><!--  <p>  Je bois</p> </a> -->
       <%# else %>
@@ -80,7 +80,7 @@
     <%= simple_form_for @unlike, url: unlikes_path, method: :post do |f| %>
       <%= f.input :unliked_user, input_html: {value: "#{@user.id}"}, as: :hidden %>
       <div class="small-3 columns">
-        <%= button_tag type: 'submit', class: "button postfix btn btn-next", id: "next-profile_#{@user.id}" do %>
+        <%= button_tag type: 'submit', class: "button postfix btn btn-next shadowing border-0", id: "next-profile_#{@user.id}" do %>
           <i class="fas fa-times" aria-hidden="true"></i>
         <% end %>
       </div>
@@ -89,7 +89,7 @@
   <div class="col-9">
     <%= simple_form_for @like, url: likes_path, method: :post do |f| %>
       <%= f.input :liked_user, input_html: {value: "#{@user.id}"}, as: :hidden %>
-      <%= f.submit "Rencontrer", class: "btn btn-like", id: "meet-profile_#{@user.id}"  do %>
+      <%= f.submit "Rencontrer", class: "btn btn-like shadowing border-0", id: "meet-profile_#{@user.id}"  do %>
       <% end %>
     <% end %>
   </div>
