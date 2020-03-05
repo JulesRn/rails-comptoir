@@ -47,7 +47,7 @@
 
     <!-- permet d'enlever le rubberbandscroll dans l'app -->
 
-    <% unless (controller.action_name == "show" && controller.controller_name != "users") || (controller.action_name == "show" && controller.controller_name != "profiles")  %>
+    <% unless (controller.action_name == "show" && controller.controller_name != "profiles")  %>
       <script>
         document.body.addEventListener('touchmove', function(event) {
           event.preventDefault();
