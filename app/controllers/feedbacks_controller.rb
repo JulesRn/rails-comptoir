@@ -36,7 +36,7 @@ class FeedbacksController < ApplicationController
         else
           # redirect_to destroy_user_session_path(@user), method: :delete
           sign_out :user
-          flash[:notice] = "A bientôt au Comptoir 😘"
+          flash[:notice] = "À bientôt au Comptoir 😘"
           redirect_to root_path
         end
       end
