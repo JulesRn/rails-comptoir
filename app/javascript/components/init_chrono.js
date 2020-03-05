@@ -20,7 +20,7 @@ const initChrono = () => {
   }
   updateChrono();
 
-  interval = setInterval(updateChrono, 12);
+  interval = setInterval(updateChrono, 10);
 }
 
 

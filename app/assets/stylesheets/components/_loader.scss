@@ -200,7 +200,6 @@ body {
 .loader-logo {
 //   background-image:url('logo_comptoir_match.svg');
   margin: -95px 3px 0 3px;
-  p{
     color: white;
     font-size: 25px;
     font-family: Quicksand;
@@ -208,12 +207,20 @@ body {
     text-align: center;
     margin: 20px 61px 0px 61px;
   }
-  svg {
-  height: 150px;
-  margin: 50px 90px 50px 90px;
+.logo-match-loader {
+    height: 150px;
+    margin: 50px 90px 50px 90px;
+    //   height: 100vh;
+    // width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: absolute;
+    top: -100px;
+
      animation-duration: 3s;
     animation-timing-function: ease-in-out;
-    animation-delay: 0.2;
+    animation-delay: 0.1;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: forwards;
@@ -225,7 +232,6 @@ body {
 //   background-position: cover;
 //   background-repeat: no-repeat;
 //   margin-top: 15px;
-}
 
 
 @keyframes loadering {
