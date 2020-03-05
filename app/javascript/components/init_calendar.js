@@ -6,10 +6,11 @@ const initCalendar = () => {
   })
 
   const validates = document.querySelector('.btn-validate-availabity')
-
-  validates.addEventListener('click', () => {
-     document.querySelector('#calendar-form').classList.remove('calendar-active')
-  })
+  if (validates){
+    validates.addEventListener('click', () => {
+       document.querySelector('#calendar-form').classList.remove('calendar-active')
+    })
+  }
 }
 
 
