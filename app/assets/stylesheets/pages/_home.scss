@@ -15,10 +15,44 @@
   height: 30vh;
 }
 
+
+
 #home-logo-title {
   height: 10vh;
   margin-bottom:20px;
 }
+
+#goodbye-logo {
+  height: 17vh;
+}
+
+#goodbye-logo-title {
+  height: 7vh;
+  margin-bottom:20px;
+}
+.goodbye-page-style {
+  position: absolute;
+  width: 321px;
+  height: 474px;
+  left: 27px;
+  top: 346px;
+
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 37px;
+  // display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+
 
 #home-title {
   font-family: 'Fredoka One';
