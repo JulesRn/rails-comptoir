@@ -12,7 +12,7 @@
       </div>
       <div class="col-text" >
         <p class= "with shadowing">avec</p>
-        <%= link_to new_meeting_feedback_path(@meeting) do %>
+        <%= link_to new_meeting_feedback_path(@meeting), class:"name_decoration" do %>
           <p class="meeting-hour_name shadowing"><%=@liked_user.name %></p>
         <% end %>
       </div>
