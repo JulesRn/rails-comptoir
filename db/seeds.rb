@@ -45,7 +45,7 @@ puts "user created"
 
 file7 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583162595/IMG_6609_lzseja.jpg")
 file8 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583249310/WhatsApp_Image_2020-03-03_at_16.28.12_ua3nbe.jpg")
-user4 = User.new(email:"jessica@nomail.com", name: "Jessica", password: "coucou", description: "Instagrammeuse pro, Ma vie c’est les plantes et les selfies. Likes moi pour plus de folie in your life! Yolo", age:25, height: "170", smoker: false,  drinker: false, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
+user4 = User.new(email:"jessica@nomail.com", name: "Jessica", password: "coucou", description: "Un geek ne descend pas du métro. Il libère la RAM...", age:25, height: "170", smoker: false,  drinker: false, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
 user4.photos.attach([{io: file7, filename: " ", content_type: 'image/jpg'}, {io: file8, filename: " ", content_type: 'image/jpg'}])
 user4.save!
 puts "user created"
@@ -82,13 +82,13 @@ puts "user created"
 file10 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583165249/vif1ppa7jnadbq3zkmz5.jpg")
 file11 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583165355/IMG_20200302_170821_wyf0kg.jpg")
 file43 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583165362/IMG_20200302_170604_y8qzof.jpg")
-user5 = User.new(email:"claire@nomail.com", name: "Claire", password: "coucou", description: "Un geek ne descend pas du métro. Il libère la RAM...", age:26, height: "170", smoker: false,  drinker: true, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
+user5 = User.new(email:"claire@nomail.com", name: "Claire", password: "coucou", description: "Instagrammeuse pro, Ma vie c’est les plantes et les selfies. Likes moi pour plus de folie in your life! Yolo", age:26, height: "170", smoker: false,  drinker: true, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
 user5.photos.attach([{io: file10, filename: " ", content_type: 'image/jpg'}, {io: file11, filename: " ", content_type: 'image/jpg'}, {io: file43, filename: " ", content_type: 'image/jpg'}])
 user5.save!
 puts "user created"
 
 file14 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583249022/IMG_4769_juhnqe.jpg")
-user6 = User.new(email:"jm@nomail.com", name: "Jean-Mi", password: "coucou", description: "Je te laisserai piquer mes frites si tu aimes ma brioche 😜.", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
+user6 = User.new(email:"jean@nomail.com", name: "Jean", password: "coucou", description: "Je te laisserai piquer mes frites si tu aimes ma brioche 😜.", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
 user6.photos.attach([{io: file14, filename: " ", content_type: 'image/jpg'}])
 user6.save!
 puts "user created"
@@ -131,7 +131,7 @@ puts "user created"
 
 file30 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583245714/IMG_6747_c4fseg.jpg")
 file31 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583245732/IMG_6748_hm2j2v.jpg")
-user14 = User.new(email:"thanan@nomail.com", name: "Thanh-An", password: "coucou", description: "Le roi de la musique. Si tu souhaites que je te joue des airs de foly toute la soirée deviens  ma Juliette je serai Roméo sous ton balcon. Kiss", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user14 = User.new(email:"nicolas@nomail.com", name: "Nicoas", password: "coucou", description: "Le roi de la musique. Si tu souhaites que je te joue des airs de foly toute la soirée deviens  ma Juliette je serai Roméo sous ton balcon. Kiss", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
 user14.photos.attach([{io: file30, filename: " ", content_type: 'image/jpg'}, {io: file31, filename: " ", content_type: 'image/jpg'}])
 user14.save!
 puts "user created"
