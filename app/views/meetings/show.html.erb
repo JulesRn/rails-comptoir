@@ -2,7 +2,7 @@
   <div class="meeting-topbar">
     <div class="center-text-meeting">
       <%= image_tag "LogoComptoir.png", alt: "alttext", style: "height:7vh"%>
-      <h1>Ton date</h1>
+      <h1 class="shadowing">Ton date</h1>
     </div>
     <div class="row-meeting">
       <div class="col-avatar">
@@ -11,24 +11,24 @@
         <% end %>
       </div>
       <div class="col-text" >
-        <p class= "with">avec</p>
+        <p class= "with shadowing">avec</p>
         <%= link_to new_meeting_feedback_path(@meeting) do %>
-          <p class="meeting-hour_name"><%=@liked_user.name %></p>
+          <p class="meeting-hour_name shadowing"><%=@liked_user.name %></p>
         <% end %>
       </div>
     </div>
 
     <div class="m-2 row-meeting ">
       <div class="col-text font-correction">
-      <p  class= "opacity-margin">aura lieu</p>
-      <p class="m-0 meeting-hour">Le <%= @day %> <%= @month %> à <%= @hour%>h</p>
-      <p class= "opacity-margin">au</p>
+      <p  class= "opacity-margin shadowing">aura lieu</p>
+      <p class="m-0 meeting-hour shadowing">Le <%= @day %> <%= @month %> à <%= @hour%>h</p>
+      <p class= "opacity-margin shadowing">au</p>
       </div>
     </div>
   </div>
 
 
-    <div class= "card-category-meeting hide-meeting" style = 'background-image: linear-gradient(rgba(74, 222, 222, 0.2) 0%, rgba(6, 73, 93, 0.55) 71.35%, rgba(2, 15, 21, 0.73) 100%), url(https://media.timeout.com/images/103849258/630/472/image.jpg);display: block;", url(<%= "#{@place.photo}" %>);'>
+    <div class= "card-category-meeting hide-meeting" style = 'background-image: linear-gradient(rgba(74, 222, 222, 0.2) 0%, rgba(6, 73, 93, 0.55) 71.35%, rgba(2, 15, 21, 0.73) 100%), url(<%= "#{@place.photo}" %>);display: block;'>
         <div class="bottom-left-meeting">
           <p><%= @place.category %></p>
           <% if @place.url.match(/^https/) %>
@@ -37,19 +37,23 @@
             <a href= "https://www.timeout.fr<%= @place.url%>" target ="_blank" style="text-decoration: none;">
           <% end %>
 
-            <% if @place.name.size >=22 %>
-            <h2 class=""><%= @place.name.first(22) %></h2>
+            <% if @place.name.size >15 %>
+            <h2 class="shadowing"><%= @place.name.first(15) %>...</h2>
             <% else %>
-            <h2 class=""><%= @place.name %></h2>
+            <h2 class="shadowing"><%= @place.name %></h2>
             <% end %>
           </a>
-          <a href="https://www.google.fr/maps/dir//<%= @place.address %>" target ="_blank" class="btn-google"><i class="fas fa-map-marked-alt"></i>  S'y rendre</a>
-          <h3><%= @place.address %></h3>
+          <!-- <a href="https://www.google.fr/maps/dir//<%= @place.address %>" target ="_blank" class="btn-google"><i class="fas fa-map-marked-alt"></i>  S'y rendre</a> -->
+          <% if @place.address.size >34 %>
+            <h3 class="shadowing"><%= @place.address.first(34) %>...</h3>
+          <% else %>
+            <h3 class="shadowing"><%= @place.address %></h3>
+          <% end %>
         </div>
     </div>
 
         <div class="meeting-btn-annulation hide-meeting">
-          <%= link_to "Annuler le date",  meeting_lapins_path(@meeting), method: :post, style: "color:white; text-decoration:none;" %>
+          <%= link_to "Annuler le date",  meeting_lapins_path(@meeting), method: :post, style: "color:white; text-decoration:none;", class: 'shadowing' %>
         </div>
     <div class="loader-logo">
       <p> Comptoir recherche LE bar... </p>
