@@ -58,7 +58,7 @@ class User < ApplicationRecord
   def interesting_users
     cu_id = self.id
     cu_user = User.find(cu_id)
-    list_users = User.all
+    list_users = User.all.where.not(id: cu_user.id)
     wanted_users =[]
     case cu_user.sex
     when "Homme"
