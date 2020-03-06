@@ -196,7 +196,7 @@ html_doc.search('.card-content').each do |card|
 end
 
 User.all.each do |user|
-  Like.create(user: user, liked_user: User.last)
+  Like.create(user: user, liked_user: User.first)
 end
 puts "All like created"
 
