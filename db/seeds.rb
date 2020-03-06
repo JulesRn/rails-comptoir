@@ -44,10 +44,9 @@ user17.photos.attach([{io: file38, filename: " ", content_type: 'image/jpg'}, {i
 user17.save!
 puts "user created"
 
-file34 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583247925/WhatsApp_Image_2020-03-03_at_15.56.54_1_qygqjp.jpg")
 file35 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164246/IMG_4698_mvgcor.jpg")
 user15 = User.new(email:"marc@nomail.com", name: "Marc", password: "coucou", description: "J’aime figma, c’est ma passion. Mais par-dessus tout je connais les bars de Paris et leur playlist alors come on bb tu ne seras plus jamais perdu!", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
-user15.photos.attach([{io: file34, filename: " ", content_type: 'image/jpg'}, {io: file35, filename: " ", content_type: 'image/jpg'}])
+user15.photos.attach([{io: file35, filename: " ", content_type: 'image/jpg'}])
 user15.save!
 puts "user created"
 
