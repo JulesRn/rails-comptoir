@@ -44,9 +44,10 @@ user17.photos.attach([{io: file38, filename: " ", content_type: 'image/jpg'}, {i
 user17.save!
 puts "user created"
 
-file35 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164246/IMG_4698_mvgcor.jpg")
+file35 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583497787/IMG_6822_iyfwil.jpg")
+file55 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164246/IMG_4698_mvgcor.jpg")
 user15 = User.new(email:"marc@nomail.com", name: "Marc", password: "coucou", description: "J’aime figma, c’est ma passion. Mais par-dessus tout je connais les bars de Paris et leur playlist alors come on bb tu ne seras plus jamais perdu!", age:30, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
-user15.photos.attach([{io: file35, filename: " ", content_type: 'image/jpg'}])
+user15.photos.attach([{io: file35, filename: " ", content_type: 'image/jpg'}, {io: file55, filename: " ", content_type: 'image/jpg'}])
 user15.save!
 puts "user created"
 
@@ -64,10 +65,11 @@ user7.photos.attach([{io: file16, filename: " ", content_type: 'image/jpg'}, {io
 user7.save!
 puts "user created"
 
-file3 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583166333/IMG_20200302_172427_rtafov.jpg")
-file4 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583166019/gbrmaqcou91smw7hhxpz.jpg")
+file3 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583497578/IMG_6826_d0iups.jpg")
+file4 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583497584/IMG_6835_geqzzg.jpg")
+file50 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583497583/IMG_6845_ugym6y.jpg")
 user2 = User.new(email:"cecile@nomail.com", name: "Cécile", password: "coucou", description: "Développeuse pro, si tu veux devenir le contrôleur de ma view (les vrais comprendront) alors tu es fait pour moi!", age:22, height: "170", smoker: true,  drinker: true, sex: "Femme", sexual_orientation: "bi", position: "16 Villa Gaudelet, 75011 Paris")
-user2.photos.attach([{io: file3, filename: " ", content_type: 'image/jpg'}, {io: file4, filename: " ", content_type: 'image/jpg'}])
+user2.photos.attach([{io: file3, filename: " ", content_type: 'image/jpg'}, {io: file4, filename: " ", content_type: 'image/jpg'}, {io: file50, filename: " ", content_type: 'image/jpg'}])
 user2.save!
 puts "user created"
 
