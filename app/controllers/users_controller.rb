@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
+
   def index
-    @users = User.all
+    @users = policy_scope(User)
     @user = current_user
     @like = Like.new
     @unlike = Unlike.new
@@ -18,16 +19,19 @@ class UsersController < ApplicationController
     @current_user = current_user
     @like = Like.new
     @unlike = Unlike.new
+    authorize @user
   end
 
   def new
     @user = User.new
+    authorize @user
   end
 
   def create
     @user = User.new(user_params)
     @user.save
     redirect_to user_path(@user)
+    authorize @user
   end
 
   def edit
@@ -37,7 +41,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
-
+    authorize @user
     redirect_to users_path
   end
 

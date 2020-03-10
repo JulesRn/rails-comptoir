@@ -2,6 +2,7 @@ class FeedbacksController < ApplicationController
 
    def show
     @user = current_user
+    authorize @user
    end
 
   # def update
@@ -21,6 +22,7 @@ class FeedbacksController < ApplicationController
                   else
                     @like = @meeting.user2
                   end
+      authorize @liked_user
 
     end
 
@@ -28,6 +30,7 @@ class FeedbacksController < ApplicationController
       @meeting = Meeting.find(params[:meeting_id])
       @meeting.status = "occured"
       @user = current_user
+      authorize @user
       result_present = params[:feedback][:was_present] == "Oui"
       @feedback = Feedback.new(user: @user, meeting: @meeting, was_present: result_present)
       if @feedback.save!

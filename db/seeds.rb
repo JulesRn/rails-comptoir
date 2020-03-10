@@ -22,6 +22,13 @@ SEXUAL_ORIENTATION =["hetero", "homo", "bi"]
 
 days = User::DAYS
 
+file22 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164597/qy2uvmqfybaxdwk1livk.jpg")
+file23 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164582/IMG_20200302_165429_klxzly.jpg")
+user18 = User.new(email:"baptiste@nomail.com", name: "Baptiste", password: "coucou", description: "Choisis-moi pour qu’on puisse se séparer. Ma dernière rupture a été difficile, mais je ferais tout pour que la prochaine rupture soit la bonne. J’aime regarder le sucre fondre dans mon café et les dimanches pluvieux", age:27, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
+user18.photos.attach([{io: file22, filename: " ", content_type: 'image/jpg'}, {io: file23, filename: " ", content_type: 'image/jpg'}])
+user18.save!
+puts "user created"
+
 file28 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246686/IMG_6778_i39x0k.jpg")
 file29 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246700/IMG_6776_lqzfs2.jpg")
 user13 = User.new(email:"fabien@nomail.com", name: "Fabien", password: "coucou", description: "Ton père ne bosserait pas chez Nintendo? Vu ton corps de DS ça semblerait logique", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
@@ -146,12 +153,7 @@ user16.photos.attach([{io: file36, filename: " ", content_type: 'image/jpg'}, {i
 user16.save!
 puts "user created"
 
-file22 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164597/qy2uvmqfybaxdwk1livk.jpg")
-file23 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583164582/IMG_20200302_165429_klxzly.jpg")
-user18 = User.new(email:"baptiste@nomail.com", name: "Baptiste", password: "coucou", description: "Choisis-moi pour qu’on puisse se séparer. Ma dernière rupture a été difficile, mais je ferais tout pour que la prochaine rupture soit la bonne. J’aime regarder le sucre fondre dans mon café et les dimanches pluvieux", age:27, height: "180", smoker: false,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
-user18.photos.attach([{io: file22, filename: " ", content_type: 'image/jpg'}, {io: file23, filename: " ", content_type: 'image/jpg'}])
-user18.save!
-puts "user created"
+
 
 url = "https://www.timeout.fr/paris/bar/100-meilleurs-bars"
 response = open(url).read

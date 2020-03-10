@@ -2,10 +2,12 @@ class ProfilesController < ApplicationController
 
   def show
     @user = current_user
+    authorize @user
   end
 
   def update
     @user = current_user
+    authorize @user
     if @user.update(user_params)
       redirect_to profile_path
     else
