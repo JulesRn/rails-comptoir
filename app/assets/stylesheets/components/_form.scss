@@ -1,5 +1,5 @@
 body, input, textarea {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #myDIV .form-group {
@@ -166,6 +166,70 @@ body, input, textarea {
 }
 
 
+
+.form-connexion {
+  margin-top: 10%;
+  background-color: white;
+  padding: 5%;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 6%;
+  text-align: left;
+  color: #1CA7EC;
+  font-size: 20px;
+}
+
+.form-connexion input {
+    background-color: white;
+    text-align: left;
+    color: #1CA7EC;
+    font-size: 20px;
+    font-family: 'Quicksand';
+    border-width: 3px;
+    border-color: #1CA7EC;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+
+
+#feedback-form .form-check-input {
+  // display: none;
+}
+
+#feedback-form .collection_radio_buttons {
+  // position: absolute;
+  // display: flex;
+  background: white;
+  border-radius: 50px;
+  text-align: center;
+  width: 200px !important;
+  padding: 10px 30px 10px 30px;
+
+}
+
+.feedback-form  {
+  display: flex;
+  color: #1CA7EC;
+  justify-content: center;
+  padding-bottom: 10px;
+  font-family: Fredoka One;
+  font-style: normal;
+  font-weight: normal;
+    input {
+      // visibility: hidden;
+
+      &:checked + label::before {
+        background-color: black !important;
+      }
+    }
+
+  input:checked {
+    background-color: black !important;
+  }
+}
 // #feedback-form .form-group {
 //   position: relative;
 //   height: 150px;
@@ -248,65 +312,6 @@ body, input, textarea {
 //   opacity: 1;
 //   }
 // }
-
-.form-connexion {
-  margin-top: 10%;
-  background-color: white;
-  padding: 5%;
-  border-radius: 15px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-  margin-bottom: 6%;
-  text-align: left;
-  color: #1CA7EC;
-  font-size: 20px;
-}
-
-.form-connexion input {
-  background-color: white;
-  border-radius: 10px;
-  text-align: left;
-  color: #1CA7EC;
-  font-size: 20px;
-}
-
-
-
-
-#feedback-form .form-check-input {
-  // display: none;
-}
-
-#feedback-form .collection_radio_buttons {
-  // position: absolute;
-  // display: flex;
-  background: white;
-  border-radius: 50px;
-  text-align: center;
-  width: 200px !important;
-  padding: 10px 30px 10px 30px;
-
-}
-
-.feedback-form  {
-  display: flex;
-  color: #1CA7EC;
-  justify-content: center;
-  padding-bottom: 10px;
-  font-family: Fredoka One;
-  font-style: normal;
-  font-weight: normal;
-    input {
-      // visibility: hidden;
-
-      &:checked + label::before {
-        background-color: black !important;
-      }
-    }
-
-  input:checked {
-    background-color: black !important;
-  }
-}
 
 //   label::before {
 //       content: '';
