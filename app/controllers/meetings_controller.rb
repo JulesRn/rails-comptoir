@@ -35,11 +35,12 @@ class MeetingsController < ApplicationController
     @month = TRANSLATIONS.key(month_en)
     @hour =  @meeting.start_hour.strftime('%S')
 
+    authorize @meeting
   end
 
   def pre_show
     @meeting = Meeting.find(params[:id])
-
+    authorize @meeting
   end
 
 end

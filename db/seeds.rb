@@ -29,6 +29,7 @@ user18.photos.attach([{io: file22, filename: " ", content_type: 'image/jpg'}, {i
 user18.save!
 puts "user created"
 
+
 file28 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246700/IMG_6776_lqzfs2.jpg")
 file29 = URI.open("https://res.cloudinary.com/dlh4cl5ih/image/upload/v1583246686/IMG_6778_i39x0k.jpg")
 user13 = User.new(email:"fabien@nomail.com", name: "Fabien", password: "coucou", description: "Ton père ne bosserait pas chez Nintendo? Vu ton corps de DS ça semblerait logique.", age:25, height: "180", smoker: true,  drinker: true, sex: "Homme", sexual_orientation: "bi", position: "6 avenue de la République, 75011 Paris")
@@ -150,6 +151,7 @@ user14 = User.new(email:"nicolas@nomail.com", name: "Nicolas", password: "coucou
 user14.photos.attach([{io: file30, filename: " ", content_type: 'image/jpg'}, {io: file31, filename: " ", content_type: 'image/jpg'}])
 user14.save!
 puts "user created"
+
 
 
 

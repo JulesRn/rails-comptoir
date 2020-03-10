@@ -11,6 +11,7 @@ class LikesController < ApplicationController
 }
   def create
     @like = Like.create
+    authorize @like
     @like.user = current_user
     @like.liked_user = User.find(params[:like][:liked_user])
     @like.save

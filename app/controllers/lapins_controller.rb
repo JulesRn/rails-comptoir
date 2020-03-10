@@ -8,13 +8,16 @@ class LapinsController < ApplicationController
     @now_unix_time = DateTime.now.in_time_zone.to_time.to_i
     @countdown_in_seconds = @end_unix_time - @now_unix_time
     @countdown_in_hours = Time.at(@countdown_in_seconds).utc.strftime('%H:%M:%S')
+    authorize @lapin
   end
 
   def create
     @meeting = Meeting.find(params[:meeting_id])
     @meeting.status = "cancelled"
     @user = current_user
+    authorize @user
     @lapin = Lapin.new(user: @user, meeting: @meeting)
+    authorize @lapin
     if @lapin.save
       message = "#{@user.name} t'a posé un lapin."
       #TwilioTextMessenger.new(message).call(ENV['TWILIO_SID'], ENV['TWILIO_TOKEN'])
